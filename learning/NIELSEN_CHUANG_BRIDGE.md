@@ -113,7 +113,7 @@ This last fact explains the unknown-rate extension. For known directions $`F_j`$
 
 ## 4. Worked example: a qubit, one ancilla and unknown jump times
 
-Take a sensor qubit with $`G=Z/2`$ and $`L=\sqrt\gamma X`$. The Pauli matrix $`Z`$ distinguishes the basis states, while $`X`$ interchanges them. The noise algebra is the span of $`I`$ and $`X`$, so $`Z/2`$ lies outside it.
+Take a sensor qubit with $`G=Z/2`$ and $`L=\sqrt\gamma X`$, with $`\gamma>0`$. The Pauli matrix $`Z`$ distinguishes the basis states, while $`X`$ interchanges them. The noise algebra is the span of $`I`$ and $`X`$, so $`Z/2`$ lies outside it.
 
 Use one noiseless ancilla and encode
 
