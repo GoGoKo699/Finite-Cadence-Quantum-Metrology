@@ -1,20 +1,35 @@
 # Inline mathematical glyph calibration
 
-This temporary diagnostic page compares the same mathematical expressions with zero-width layout guards. It is held on the verification branch only.
+Temporary verification-branch comparison of mathematical layout guards.
 
-| Expression | Original | Strut | Tall phantom |
-|---|---|---|---|
-| `T` | $`T`$ | $`\strut T`$ | $`\vphantom{X^{2}_{2}}T`$ |
-| `Z/2` | $`Z/2`$ | $`\strut Z/2`$ | $`\vphantom{X^{2}_{2}}Z/2`$ |
-| `-cZ/2` | $`-cZ/2`$ | $`\strut -cZ/2`$ | $`\vphantom{X^{2}_{2}}-cZ/2`$ |
-| `F_j` | $`F_j`$ | $`\strut F_j`$ | $`\vphantom{X^{2}_{2}}F_j`$ |
-| `\tau` | $`\tau`$ | $`\strut \tau`$ | $`\vphantom{X^{2}_{2}}\tau`$ |
-| `Q_+` | $`Q_+`$ | $`\strut Q_+`$ | $`\vphantom{X^{2}_{2}}Q_+`$ |
-| `T^{-1}` | $`T^{-1}`$ | $`\strut T^{-1}`$ | $`\vphantom{X^{2}_{2}}T^{-1}`$ |
-| `T_K\le T` | $`T_K\le T`$ | $`\strut T_K\le T`$ | $`\vphantom{X^{2}_{2}}T_K\le T`$ |
-| `\mathcal R` | $`\mathcal R`$ | $`\strut \mathcal R`$ | $`\vphantom{X^{2}_{2}}\mathcal R`$ |
-| `\gamma` | $`\gamma`$ | $`\strut \gamma`$ | $`\vphantom{X^{2}_{2}}\gamma`$ |
-| `T/\tau` | $`T/\tau`$ | $`\strut T/\tau`$ | $`\vphantom{X^{2}_{2}}T/\tau`$ |
-| `0\lt\Delta\le W` | $`0\lt\Delta\le W`$ | $`\strut 0\lt\Delta\le W`$ | $`\vphantom{X^{2}_{2}}0\lt\Delta\le W`$ |
+## Original
 
-Running text: original $`T`$ and guarded $`\strut T`$; original $`Z/2`$ and guarded $`\strut Z/2`$; original $`\tau`$ and guarded $`\strut\tau`$.
+$`T`$ · $`Z/2`$ · $`\tau`$ · $`T_K\le T`$ · $`Q_+`$
+
+## Rule
+
+$`\rule{0pt}{1.4em}T`$ · $`\rule{0pt}{1.4em}Z/2`$ · $`\rule{0pt}{1.4em}\tau`$ · $`\rule{0pt}{1.4em}T_K\le T`$ · $`\rule{0pt}{1.4em}Q_+`$
+
+## Mathstrut
+
+$`\mathstrut T`$ · $`\mathstrut Z/2`$ · $`\mathstrut \tau`$ · $`\mathstrut T_K\le T`$ · $`\mathstrut Q_+`$
+
+## Empty superscript on strut
+
+$`\strut^{}T`$ · $`\strut^{}Z/2`$ · $`\strut^{}\tau`$ · $`\strut^{}T_K\le T`$ · $`\strut^{}Q_+`$
+
+## Matrix
+
+$`\begin{matrix}T\end{matrix}`$ · $`\begin{matrix}Z/2\end{matrix}`$ · $`\begin{matrix}\tau\end{matrix}`$ · $`\begin{matrix}T_K\le T\end{matrix}`$ · $`\begin{matrix}Q_+\end{matrix}`$
+
+## Aligned
+
+$`\begin{aligned}T\end{aligned}`$ · $`\begin{aligned}Z/2\end{aligned}`$ · $`\begin{aligned}\tau\end{aligned}`$ · $`\begin{aligned}T_K\le T\end{aligned}`$ · $`\begin{aligned}Q_+\end{aligned}`$
+
+## Parentheses
+
+$`(T)`$ · $`(Z/2)`$ · $`(\tau)`$ · $`(T_K\le T)`$ · $`(Q_+)`$
+
+## Displaystyle
+
+$`\displaystyle T`$ · $`\displaystyle Z/2`$ · $`\displaystyle \tau`$ · $`\displaystyle T_K\le T`$ · $`\displaystyle Q_+`$
