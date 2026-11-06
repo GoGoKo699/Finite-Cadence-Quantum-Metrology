@@ -1,0 +1,16 @@
+{
+  "kind": "finite numerical checks, not a universal proof",
+  "checked_cases": 19200,
+  "minimum_ratio_of_signed_mean_to_proved_margin": 3.3343038994398744,
+  "minimum_visibility": 0.9970353934346246,
+  "proved_visibility_lower_bound": 0.9394130628134758,
+  "maximum_fixed_xy_projection_identity_error": 5.578870698741412e-15,
+  "worst_margin_case": {
+    "lam": 1.0,
+    "h": 0.0078125,
+    "stage": 39,
+    "d": -0.00390625,
+    "e": -5.237804771686196e-08,
+    "cycles": 1022
+  }
+}

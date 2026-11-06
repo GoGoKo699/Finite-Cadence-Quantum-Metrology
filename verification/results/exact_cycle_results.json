@@ -1,0 +1,11 @@
+{
+  "density_matrix_cases": 72,
+  "maximum_complex_channel_discrepancy": 1.336885555457667e-15,
+  "sign_margin_cases": 13020,
+  "minimum_computed_positive_mean": 0.04859980613645187,
+  "proved_uniform_lower_margin": 0.013508742220761321,
+  "Gamma": 1.0,
+  "tau": 1.0,
+  "W": 0.05,
+  "scope": "Finite numerical cross-check; proof establishes universal statement independently."
+}
