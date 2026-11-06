@@ -10,7 +10,7 @@ This explains the four-level witness. A cubic signal can lie outside the quadrat
 
 ## Physical compensation keeps the experiment near an exactly correctable point
 
-When the signal lies outside the full noise algebra, the [construction](constructive_proof.md) exactly corrects the finite-duration channel at zero residual detuning. At a nearby residual $`\delta`$, the corrected channel has a useful first-order logical rotation and a second-order mismatch. Repeating longer coherent blocks is useful only if the controller simultaneously makes the residual smaller.
+When the signal lies outside the full noise algebra, the [construction](constructive_proof.md) exactly corrects the finite-duration channel at zero residual detuning. At a nearby residual $`\mathstrut{\delta}`$, the corrected channel has a useful first-order logical rotation and a second-order mismatch. Repeating longer coherent blocks is useful only if the controller simultaneously makes the residual smaller.
 
 The adaptive estimator achieves this from a fixed initial band. It keeps overlapping, nested intervals, uses a fixed measurement quadrature to decide which side can be discarded, and allocates more repetitions to earlier decisions whose errors would be expensive. The first-error decomposition bounds the effect of every wrong decision. A deterministic budget rule counts every cell on every history. This supplies the statistical step that a growing local Fisher information alone does not provide.
 
@@ -23,19 +23,19 @@ The field must act during the noisy cell. When signal and noise do not commute, 
 | Sensor dimension and noise directions | Fixed physical model |
 | Persistent coherent encoding ancilla | Dimension at most the sensor dimension |
 | Code and recovery | Fixed, independent of compensation and unknown allowed rates |
-| Correction interval | One sufficiently small positive value, independent of $`T`$ |
+| Correction interval | One sufficiently small positive value, independent of $`\mathstrut{T}`$ |
 | Logical readout observable | Fixed |
-| Total sensing time | At most $`T`$ on every history |
-| Physical correction applications | At most $`\lfloor T/\tau\rfloor`$ |
-| Localization stages and field settings | $`O(\log T)`$ |
-| Independently prepared/read-out batches | $`O((\log T)^2)`$ |
+| Total sensing time | At most $`\mathstrut{T}`$ on every history |
+| Physical correction applications | At most $`\mathstrut{\lfloor T/\tau\rfloor}`$ |
+| Localization stages and field settings | $`\mathstrut{O(\log T)}`$ |
+| Independently prepared/read-out batches | $`\mathstrut{O((\log T)^2)}`$ |
 | Accuracy of the classical compensation values | Improves as the localization interval shrinks |
 
-Instantaneous, noiseless boundary operations are idealizations of the model. The count of their applications is explicit, but their laboratory duration, thermodynamic cost and implementation error are not estimated. The fast-separation construction uses $`\Theta(T^2)`$ correction applications because its interval shrinks with $`T`$; this is not claimed to be optimal.
+Instantaneous, noiseless boundary operations are idealizations of the model. The count of their applications is explicit, but their laboratory duration, thermodynamic cost and implementation error are not estimated. The fast-separation construction uses $`\mathstrut{\Theta(T^2)}`$ correction applications because its interval shrinks with $`\mathstrut{T}`$; this is not claimed to be optimal.
 
 ## Resolution is distinct from the correction clock
 
-The grid witness holds the correction interval fixed while limiting the values of the classical compensation field. The [exact qubit response](grid_upper.md) has a phase slope and residual-noise attenuation. A grid leaves a detuning of order $`\Delta`$ in the worst part of the parameter band. The best useful coherent block then balances localization scale against this residual loss.
+The grid witness holds the correction interval fixed while limiting the values of the classical compensation field. The [exact qubit response](grid_upper.md) has a phase slope and residual-noise attenuation. A grid leaves a detuning of order $`\mathstrut{\Delta}`$ in the worst part of the parameter band. The best useful coherent block then balances localization scale against this residual loss.
 
 Two fixed quantum quadratures suffice for the upper bound. A classically computed phase combines their sample means; the protocol does not require a quantum measurement axis whose calibration improves indefinitely. Both quadrature batches are paid for. At fine resolution the useful block length grows as the interval shrinks; at coarser resolution the grid penalty limits that growth and additional independent batches carry the statistical cost.
 
@@ -53,7 +53,7 @@ The law assumes a known strictly positive noise rate and the stated band/grid co
 
 A nonzero local tangent does not by itself identify a parameter over an arbitrary large band. Exact cell channels can repeat periodically, and an estimator cannot distinguish an alias pair even with unlimited repetitions. The positive theorem chooses a sufficiently small cadence to construct its global route. The fixed-clock converse gives a lower bound whether or not the model is identifiable.
 
-The four-level example makes this concrete: its exact channel has fundamental period $`\pi/\tau`$. On a fixed interval shorter than one period, two quadratures attain SQL order; a band containing an alias pair retains a positive error floor. Thus an $`\Omega(T^{-1})`$ converse must not be rephrased as universal SQL attainability.
+The four-level example makes this concrete: its exact channel has fundamental period $`\mathstrut{\pi/\tau}`$. On a fixed interval shorter than one period, two quadratures attain SQL order; a band containing an alias pair retains a positive error floor. Thus an $`\mathstrut{\Omega(T^{-1})}`$ converse must not be rephrased as universal SQL attainability.
 
 ## What is inherited and what the combined account adds
 

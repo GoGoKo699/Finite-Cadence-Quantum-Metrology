@@ -85,7 +85,7 @@ Dependency links name earlier milestones whose ideas are needed. They describe t
 
 **Central question:** Why is subtracting a frequency estimate during noisy evolution a physical resource?
 
-**Understanding target:** Explain the residual detuning $`\delta=\omega-c`$, where the known field value $`c`$ is chosen from earlier data and held throughout a cell. Distinguish this physical cancellation from subtracting a number from an estimate or applying a known rotation only after the cell. Identify commutation as the special circumstance in which a boundary rotation can represent the same compensation.
+**Understanding target:** Explain the residual detuning $`\mathstrut{\delta=\omega-c}`$, where the known field value $`\mathstrut{c}`$ is chosen from earlier data and held throughout a cell. Distinguish this physical cancellation from subtracting a number from an estimate or applying a known rotation only after the cell. Identify commutation as the special circumstance in which a boundary rotation can represent the same compensation.
 
 **Dependencies and story role:** [M02](#m02--one-physical-cell-is-an-exact-noisy-channel), [M03](#m03--memory-instruments-and-the-accessible-experiment). This identifies the control family whose powers and limitations are being compared.
 
@@ -121,7 +121,7 @@ Dependency links name earlier milestones whose ideas are needed. They describe t
 
 **Central question:** How is an adaptive experiment compared fairly when its outcomes determine later actions?
 
-**Understanding target:** Explain why every prepared batch, failed decision and postselection failure consumes its actual cells. Distinguish a deterministic cap of $`N=\lfloor T/\tau\rfloor`$ cells on every history from an average cost or a cost conditioned on success. Separate sensing time from the assumed ideal, instantaneous boundary operations.
+**Understanding target:** Explain why every prepared batch, failed decision and postselection failure consumes its actual cells. Distinguish a deterministic cap of $`\mathstrut{N=\lfloor T/\tau\rfloor}`$ cells on every history from an average cost or a cost conditioned on success. Separate sensing time from the assumed ideal, instantaneous boundary operations.
 
 **Dependencies and story role:** [M03](#m03--memory-instruments-and-the-accessible-experiment), [M06](#m06--a-physical-counterfield-changes-the-cell), [M08](#m08--local-sensitivity-and-global-risk-are-different-claims). The statistical objective now has a complete operational resource constraint.
 
@@ -159,7 +159,7 @@ Dependency links name earlier milestones whose ideas are needed. They describe t
 
 **Central question:** How does an operator component outside the noise algebra specify two protected logical states?
 
-**Understanding target:** Explain the residual $`Q=G-\Pi_{\mathcal A_F}G`$, why it is a nonzero traceless Hermitian operator, and how its positive and negative parts yield two density operators. Connect their purifications on disjoint ancilla supports to equal algebra expectations, zero logical cross terms and a surviving signal difference.
+**Understanding target:** Explain the residual $`\mathstrut{Q=G-\Pi_{\mathcal A_F}G}`$, why it is a nonzero traceless Hermitian operator, and how its positive and negative parts yield two density operators. Connect their purifications on disjoint ancilla supports to equal algebra expectations, zero logical cross terms and a surviving signal difference.
 
 **Dependencies and story role:** [M04](#m04--an-error-span-and-an-error-algebra-ask-different-questions), [M05](#m05--correct-noise-without-erasing-the-useful-signal), [M11](#m11--assemble-the-fixed-cadence-question). The narrative begins with the concrete object that makes the positive direction possible.
 
@@ -183,7 +183,7 @@ Dependency links name earlier milestones whose ideas are needed. They describe t
 
 **Central question:** What signal survives after a whole noisy cell is corrected at zero residual detuning?
 
-**Understanding target:** Explain why the compensated null channel is corrected exactly, while the first derivative away from it is a logical Hamiltonian. Interpret $`B_\tau=\int_0^\tau e^{t\mathcal D^\dagger}(G)\,dt`$ as the noise-evolved signal integrated across the physical cell. Distinguish this tangent from an assumed noiseless value $`\tau G`$. Explain why Hermitian noise gives a strictly positive overlap with the residual code direction.
+**Understanding target:** Explain why the compensated null channel is corrected exactly, while the first derivative away from it is a logical Hamiltonian. Interpret $`\mathstrut{B_\tau=\int_0^\tau e^{t\mathcal D^\dagger}(G)\,dt}`$ as the noise-evolved signal integrated across the physical cell. Distinguish this tangent from an assumed noiseless value $`\mathstrut{\tau G}`$. Explain why Hermitian noise gives a strictly positive overlap with the residual code direction.
 
 **Dependencies and story role:** [M02](#m02--one-physical-cell-is-an-exact-noisy-channel), [M06](#m06--a-physical-counterfield-changes-the-cell), [M12](#m12--turn-the-signal-outside-the-algebra-into-a-code), [M13](#m13--one-decoder-corrects-an-entire-algebra). This connects the fixed decoder to exact finite-time dynamics.
 
@@ -195,7 +195,7 @@ Dependency links name earlier milestones whose ideas are needed. They describe t
 
 **Central question:** Why can increasingly long coherent blocks remain useful at one fixed correction interval?
 
-**Understanding target:** Contrast the first-order logical phase with the second-order detuning remainder. Explain how the cell bound telescopes across a block, giving a total channel error bounded by $`4n\delta^2\tau^2\|G\|^2`$. Connect shrinking residual uncertainty with increasing block length, and explain why known rate bounds suffice for a uniformly positive slope without measuring the rates.
+**Understanding target:** Contrast the first-order logical phase with the second-order detuning remainder. Explain how the cell bound telescopes across a block, giving a total channel error bounded by $`\mathstrut{4n\delta^2\tau^2\|G\|^2}`$. Connect shrinking residual uncertainty with increasing block length, and explain why known rate bounds suffice for a uniformly positive slope without measuring the rates.
 
 **Dependencies and story role:** [M07](#m07--compare-channels-and-identify-their-support), [M14](#m14--find-the-exact-finite-cell-signal-tangent). This supplies the controlled approximation needed to use the local tangent repeatedly.
 
@@ -219,7 +219,7 @@ Dependency links name earlier milestones whose ideas are needed. They describe t
 
 **Central question:** How do reliable refinements become a uniform inverse-square risk guarantee under a hard time cap?
 
-**Understanding target:** Explain the first-exclusion decomposition: an early mistake is more costly, so earlier stages receive stronger reliability. Connect the bound $`R\le13w_K^2`$ to a deterministic cost of at most a constant divided by $`w_K`$, and hence to a final width of order $`T^{-1}`$. Explain how the two-frequency distinguishability argument supplies the matching inverse-square lower bound.
+**Understanding target:** Explain the first-exclusion decomposition: an early mistake is more costly, so earlier stages receive stronger reliability. Connect the bound $`\mathstrut{R\le13w_K^2}`$ to a deterministic cost of at most a constant divided by $`\mathstrut{w_K}`$, and hence to a final width of order $`\mathstrut{T^{-1}}`$. Explain how the two-frequency distinguishability argument supplies the matching inverse-square lower bound.
 
 **Dependencies and story role:** [M08](#m08--local-sensitivity-and-global-risk-are-different-claims), [M09](#m09--charge-every-history-to-one-budget), [M16](#m16--refine-an-interval-without-knowing-the-exact-slope). This integrates the positive branch from code to complete estimation theorem.
 
@@ -255,7 +255,7 @@ Dependency links name earlier milestones whose ideas are needed. They describe t
 
 **Central question:** What global estimation obstruction follows from information that grows only linearly with cell count?
 
-**Understanding target:** Explain the smooth-prior, integration-by-parts argument that bounds risk without assuming an unbiased estimator. Read the resulting lower bound $`1/(NM+\pi^2/W^2)`$ with its fixed-model constants. Combine it with the constructive branch to classify the existence of a sufficiently small, horizon-independent cadence supporting Heisenberg order.
+**Understanding target:** Explain the smooth-prior, integration-by-parts argument that bounds risk without assuming an unbiased estimator. Read the resulting lower bound $`\mathstrut{1/(NM+\pi^2/W^2)}`$ with its fixed-model constants. Combine it with the constructive branch to classify the existence of a sufficiently small, horizon-independent cadence supporting Heisenberg order.
 
 **Dependencies and story role:** [M08](#m08--local-sensitivity-and-global-risk-are-different-claims), [M10](#m10--identification-can-fail-even-with-a-useful-tangent), [M17](#m17--complete-the-globally-paid-heisenberg-construction), [M19](#m19--bound-information-in-the-whole-adaptive-record). This integrates the two sides of the general theorem.
 
@@ -267,7 +267,7 @@ Dependency links name earlier milestones whose ideas are needed. They describe t
 
 **Central question:** How can a signal pass the fast-control criterion and fail the fixed-cadence criterion in the same sensor?
 
-**Understanding target:** Explain why the cubic signal $`G=L^3`$ for $`L=\mathrm{diag}(-3,-1,1,3)`$ lies outside the quadratic real span but inside the full diagonal algebra. Connect the displayed code's equal first two noise moments and unequal cubic signal moments to its first-order recovered Hamiltonian. Distinguish this correction of leading errors from exact correction at positive duration.
+**Understanding target:** Explain why the cubic signal $`\mathstrut{G=L^3}`$ for $`\mathstrut{L=\mathrm{diag}(-3,-1,1,3)}`$ lies outside the quadratic real span but inside the full diagonal algebra. Connect the displayed code's equal first two noise moments and unequal cubic signal moments to its first-order recovered Hamiltonian. Distinguish this correction of leading errors from exact correction at positive duration.
 
 **Dependencies and story role:** [M04](#m04--an-error-span-and-an-error-algebra-ask-different-questions), [M05](#m05--correct-noise-without-erasing-the-useful-signal), [M18](#m18--determine-the-full-physical-kraus-support), [M20](#m20--convert-the-information-bound-into-the-classification). This turns the abstract distinction into one explicit physical witness.
 
@@ -279,7 +279,7 @@ Dependency links name earlier milestones whose ideas are needed. They describe t
 
 **Central question:** What resource changes when the four-level sensor moves from inverse-time to inverse-square error?
 
-**Understanding target:** Explain why the explicit fast construction chooses its interval as $`h(T)=\Theta(T^{-1})`$ and uses $`\Theta(T^2)`$ recoveries while still charging at most total sensing time $`T`$. Contrast that construction with the all-strategy fixed-clock information bound. Explain why the exact alias period limits the fixed-clock SQL upper bound to an identifiable interval.
+**Understanding target:** Explain why the explicit fast construction chooses its interval as $`\mathstrut{h(T)=\Theta(T^{-1})}`$ and uses $`\mathstrut{\Theta(T^2)}`$ recoveries while still charging at most total sensing time $`\mathstrut{T}`$. Contrast that construction with the all-strategy fixed-clock information bound. Explain why the exact alias period limits the fixed-clock SQL upper bound to an identifiable interval.
 
 **Dependencies and story role:** [M09](#m09--charge-every-history-to-one-budget), [M10](#m10--identification-can-fail-even-with-a-useful-tangent), [M17](#m17--complete-the-globally-paid-heisenberg-construction), [M20](#m20--convert-the-information-bound-into-the-classification), [M21](#m21--build-the-four-level-algebraic-separation). This completes the first resource comparison at the same global-risk level.
 
@@ -291,7 +291,7 @@ Dependency links name earlier milestones whose ideas are needed. They describe t
 
 **Central question:** What happens to the signal phase when bit-flip noise is corrected only at cell boundaries?
 
-**Understanding target:** Explain the parity code, the unobserved telegraph sign of the accumulated phase and the exact corrected coherence function $`f(z)`$. Distinguish phase response from visibility. Connect its nonzero phase slope and quadratic attenuation near zero detuning to the mechanism behind compensation, without replacing the exact response by an unmodified noiseless phase.
+**Understanding target:** Explain the parity code, the unobserved telegraph sign of the accumulated phase and the exact corrected coherence function $`\mathstrut{f(z)}`$. Distinguish phase response from visibility. Connect its nonzero phase slope and quadratic attenuation near zero detuning to the mechanism behind compensation, without replacing the exact response by an unmodified noiseless phase.
 
 **Dependencies and story role:** [M01](#m01--a-frequency-becomes-a-measurement-distribution), [M02](#m02--one-physical-cell-is-an-exact-noisy-channel), [M05](#m05--correct-noise-without-erasing-the-useful-signal), [M14](#m14--find-the-exact-finite-cell-signal-tangent). This begins the second resource comparison with a completely specified qubit channel.
 
@@ -339,7 +339,7 @@ Dependency links name earlier milestones whose ideas are needed. They describe t
 
 **Central question:** How can a lower bound remain valid when a controller switches or dithers among grid fields after every cell?
 
-**Understanding target:** Explain why the middle half of an interior lattice gap stays a definite distance from every allowed field value. Use that fact to understand the uniform per-cell information bound, the full-history chain rule and the smooth-prior risk bound. Identify why the common condition $`\Delta\le W`$ guarantees a suitable gap for every offset.
+**Understanding target:** Explain why the middle half of an interior lattice gap stays a definite distance from every allowed field value. Use that fact to understand the uniform per-cell information bound, the full-history chain rule and the smooth-prior risk bound. Identify why the common condition $`\mathstrut{\Delta\le W}`$ guarantees a suitable gap for every offset.
 
 **Dependencies and story role:** [M19](#m19--bound-information-in-the-whole-adaptive-record), [M20](#m20--convert-the-information-bound-into-the-classification), [M26](#m26--find-the-obstruction-before-choosing-a-decoder). This turns the physical support calculation into the grid obstruction for arbitrary allowed controllers.
 
@@ -351,7 +351,7 @@ Dependency links name earlier milestones whose ideas are needed. They describe t
 
 **Central question:** What must improve with the sensing horizon when the recovery clock itself stays fixed?
 
-**Understanding target:** Combine the grid upper and lower bounds to read $`R_T^*=\Theta(T^{-2}+\tau\Delta^2/T)`$ uniformly over the stated spacings and offsets. Explain the crossover and why $`\Delta=O((\tau T)^{-1/2})`$ retains Heisenberg order at fixed model parameters. Distinguish the known-positive-rate grid theorem from the unknown-bounded-rate continuous-field sufficiency theorem, and distinguish the actual jump algebra from its known envelope when rates may vanish.
+**Understanding target:** Combine the grid upper and lower bounds to read $`\mathstrut{R_T^*=\Theta(T^{-2}+\tau\Delta^2/T)}`$ uniformly over the stated spacings and offsets. Explain the crossover and why $`\mathstrut{\Delta=O((\tau T)^{-1/2})}`$ retains Heisenberg order at fixed model parameters. Distinguish the known-positive-rate grid theorem from the unknown-bounded-rate continuous-field sufficiency theorem, and distinguish the actual jump algebra from its known envelope when rates may vanish.
 
 **Dependencies and story role:** [M13](#m13--one-decoder-corrects-an-entire-algebra), [M20](#m20--convert-the-information-bound-into-the-classification), [M25](#m25--pay-for-both-quadratures-and-all-grid-refinements), [M27](#m27--use-one-grid-gap-to-constrain-every-adaptive-policy). This integrates the grid branch with the general classification.
 
