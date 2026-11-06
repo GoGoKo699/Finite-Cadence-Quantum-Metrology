@@ -11,7 +11,7 @@ Algebraic error correction, cancellation near an estimated parameter, local chan
 For Hermitian jumps, the usual infinitesimal Lindblad span is the real space
 
 ```math
-\mathcal S=\operatorname{span}_{\mathbb R}
+\mathcal S=\mathrm{span}_{\mathbb R}
 \left\{I,L_j,\frac{L_jL_k+L_kL_j}{2},
 \frac{L_jL_k-L_kL_j}{2i}\right\}.
 ```

@@ -8,7 +8,7 @@ For a finite-dimensional sensor with Hermitian Lindblad noise, let $`\mathcal A=
 |---|---|
 | $`G\notin\mathcal A`$ | A sufficiently small correction interval can be chosen once, independently of the sensing budget $`T`$, to attain global minimax mean-square error $`\Theta(T^{-2})`$. |
 | $`G\in\mathcal A`$ | Every fixed positive interval has an $`\Omega(T^{-1})`$ error lower bound, even with adaptive boundary instruments and arbitrary noiseless ancillary memory, for each fixed bounded compensation range. |
-| Four-level example $`L=\operatorname{diag}(-3,-1,1,3)`$, $`G=L^3`$ | Arbitrarily fast correction permits global $`\Theta(T^{-2})`$ error, but every positive fixed clock obeys the preceding lower bound. |
+| Four-level example $`L=\mathrm{diag}(-3,-1,1,3)`$, $`G=L^3`$ | Arbitrarily fast correction permits global $`\Theta(T^{-2})`$ error, but every positive fixed clock obeys the preceding lower bound. |
 | Transverse qubit with known positive noise rate and compensation-grid spacing $`\Delta`$ | In the stated small-band regime, the optimal error is $`\Theta(T^{-2}+\tau\Delta^2/T)`$, uniformly over grid offsets and $`0<\Delta\le\Delta_0\le W`$. |
 
 The lower bound in the second row does not assert that the standard quantum limit is attainable when the parameter is unidentifiable. In the first row the interval is **chosen sufficiently small**, rather than supplied arbitrarily. Every trial, including an unsuccessful localization trial, is charged to a deterministic total sensing-time budget.
@@ -28,6 +28,12 @@ Start with the [model, assumptions and exact statements](science/model.md), then
 | Reproducible finite checks and their limits | [Verification](verification/README.md) |
 
 The full generated-algebra correction principle, local channel-metrology criteria and adaptive compensation ideas have prior antecedents. The account distinguishes those ingredients from the exact simultaneous-noise model, the global hard-budget guarantee and its all-strategy converse. No priority claim follows from a literature comparison alone.
+
+## Learn the project
+
+The educational anchor is Michael A. Nielsen and Isaac L. Chuang, *Quantum Computation and Quantum Information*, **10th Anniversary Edition (2010)**. Its treatment of quantum operations, distinguishability and error correction supplies the foundation; the finite-cadence sensing and global estimation arguments are developed here.
+
+Start with the [Nielsen–Chuang bridge](learning/NIELSEN_CHUANG_BRIDGE.md) for a physical example, notation and the steps connecting the textbook to the results. Then use the [30-milestone understanding map](learning/MILESTONES.md): 11 background milestones assemble the experimental and statistical framework, and 19 narrative milestones connect the construction, converse, correction-clock separation and compensation-grid law. Each milestone points to its supporting science. The map is a route to the project's main ideas and limitations; the specialist proofs retain the technical details.
 
 ## Reproduce the finite checks
 
