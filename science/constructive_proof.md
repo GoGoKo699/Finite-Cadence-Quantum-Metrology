@@ -18,21 +18,25 @@ Let the sensor have finite dimension $`d`$, known Hermitian signal generator $`G
 \tag{C1}
 ```
 
-The unknown frequency belongs to the fixed band $`[-W,W]`$, where $`W>0`$. The rates are fixed throughout the experiment, may be unknown, and obey known bounds $`0\le\gamma_j\le\Gamma_j<\infty`$. A known additional Hamiltonian drift is assumed physically canceled; an unknown drift is not part of this model.
+The unknown frequency belongs to the fixed band $`[-W,W]`$, where $`W>0`$. The rates are fixed throughout the experiment, may be unknown, and obey known bounds $`0\le\gamma_j\le\Gamma_j\lt \infty`$. A known additional Hamiltonian drift is assumed physically canceled; an unknown drift is not part of this model.
 
 Define the known envelope algebra
 
 ```math
+\begin{aligned}
 \mathcal A_F=C^*(I,F_1,\ldots,F_m).
+\end{aligned}
 \tag{C2}
 ```
 
 **Constructive theorem.** If $`G\notin\mathcal A_F`$, there exist an encoding, a decoder and a sufficiently small $`\tau>0`$, all chosen independently of the eventual budget $`T`$ and of the actual rates, such that
 
 ```math
+\begin{aligned}
 \sup_{\omega\in[-W,W],\;0\le\gamma_j\le\Gamma_j}
 \mathbb E_{\omega,\gamma}(\widehat\omega-\omega)^2
 \le \frac{C}{T^2}
+\end{aligned}
 \tag{C3}
 ```
 
@@ -60,17 +64,21 @@ The projection preserves adjoints because the algebra is adjoint closed. Thus $`
 Purify $`\rho_0`$ and $`\rho_1`$ using disjoint ancilla supports. Their purifications define orthonormal codewords $`|0_L\rangle`$ and $`|1_L\rangle`$, and an isometry $`V:\mathbb C^2\to\mathbb C^d\otimes\mathcal H_A`$. The required ancilla dimension is
 
 ```math
+\begin{aligned}
 \dim\mathcal H_A
 =\mathrm{rank}Q_++\mathrm{rank}Q_-
 \le d.
+\end{aligned}
 \tag{C5}
 ```
 
 Disjoint ancilla supports imply $`\langle0_L|(X\otimes I_A)|1_L\rangle=0`$ for **every** sensor operator $`X`$. For $`A\in\mathcal A_F`$, the difference of diagonal matrix elements is $`\mathrm{Tr}(AQ)/s=0`$. Consequently
 
 ```math
+\begin{aligned}
 V^\dagger(A\otimes I_A)V=\alpha_A I_2
 \qquad(A\in\mathcal A_F).
+\end{aligned}
 \tag{C6}
 ```
 
@@ -79,24 +87,30 @@ Since $`A^\dagger B\in\mathcal A_F`$ whenever $`A,B\in\mathcal A_F`$, this is th
 For completeness, a single decoder can be constructed directly. Choose a basis $`E_1,\ldots,E_a`$ of the algebra and form its positive semidefinite scalar Gram matrix
 
 ```math
+\begin{aligned}
 V^\dagger(E_\alpha^\dagger E_\beta\otimes I_A)V
 =C_{\alpha\beta}I_2.
+\end{aligned}
 \tag{C7}
 ```
 
 Let $`U^\dagger C U=\mathrm{diag}(\lambda_a)`$ and define $`D_a=\sum_\alpha E_\alpha U_{\alpha a}`$. For each $`\lambda_a>0`$, set
 
 ```math
+\begin{aligned}
 W_a=\frac{(D_a\otimes I_A)V}{\sqrt{\lambda_a}}.
+\end{aligned}
 \tag{C8}
 ```
 
 Then $`W_a^\dagger W_b=\delta_{ab}I_2`$. Zero-eigenvalue combinations satisfy $`(D_a\otimes I_A)V=0`$ and need no recovery branch. Let $`P_{\rm err}=\sum_{\lambda_a>0}W_aW_a^\dagger`$. A decoder from the joint physical space to the logical qubit is
 
 ```math
+\begin{aligned}
 \mathcal R(\sigma)
 =\sum_{\lambda_a>0}W_a^\dagger\sigma W_a
 +\mathrm{Tr}[(I-P_{\rm err})\sigma]\,|0\rangle\langle0|.
+\end{aligned}
 \tag{C9}
 ```
 
@@ -105,17 +119,21 @@ This map is completely positive and trace preserving. The first term reverses th
 To verify the universal correction property, expand any Kraus operator $`K_\mu\in\mathcal A_F`$ in the $`D_a`$ basis. On the code,
 
 ```math
+\begin{aligned}
 (K_\mu\otimes I_A)V
 =\sum_{\lambda_a>0}k_{\mu a}\sqrt{\lambda_a}\,W_a.
+\end{aligned}
 \tag{C10}
 ```
 
 The decoder maps its contribution to $`\sum_a|k_{\mu a}|^2\lambda_a\rho`$. If the physical channel is trace preserving, summing (C10) over its Kraus operators gives $`\sum_{\mu,a}|k_{\mu a}|^2\lambda_a=1`$. Therefore
 
 ```math
+\begin{aligned}
 \mathcal R\circ(\mathcal N\otimes\mathrm{id}_A)\circ\mathcal V
-=\mathrm{id}_2,
-\qquad \mathcal V(\rho)=V\rho V^\dagger,
+&=\mathrm{id}_2,\\
+\qquad \mathcal V(\rho)&=V\rho V^\dagger,
+\end{aligned}
 \tag{C11}
 ```
 
@@ -128,10 +146,12 @@ At a boundary one applies this decoder and re-encodes with $`V`$. Equivalently o
 Write $`L_j=\sqrt{\gamma_j}F_j`$ and $`\delta=\omega-c`$. Hermitian Lindblad noise admits a parameter-independent Brownian-unitary representation. In Itô form,
 
 ```math
+\begin{aligned}
 dU_\delta(t)
-=\left(-i\delta G-\tfrac12\sum_jL_j^2\right)U_\delta(t)\,dt
--i\sum_jL_jU_\delta(t)\,dW_j(t),
+&=\left(-i\delta G-\tfrac12\sum_jL_j^2\right)U_\delta(t)\,dt\\
+&-i\sum_jL_jU_\delta(t)\,dW_j(t),
 \qquad U_\delta(0)=I.
+\end{aligned}
 \tag{C12}
 ```
 
@@ -140,10 +160,12 @@ Averaging $`U_\delta\rho U_\delta^\dagger`$ gives precisely (C1). At $`\delta=0`
 Define
 
 ```math
+\begin{aligned}
 \Lambda_\delta
 =\mathcal R\circ
 \bigl(\mathcal E^{(\tau)}_{\omega,c,\gamma}\otimes\mathrm{id}_A\bigr)
 \circ\mathcal V.
+\end{aligned}
 \tag{C13}
 ```
 
@@ -154,17 +176,21 @@ Then $`\Lambda_0=\mathrm{id}_2`$. The Brownian paths are a mathematical represen
 For a fixed Brownian path, the relative unitary $`A_\delta(t)=U_0(t)^\dagger U_\delta(t)`$ obeys the ordinary differential equation
 
 ```math
+\begin{aligned}
 \frac{dA_\delta}{dt}
 =-i\delta\,U_0(t)^\dagger G U_0(t)A_\delta(t).
+\end{aligned}
 \tag{C14}
 ```
 
 The stochastic terms cancel. Differentiating at zero gives
 
 ```math
+\begin{aligned}
 iU_0(\tau)^\dagger
 \left.\partial_\delta U_\delta(\tau)\right|_0
 =\int_0^\tau U_0(t)^\dagger G U_0(t)\,dt.
+\end{aligned}
 \tag{C15}
 ```
 
@@ -184,7 +210,9 @@ In particular $`B_\tau=\tau G`$ when the noise vanishes, fixing the sign convent
 Let $`R_\ell`$ be Kraus operators of the fixed decoder. Exact correction gives
 
 ```math
+\begin{aligned}
 R_\ell(K_\mu(0)\otimes I_A)V=\lambda_{\ell\mu}I_2.
+\end{aligned}
 \tag{C17}
 ```
 
@@ -207,15 +235,19 @@ R_\ell(K_\mu'(0)\otimes I_A)V\\
 The final equality uses trace preservation of the full decoder, including its extension off the correctable space. Thus
 
 ```math
-\Lambda_0'(\rho)=-i[H_L,\rho],
-\qquad H_L=V^\dagger(B_\tau\otimes I_A)V.
+\begin{aligned}
+\Lambda_0'(\rho)&=-i[H_L,\rho],\\
+\qquad H_L&=V^\dagger(B_\tau\otimes I_A)V.
+\end{aligned}
 \tag{C19}
 ```
 
 There is no parameter-dependent recovery in this calculation. Disjoint ancilla supports make $`H_L`$ diagonal in the logical basis. Its eigenvalue difference, in logical-zero minus logical-one order, is
 
 ```math
+\begin{aligned}
 b_\tau=\frac{\mathrm{Tr}(QB_\tau)}s.
+\end{aligned}
 \tag{C20}
 ```
 
@@ -224,27 +256,33 @@ b_\tau=\frac{\mathrm{Tr}(QB_\tau)}s.
 For Hermitian jumps,
 
 ```math
+\begin{aligned}
 \mathcal D_\gamma(X)
-=-\tfrac12\sum_j[L_j,[L_j,X]],
+&=-\tfrac12\sum_j[L_j,[L_j,X]],\\
 \qquad
 \langle X,\mathcal D_\gamma X\rangle
-=-\tfrac12\sum_j\|[L_j,X]\|_{\rm HS}^2.
+&=-\tfrac12\sum_j\|[L_j,X]\|_{\rm HS}^2.
+\end{aligned}
 \tag{C21}
 ```
 
 Therefore $`\mathcal D_\gamma=\mathcal D_\gamma^\dagger`$ is self-adjoint and negative semidefinite on operator Hilbert space. It preserves $`\mathcal A_F`$; self-adjointness then makes $`\mathcal A_F^\perp`$ invariant as well. Define
 
 ```math
+\begin{aligned}
 F_\tau(\mathcal D_\gamma)=\int_0^\tau e^{t\mathcal D_\gamma}\,dt.
+\end{aligned}
 \tag{C22}
 ```
 
 Each of its eigenvalues is $`\int_0^\tau e^{t\lambda}dt>0`$ for an eigenvalue $`\lambda\le0`$ of the dissipator. Orthogonality of $`Q`$ to the algebra now yields
 
 ```math
+\begin{aligned}
 b_\tau
 =\frac{\langle Q,F_\tau(\mathcal D_\gamma)Q\rangle}{s}
 >0.
+\end{aligned}
 \tag{C23}
 ```
 
@@ -269,7 +307,9 @@ M&=2\sum_j\Gamma_j\|F_j\|^2,
 The spectrum of every allowed $`\mathcal D_\gamma`$ lies in $`[-M,0]`$, because the Hilbert–Schmidt operator norm of a commutator with $`F_j`$ is at most $`2\|F_j\|`$. Therefore
 
 ```math
+\begin{aligned}
 q\,a_{\min}(\tau)\le b_\tau\le q\tau.
+\end{aligned}
 \tag{C25}
 ```
 
@@ -280,9 +320,11 @@ In particular, $`M\tau\le1`$ implies $`q\tau/2\le b_\tau\le q\tau`$. These bound
 Let $`\mathcal K=-i[G,\cdot]`$, for which $`\|\mathcal K\|_\diamond\le2g`$. Iterating the Duhamel identity once gives
 
 ```math
+\begin{aligned}
 \|\Lambda_\delta-\mathrm{id}_2-\delta\Lambda_0'\|_\diamond
 \le\tfrac12\delta^2\tau^2\|\mathcal K\|_\diamond^2
 \le2\delta^2\tau^2g^2.
+\end{aligned}
 \tag{C26}
 ```
 
@@ -306,8 +348,10 @@ The second inequality is a telescoping sum of channel products. The corrected ch
 Prepare $`|+\rangle=(|0\rangle+|1\rangle)/\sqrt2`$ and measure the same logical Pauli $`Y`$ after $`n`$ cells. With the usual $`Y`$ convention, its ideal mean is $`\sin(nb_\tau\delta)`$. The actual mean $`\mu_n(\delta)`$ satisfies
 
 ```math
+\begin{aligned}
 |\mu_n(\delta)-\sin(nb_\tau\delta)|
 \le4n\delta^2\tau^2g^2.
+\end{aligned}
 \tag{C28}
 ```
 
@@ -316,17 +360,21 @@ Prepare $`|+\rangle=(|0\rangle+|1\rangle)/\sqrt2`$ and measure the same logical 
 Fix
 
 ```math
+\begin{aligned}
 \beta=\tfrac14,\qquad r=\tfrac34,
 \qquad s_0=\sin(\beta/8)>0.
+\end{aligned}
 \tag{C29}
 ```
 
 Choose $`\tau>0`$ once so that
 
 ```math
+\begin{aligned}
 M\tau\le1,\qquad
 q\tau W\le\beta/2,\qquad
 \frac{4\beta\tau g^2 W}{q}\le s_0/2.
+\end{aligned}
 \tag{C30}
 ```
 
@@ -335,29 +383,37 @@ Every fixed finite model and prior band with $`q>0`$ admits such a choice. These
 Suppose the current interval is $`I=[c-w,c+w]`$, where $`w\le W`$. Hold the physical field at $`c`$ and use
 
 ```math
+\begin{aligned}
 n(w)=\left\lfloor\frac{\beta}{q\tau w}\right\rfloor.
+\end{aligned}
 \tag{C31}
 ```
 
 The quantity inside the floor is at least two, so
 
 ```math
+\begin{aligned}
 \frac{\beta}{2q\tau w}\le n(w)\le\frac{\beta}{q\tau w}.
+\end{aligned}
 \tag{C32}
 ```
 
 For a true point in either outer quarter, $`w/2\le|\delta|\le w`$, (C25) and (C32) imply
 
 ```math
+\begin{aligned}
 \beta/8\le|n(w)b_\tau\delta|\le\beta.
+\end{aligned}
 \tag{C33}
 ```
 
 The ideal mean has the sign of $`\delta`$ and magnitude at least $`s_0`$. Its error in (C28) is at most $`4\beta\tau g^2w/q\le s_0/2`$. Thus
 
 ```math
+\begin{aligned}
 \mathrm{sgn}(\delta)\,\mu_{n(w)}(\delta)\ge s_0/2
 \qquad(w/2\le|\delta|\le w).
+\end{aligned}
 \tag{C34}
 ```
 
@@ -368,8 +424,10 @@ Repeat the prepared batch independently $`m`$ times and let $`\overline Y`$ be t
 Excluding a true point outside the overlap requires a wrong sign. Hoeffding's one-sided inequality and (C34) give
 
 ```math
-\Pr\{\text{truth excluded}\mid\text{truth in current interval}}
+\begin{aligned}
+\Pr\{\text{truth excluded}\mid\text{truth in current interval}\}
 \le e^{-ms_0^2/8}.
+\end{aligned}
 \tag{C35}
 ```
 
@@ -408,7 +466,9 @@ The early stages are repeated more often because their first errors would be mor
 The deterministic sensing time used by the $`K`$-stage protocol is
 
 ```math
+\begin{aligned}
 T_K=\tau\sum_{j=1}^Km_jn_j.
+\end{aligned}
 \tag{C38}
 ```
 
@@ -430,22 +490,26 @@ The last step uses $`w_{j-1}=w_Kr^{-(K-j+1)}`$ and $`\sum_{k\ge1}kr^k=r/(1-r)^2`
 For a given hard budget $`T`$, choose
 
 ```math
+\begin{aligned}
 K(T)=
 \begin{cases}
-0,&T<B/W,\\[2pt]
+0,&T\lt B/W,\\[2pt]
 \left\lfloor\dfrac{\log(WT/B)}{\log(1/r)}\right\rfloor,
 &T\ge B/W.
 \end{cases}
+\end{aligned}
 \tag{C40}
 ```
 
-For $`K=0`$, return the initial midpoint and use no sensing time. In the second branch, $`B/T\le w_K<B/(rT)`$, so (C39) ensures $`T_K\le T`$ on every history. Combining with (C37) gives $`13B^2/(r^2T^2)`$. For the first branch, $`W^2\le B^2/T^2`$, which supplies the same all-budget upper bound after enlarging the constant if necessary.
+For $`K=0`$, return the initial midpoint and use no sensing time. In the second branch, $`B/T\le w_K\lt B/(rT)`$, so (C39) ensures $`T_K\le T`$ on every history. Combining with (C37) gives $`13B^2/(r^2T^2)`$. For the first branch, $`W^2\le B^2/T^2`$, which supplies the same all-budget upper bound after enlarging the constant if necessary.
 
 The quantum code, decoder, ancilla dimension, preparation and final measurement remain fixed. The number of independent prepared/read batches is at most
 
 ```math
+\begin{aligned}
 \sum_{j=1}^Km_j
 \le(C_{\rm rep}+1)\frac{K(K+1)}2=O((\log T)^2).
+\end{aligned}
 \tag{C41}
 ```
 
@@ -456,17 +520,21 @@ There are at most $`K=O(\log T)`$ field settings and at most $`T/\tau`$ recovery
 Let $`\nu=\lambda_{\max}(G)-\lambda_{\min}(G)>0`$. A scalar shift of $`G`$ changes no channel and gives $`\|{-i[G,\cdot]}\|_\diamond\le\nu`$. Duhamel's formula therefore bounds any fixed-field cell by
 
 ```math
+\begin{aligned}
 \|\mathcal E^{(\tau)}_{\omega,c,\gamma}
 -\mathcal E^{(\tau)}_{\omega',c,\gamma}\|_\diamond
 \le\tau\nu|\omega-\omega'|.
+\end{aligned}
 \tag{C42}
 ```
 
 Treat the complete classical history and quantum memory as the state of an adaptive protocol. Boundary instruments and the rule assigning $`c`$ from that history are parameter-independent maps. Replacing the cells one at a time in the two experiments yields the hybrid bound
 
 ```math
+\begin{aligned}
 \|\rho_\omega^{\rm out}-\rho_{\omega'}^{\rm out}\|_1
 \le T\nu|\omega-\omega'|.
+\end{aligned}
 \tag{C43}
 ```
 
@@ -475,8 +543,10 @@ This bound includes ancillary systems, all retained outcomes and classical adapt
 Choose two frequencies separated by $`\varepsilon=\min\{2W,1/(\nu T)\}`$ inside the prior band. Their trace distance is at most $`1/2`$. Any estimate induces a nearest-point binary test, whose error forces a squared estimation error of at least $`\varepsilon^2/4`$. The optimal average testing error is at least $`(1-1/2)/2=1/4`$. Thus the minimax risk is bounded below by
 
 ```math
+\begin{aligned}
 \frac{\varepsilon^2}{16}
 =\min\!\left\{\frac{W^2}{4},\frac1{16\nu^2T^2}\right\}.
+\end{aligned}
 \tag{C44}
 ```
 

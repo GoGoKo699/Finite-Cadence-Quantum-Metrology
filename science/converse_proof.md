@@ -13,7 +13,7 @@ for the distinction between these inherited tools and the operational result.
 
 ## 1. Statement and quantifiers
 
-Let the sensor have dimension $`d<\infty`$, with known Hermitian signal generator
+Let the sensor have dimension $`d\lt \infty`$, with known Hermitian signal generator
 $`G`$ and parameter-independent Hermitian jump operators $`L_1,\ldots,L_r`$.
 Absorb the actual fixed jump rates into the $`L_j`$, and write
 
@@ -34,7 +34,7 @@ joint sensor–ancilla channel is
 \exp\!\left[\tau\big(\mathcal D-i\delta[G,\cdot]\big)\right].
 ```
 
-Both the cell length $`\tau>0`$ and field bound $`C<\infty`$ are independent of
+Both the cell length $`\tau>0`$ and field bound $`C\lt \infty`$ are independent of
 the sensing budget $`T`$. At cell boundaries the protocol may apply any
 parameter-independent quantum instrument, retain noiseless quantum and
 classical memory, and choose the next $`c`$ from its record. The environment
@@ -46,16 +46,20 @@ $`N=\lfloor T/\tau\rfloor`$ cells on every history, including failed trials.
 $`M`$ such that every allowed protocol satisfies
 
 ```math
+\begin{aligned}
 I_{\mathrm{data}}(\omega)\le NM,\qquad \omega\in[-W,W],
+\end{aligned}
 \tag{C1}
 ```
 
 and its minimax mean-squared error obeys
 
 ```math
+\begin{aligned}
 R_T:=\inf_{\mathsf P}\sup_{\omega\in[-W,W]}
 \mathbb E_\omega(\widehat\omega-\omega)^2
 \ \ge\ \frac{1}{NM+\pi^2/W^2}.
+\end{aligned}
 \tag{C2}
 ```
 
@@ -81,13 +85,15 @@ K_\delta=-i\delta G-\frac12\sum_j L_j^2.
 
 The completely positive Dyson expansion of the semigroup sums over all
 jump counts $`m\ge0`$, labels $`j_1,\ldots,j_m`$, and ordered times
-$`0<t_1<\cdots<t_m<\tau`$. Its trajectory Kraus operator is
+$`0\lt t_1\lt \cdots\lt t_m\lt \tau`$. Its trajectory Kraus operator is
 
 ```math
+\begin{aligned}
 V_{\delta,\boldsymbol j,\boldsymbol t}
 =e^{K_\delta(\tau-t_m)}L_{j_m}
  e^{K_\delta(t_m-t_{m-1})}\cdots
  L_{j_1}e^{K_\delta t_1}.
+\end{aligned}
 \tag{C3}
 ```
 
@@ -121,7 +127,9 @@ If $`G\in\mathcal A`$, then $`K_\delta\in\mathcal A`$. Every exponential and
 product in (C3) lies in $`\mathcal A`$, so
 
 ```math
+\begin{aligned}
 \mathcal V_\delta\subseteq\mathcal A.
+\end{aligned}
 \tag{C4}
 ```
 
@@ -139,7 +147,9 @@ including the empty word, is exactly the unital star algebra $`\mathcal A`$.
 It is already closed in finite dimension. Consequently
 
 ```math
+\begin{aligned}
 \mathcal A e^{K_\delta\tau}\subseteq\mathcal V_\delta.
+\end{aligned}
 \tag{C5}
 ```
 
@@ -148,8 +158,10 @@ Right multiplication by $`e^{K_\delta\tau}`$ is therefore a bijection on
 $`\mathcal A`$. Combining (C4) and (C5) proves
 
 ```math
+\begin{aligned}
 \boxed{\mathcal V_\delta=\mathcal A\quad
 \text{for every real }\delta.}
+\end{aligned}
 \tag{C6}
 ```
 
@@ -173,8 +185,10 @@ The matrix is analytic in $`\delta`$. Compactness of the accessible interval
 $`\mathcal K=[-W-C,W+C]`$ therefore gives
 
 ```math
+\begin{aligned}
 \lambda_*:=\min_{\delta\in\mathcal K}
 \lambda_{\min}\!\left(J_\delta\big|_{\mathcal A}\right)>0.
+\end{aligned}
 \tag{C7}
 ```
 
@@ -194,7 +208,9 @@ Duhamel differentiation gives an integral of this commutator between two
 channels. Diamond-norm contraction and the normalized Choi input imply
 
 ```math
+\begin{aligned}
 \|\dot J_\delta\|_1\le\tau D_G.
+\end{aligned}
 \tag{C8}
 ```
 
@@ -202,10 +218,12 @@ For the unnormalized Choi operator $`\Gamma_\delta=dJ_\delta`$, the channel
 right-logarithmic-derivative (RLD) Fisher information is
 
 ```math
+\begin{aligned}
 \widehat I(\mathcal E_\delta^{(\tau)})
 =\left\|\mathrm{Tr}_{\mathrm{out}}
 \left[\dot\Gamma_\delta\Gamma_\delta^+\dot\Gamma_\delta\right]
 \right\|_\infty.
+\end{aligned}
 \tag{C9}
 ```
 
@@ -222,7 +240,7 @@ is bounded by its trace. Thus
 &\le d\mathrm{Tr}(\dot J_\delta J_\delta^+\dot J_\delta)\\
 &\le \frac{d}{\lambda_*}\mathrm{Tr}(\dot J_\delta^2)\\
 &\le \frac{d\tau^2D_G^2}{\lambda_*}
-=:M<\infty,\qquad \delta\in\mathcal K.
+=:M\lt \infty,\qquad \delta\in\mathcal K.
 \end{aligned}
 \tag{C10}
 ```
@@ -248,9 +266,11 @@ The channel chain rule of Katariya and Wilde, Proposition 38,
 Eq. (5.222), states
 
 ```math
+\begin{aligned}
 \widehat I\!\left[(\mathcal E_\omega\otimes\mathrm{id}_A)
 (\rho_\omega)\right]
 \le \widehat I(\mathcal E_\omega)+\widehat I(\rho_\omega).
+\end{aligned}
 \tag{C11}
 ```
 
@@ -270,9 +290,11 @@ remaining quantum memory in the state
 Direct differentiation of each block gives
 
 ```math
+\begin{aligned}
 \widehat I(\sigma_\omega)
 =I(p_\omega)+
 \sum_h p_\omega(h)\widehat I(\rho_{\omega,h}).
+\end{aligned}
 \tag{C12}
 ```
 
@@ -320,9 +342,11 @@ It integrates to one, vanishes at both endpoints, and has prior Fisher
 information
 
 ```math
+\begin{aligned}
 I(\pi_W)=\int_{-W}^{W}
 \frac{[\pi_W'(\omega)]^2}{\pi_W(\omega)}\,d\omega
 =\frac{\pi^2}{W^2}.
+\end{aligned}
 \tag{C13}
 ```
 
@@ -332,7 +356,9 @@ The estimator may be clipped to the prior band without increasing risk.
 Integration by parts, using the zero prior at the endpoints, gives
 
 ```math
+\begin{aligned}
 \mathbb E_q[(\widehat\omega(y)-\omega)s(\omega,y)]=1.
+\end{aligned}
 \tag{C14}
 ```
 

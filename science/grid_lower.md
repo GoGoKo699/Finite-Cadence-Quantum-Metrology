@@ -13,13 +13,15 @@ the other prior ingredients are discussed in [related work](../references/RELATE
 One sensor evolves during a cell of duration $`\tau>0`$ according to
 
 ```math
-\frac{d\rho}{dt}=-i[(\omega-c)Z/2,\rho]
+\begin{aligned}
+&\frac{d\rho}{dt}=-i[(\omega-c)Z/2,\rho]
 +\gamma(X\rho X-\rho).
+\end{aligned}
 \tag{L1}
 ```
 
 The rate is strictly positive. For uniform constants, fix
-$`0<\gamma_-\le\gamma\le\Gamma<\infty`$. The signal belongs to the fixed
+$`0\lt \gamma_-\le\gamma\le\Gamma\lt \infty`$. The signal belongs to the fixed
 band $`[-W,W]`$, with $`W>0`$. During each cell the field is a classical
 number in a subset of the uniform lattice
 
@@ -37,17 +39,22 @@ inside a cell. Every history uses at most $`N=\lfloor T/\tau\rfloor`$ cells.
 For
 
 ```math
-0<\Delta\le\min\{W,4/\tau\},\qquad
+\begin{aligned}
+&0\lt \Delta\le\min\{W,4/\tau\},\\
+&\qquad
 T\ge\max\{\tau,1/(2W)\},
+\end{aligned}
 \tag{L2}
 ```
 
 every allowed protocol has minimax mean-squared error at least
 
 ```math
-R(T,\Delta;\gamma)
+\begin{aligned}
+&R(T,\Delta;\gamma)
 \ge\frac{1}{32T^2}
 +\frac{\tau\Delta^2}{2T(C_R+16\pi^2)},
+\end{aligned}
 \tag{L3}
 ```
 
@@ -60,9 +67,11 @@ Intersecting (L2) with the small fixed-domain conditions of the upper
 construction gives, for known $`\gamma>0`$,
 
 ```math
-R(T,\Delta;\gamma)
-=\Theta\!\left(T^{-2}+\frac{\tau\Delta^2}{T}\right),
-\qquad 0<\Delta\le\Delta_0\le W.
+\begin{aligned}
+&R(T,\Delta;\gamma)
+=\Theta\!\left(T^{-2}+\frac{\tau\Delta^2}{T}\right),\\
+&\qquad 0\lt \Delta\le\Delta_0\le W.
+\end{aligned}
 \tag{L4}
 ```
 
@@ -86,8 +95,10 @@ Write $`\delta=\omega-c`$, and let $`N(t)`$ be a Poisson process of rate
 $`\gamma`$. Its trajectory unitary is
 
 ```math
-U_{\mathrm{path}}=X^{N(\tau)}e^{-i\delta S Z/2},\qquad
+\begin{aligned}
+&U_{\mathrm{path}}=X^{N(\tau)}e^{-i\delta S Z/2},\qquad
 S=\int_0^\tau(-1)^{N(t)}\,dt.
+\end{aligned}
 \tag{L5}
 ```
 
@@ -126,18 +137,22 @@ block using only selected jump counts is valid.
 Exactly one jump gives the unnormalized density of $`S`$
 
 ```math
-p_1(s)=\frac{\gamma e^{-\gamma\tau}}2,
+\begin{aligned}
+&p_1(s)=\frac{\gamma e^{-\gamma\tau}}2,
 \qquad -\tau\le s\le\tau.
+\end{aligned}
 \tag{L6}
 ```
 
-For exactly two jumps at $`t_1<t_2`$, one has
+For exactly two jumps at $`t_1\lt t_2`$, one has
 $`S=\tau-2(t_2-t_1)`$. Integrating over $`t_1`$ and using the Jacobian of this
 change of variables gives
 
 ```math
-p_2(s)=\frac{\gamma^2e^{-\gamma\tau}}4(\tau+s),
+\begin{aligned}
+&p_2(s)=\frac{\gamma^2e^{-\gamma\tau}}4(\tau+s),
 \qquad -\tau\le s\le\tau.
+\end{aligned}
 \tag{L7}
 ```
 
@@ -159,10 +174,12 @@ with its removable value at $`\delta=0`$ understood by continuity.
 Consequently
 
 ```math
-\lambda_{\min}(J_\delta)
+\begin{aligned}
+&\lambda_{\min}(J_\delta)
 \ge\frac{\kappa_\gamma\tau}{2}
-\left[1-\left|\mathrm{sinc}(\delta\tau/2)\right|\right],
-\qquad \mathrm{sinc}x=\frac{\sin x}{x}.
+\left[1-\left|\mathrm{sinc}(\delta\tau/2)\right|\right],\\
+&\qquad \mathrm{sinc}x=\frac{\sin x}{x}.
+\end{aligned}
 \tag{L8}
 ```
 
@@ -175,24 +192,28 @@ $`|I)(I|`$ and $`|X)(X|`$.
 The elementary global bound
 
 ```math
-1-|\mathrm{sinc}x|\ge\frac18\min\{x^2,1\}
+\begin{aligned}
+&1-|\mathrm{sinc}x|\ge\frac18\min\{x^2,1\}
+\end{aligned}
 \tag{L9}
 ```
 
 can be checked as follows. For $`|x|\le1`$, the alternating sine bound gives
 $`1-\mathrm{sinc}x\ge19x^2/120`$. On $`[1,\pi]`$, the positive function
-$`\sin x/x`$ decreases and is at most $`\sin1<7/8`$. For $`|x|\ge\pi`$,
-$`|\mathrm{sinc}x|\le1/\pi<7/8`$. Evenness covers negative $`x`$.
+$`\sin x/x`$ decreases and is at most $`\sin1\lt 7/8`$. For $`|x|\ge\pi`$,
+$`|\mathrm{sinc}x|\le1/\pi\lt 7/8`$. Evenness covers negative $`x`$.
 Using also
 $`\min\{(y/2)^2,1\}\ge\frac14\min\{y^2,1\}`$ in (L8) yields
 
 ```math
-\lambda_{\min}(J_\delta)
-\ge C_0\min\{(\delta\tau)^2,1\},
-\qquad
+\begin{aligned}
+&\lambda_{\min}(J_\delta)
+\ge C_0\min\{(\delta\tau)^2,1\},\\
+&\qquad
 C_0=\frac{e^{-\Gamma\tau}}{64}
 \min\!\left\{\frac{\gamma_-\tau}{2},
 \frac{(\gamma_-\tau)^2}{8}\right\}>0.
+\end{aligned}
 \tag{L10}
 ```
 
@@ -202,8 +223,10 @@ $`\mathbb E\sin^2(\delta S/2)\le(\delta\tau)^2/4`$, and a trace-one
 four-dimensional matrix has minimum eigenvalue at most $`1/4`$. Hence
 
 ```math
-\lambda_{\min}(J_\delta)
+\begin{aligned}
+&\lambda_{\min}(J_\delta)
 \le\frac14\min\{(\delta\tau)^2,1\}.
+\end{aligned}
 \tag{L11}
 ```
 
@@ -218,8 +241,10 @@ trace norm at most $`|S|\le\tau`$. Convexity and the parameter-independent
 path law give
 
 ```math
-\|\dot J_\delta\|_1\le\tau,\qquad
+\begin{aligned}
+&\|\dot J_\delta\|_1\le\tau,\qquad
 \mathrm{Tr}(\dot J_\delta^2)\le\tau^2.
+\end{aligned}
 \tag{L12}
 ```
 
@@ -254,10 +279,13 @@ field value even if the available grid is only a subset. For
 $`\tau\Delta\le4`$, (L13) therefore gives
 
 ```math
-\sup_{\omega\in\mathcal I_\Delta}
+\begin{aligned}
+&\sup_{\omega\in\mathcal I_\Delta}
 \sup_{c\in\mathcal G_{\Delta,a}}
 \widehat I(\mathcal E_{\omega-c}^{(\tau)})
-\le\frac{C_R}{\Delta^2},\qquad C_R=\frac{32}{C_0}.
+\le\frac{C_R}{\Delta^2},\\
+&\qquad C_R=\frac{32}{C_0}.
+\end{aligned}
 \tag{L14}
 ```
 
@@ -275,9 +303,11 @@ $`c(h)`$ is constant when differentiating a fixed history branch. The
 final readout distribution consequently satisfies
 
 ```math
-I_{\mathrm{data}}(\omega)
+\begin{aligned}
+&I_{\mathrm{data}}(\omega)
 \le\frac{NC_R}{\Delta^2},\qquad
 \omega\in\mathcal I_\Delta.
+\end{aligned}
 \tag{L15}
 ```
 
@@ -309,9 +339,11 @@ The integration-by-parts and Cauchy–Schwarz proof in the
 condition,
 
 ```math
-R(T,\Delta;\gamma)
-\ge\frac{1}{\mathbb E_{\pi_\Delta}I_{\mathrm{data}}+I(\pi_\Delta)}
-\ge\frac{\Delta^2}{NC_R+16\pi^2}.
+\begin{aligned}
+&R(T,\Delta;\gamma)
+\ge\frac{1}{\mathbb E_{\pi_\Delta}I_{\mathrm{data}}+I(\pi_\Delta)}\\
+&\ge\frac{\Delta^2}{NC_R+16\pi^2}.
+\end{aligned}
 \tag{L16}
 ```
 
@@ -324,9 +356,11 @@ same access model independently of the noise and grid. The spectral
 diameter of $`Z/2`$ is one, so Duhamel's formula gives
 
 ```math
-\|\mathcal E_{\omega-c}^{(\tau)}-
+\begin{aligned}
+&\|\mathcal E_{\omega-c}^{(\tau)}-
 \mathcal E_{\omega'-c}^{(\tau)}\|_\diamond
 \le\tau|\omega-\omega'|.
+\end{aligned}
 \tag{L17}
 ```
 
@@ -343,7 +377,9 @@ hypothesis makes any classification error cost at least $`1/(4T^2)`$.
 The optimal equal-prior testing error is at least $`1/4`$, hence
 
 ```math
-R(T,\Delta;\gamma)\ge\frac{1}{16T^2}.
+\begin{aligned}
+&R(T,\Delta;\gamma)\ge\frac{1}{16T^2}.
+\end{aligned}
 \tag{L18}
 ```
 

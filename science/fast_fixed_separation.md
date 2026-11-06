@@ -17,8 +17,10 @@ and the channel RLD tools attributed there. See
 In a four-dimensional sensor, take
 
 ```math
-L=\mathrm{diag}(-3,-1,1,3),\qquad
-G=L^3=\mathrm{diag}(-27,-1,1,27).
+\begin{aligned}
+L&=\mathrm{diag}(-3,-1,1,3),\\
+G&=L^3=\mathrm{diag}(-27,-1,1,27).
+\end{aligned}
 \tag{F1}
 ```
 
@@ -46,9 +48,11 @@ therefore disagree for this explicit physical model.
 Define the encoding isometry $`V`$ by
 
 ```math
-V|0\rangle=\frac{\sqrt3}{2}|2\rangle+\frac12|4\rangle,
-\qquad
-V|1\rangle=\frac12|1\rangle+\frac{\sqrt3}{2}|3\rangle.
+\begin{aligned}
+V|0\rangle&=\frac{\sqrt3}{2}|2\rangle+\frac12|4\rangle,
+\\
+V|1\rangle&=\frac12|1\rangle+\frac{\sqrt3}{2}|3\rangle.
+\end{aligned}
 \tag{F2}
 ```
 
@@ -66,9 +70,11 @@ All off-diagonal code matrix elements of these operators vanish.
 Consequently
 
 ```math
-V^\dagger LV=0,\qquad
-V^\dagger L^2V=3I_2,\qquad
-V^\dagger GV=6Z.
+\begin{aligned}
+V^\dagger LV&=0,\\
+V^\dagger L^2V&=3I_2,\\
+V^\dagger GV&=6Z.
+\end{aligned}
 \tag{F3}
 ```
 
@@ -90,7 +96,9 @@ P+\frac13LPL=I_4.
 The two Kraus operators
 
 ```math
-R_0=V^\dagger,\qquad R_1=\frac1{\sqrt3}V^\dagger L
+\begin{aligned}
+R_0&=V^\dagger,\qquad R_1=\frac1{\sqrt3}V^\dagger L
+\end{aligned}
 \tag{F4}
 ```
 
@@ -110,8 +118,10 @@ terms sum to $`-3\rho`$. In the Hamiltonian derivative the $`R_1`$ term
 vanishes because $`R_1V=0`$, leaving
 
 ```math
+\begin{aligned}
 \left.\partial_h\Lambda_{\delta,h}\right|_{h=0}
-=-i[6\delta Z,\cdot].
+&=-i[6\delta Z,\cdot].
+\end{aligned}
 \tag{F5}
 ```
 
@@ -149,17 +159,21 @@ C_W=\frac{(18+54W)^2+(12W)^2}{2},
 one obtains the uniform bound
 
 ```math
+\begin{aligned}
 \|\Lambda_{\delta,h}-\mathcal U_{\delta,h}\|_\diamond
-\le C_Wh^2,
+&\le C_Wh^2,
 \qquad |\delta|\le W.
+\end{aligned}
 \tag{F6}
 ```
 
 Both maps are channels, so telescoping $`n`$ repeated cells gives
 
 ```math
+\begin{aligned}
 \|\Lambda_{\delta,h}^{n}-\mathcal U_{\delta,h}^{n}\|_\diamond
-\le nC_Wh^2.
+&\le nC_Wh^2.
+\end{aligned}
 \tag{F7}
 ```
 
@@ -172,19 +186,23 @@ $`\sin(12nh\delta)`$.
 Take the fixed prior $`[-W,W]`$ and choose
 
 ```math
-\beta=\frac14,\qquad r=\frac34,\qquad
+\begin{aligned}
+\beta&=\frac14,\qquad r=\frac34,\qquad
 s_0=\sin(\beta/4)>0,
-\qquad
-A=\frac{24\log(1/r)}{s_0^2}.
+\\
+A&=\frac{24\log(1/r)}{s_0^2}.
+\end{aligned}
 \tag{F8}
 ```
 
 For a chosen number of stages $`K\ge1`$, set
 
 ```math
-w_j=Wr^j,\qquad
-h_K=\min\!\left\{\frac{\beta}{24W},
+\begin{aligned}
+w_j&=Wr^j,\\
+h_K&=\min\!\left\{\frac{\beta}{24W},
 \frac{6s_0w_K}{\beta C_W}\right\}.
+\end{aligned}
 \tag{F9}
 ```
 
@@ -197,9 +215,11 @@ $`I_{j-1}=[c_j-w_{j-1},c_j+w_{j-1}]`$. Hold the field at $`c_j`$ for each
 batch, and choose the deterministic numbers
 
 ```math
-n_j=\left\lfloor\frac{\beta}{12h_Kw_{j-1}}\right\rfloor,
-\qquad
-m_j=\left\lceil A(K-j+1)\right\rceil.
+\begin{aligned}
+n_j&=\left\lfloor\frac{\beta}{12h_Kw_{j-1}}\right\rfloor,
+\\
+m_j&=\left\lceil A(K-j+1)\right\rceil.
+\end{aligned}
 \tag{F10}
 ```
 
@@ -229,8 +249,10 @@ $`|\delta|\le w_{j-1}`$. From the first part of (F9), the expression inside
 the floor in (F10) is at least two. Hence
 
 ```math
+\begin{aligned}
 \frac{\beta}{24h_Kw_{j-1}}
-\le n_j\le\frac{\beta}{12h_Kw_{j-1}}.
+&\le n_j\le\frac{\beta}{12h_Kw_{j-1}}.
+\end{aligned}
 \tag{F11}
 ```
 
@@ -239,10 +261,12 @@ $`\beta/4`$ and $`\beta`$. Its sine has the sign of $`\delta`$ and magnitude
 at least $`s_0`$. The second part of (F9) and (F11) give
 
 ```math
+\begin{aligned}
 n_jC_Wh_K^2
-\le\frac{\beta C_Wh_K}{12w_{j-1}}
+&\le\frac{\beta C_Wh_K}{12w_{j-1}}
 \le\frac{s_0w_K}{2w_{j-1}}
 \le\frac{s_0}{2}.
+\end{aligned}
 \tag{F12}
 ```
 
@@ -254,8 +278,10 @@ bound, centered on the actual mean, therefore gives conditional
 exclusion probability
 
 ```math
-p_j\le\exp(-m_js_0^2/8)
+\begin{aligned}
+p_j&\le\exp(-m_js_0^2/8)
 \le r^{3(K-j+1)}.
+\end{aligned}
 \tag{F13}
 ```
 
@@ -299,30 +325,36 @@ T_K=h_K\sum_{j=1}^Km_jn_j.
 Since $`m_j\le(A+1)(K-j+1)`$ and (F11) bounds $`n_j`$,
 
 ```math
-T_K\le\frac{C_T}{w_K},\qquad
-C_T=\frac{\beta(A+1)}{12}\frac{r}{(1-r)^2}.
+\begin{aligned}
+T_K&\le\frac{C_T}{w_K},\\
+C_T&=\frac{\beta(A+1)}{12}\frac{r}{(1-r)^2}.
+\end{aligned}
 \tag{F15}
 ```
 
 For a supplied budget $`T`$, choose
 
 ```math
-K(T)=
+\begin{aligned}
+K(T)&=
 \begin{cases}
-0,&T<C_T/W,\\[2pt]
+0,&T\lt C_T/W,\\[2pt]
 \left\lfloor\log_{1/r}(WT/C_T)\right\rfloor,&T\ge C_T/W.
 \end{cases}
+\end{aligned}
 \tag{F16}
 ```
 
 At $`K=0`$, perform no experiment and return zero. Otherwise
 $`w_K\ge C_T/T`$, so (F15) proves $`T_K\le T`$ on every history. Also
-$`w_K<C_T/(rT)`$ in the second case. Equations (F14)–(F16), with the
+$`w_K\lt C_T/(rT)`$ in the second case. Equations (F14)–(F16), with the
 constant-risk small-budget case included, therefore prove
 
 ```math
-R_T^{\mathrm{fast}}\le
+\begin{aligned}
+R_T^{\mathrm{fast}}&\le
 \frac{13C_T^2}{r^2T^2}.
+\end{aligned}
 \tag{F17}
 ```
 
@@ -366,9 +398,11 @@ For a fixed $`\tau>0`$, signal and noise commute in the physical
 eigenbasis, giving the exact channel
 
 ```math
+\begin{aligned}
 \mathcal E_\delta^{(\tau)}(|j\rangle\langle k|)
-=\exp\!\left[-\frac\tau2(l_j-l_k)^2
+&=\exp\!\left[-\frac\tau2(l_j-l_k)^2
 -i\delta\tau(g_j-g_k)\right]|j\rangle\langle k|.
+\end{aligned}
 \tag{F18}
 ```
 
@@ -376,11 +410,13 @@ The normalized Choi matrix lives on the four-dimensional maximally
 correlated subspace spanned by $`|jj\rangle`$. On that subspace it is
 
 ```math
-J_\delta=\frac14D_\delta R_\tau D_\delta^\dagger,
-\quad
-(D_\delta)_{jj}=e^{-i\delta\tau g_j},
-\quad
-(R_\tau)_{jk}=e^{-\tau(l_j-l_k)^2/2}.
+\begin{aligned}
+J_\delta&=\frac14D_\delta R_\tau D_\delta^\dagger,
+\\
+(D_\delta)_{jj}&=e^{-i\delta\tau g_j},
+\\
+(R_\tau)_{jk}&=e^{-\tau(l_j-l_k)^2/2}.
+\end{aligned}
 \tag{F19}
 ```
 
@@ -399,10 +435,12 @@ support inverse and taking the output partial trace gives the exact
 channel RLD information
 
 ```math
-M_\tau:=\widehat I(\mathcal E_\delta^{(\tau)})
-=\tau^2\max_j
+\begin{aligned}
+M_\tau&:=\widehat I(\mathcal E_\delta^{(\tau)})\\
+&=\tau^2\max_j
 \left([Q,R_\tau]R_\tau^{-1}[Q,R_\tau]^\dagger\right)_{jj}
-<\infty.
+\lt \infty.
+\end{aligned}
 \tag{F20}
 ```
 
@@ -417,9 +455,11 @@ $`I_{\mathrm{data}}\le NM_\tau`$ even for unbounded classical field
 amplitudes. The global Bayesian argument consequently yields
 
 ```math
+\begin{aligned}
 R_T^{\mathrm{fixed}}
-\ge\frac{1}{\lfloor T/\tau\rfloor M_\tau+\pi^2/W^2}
+&\ge\frac{1}{\lfloor T/\tau\rfloor M_\tau+\pi^2/W^2}
 =\Omega(T^{-1}).
+\end{aligned}
 \tag{F21}
 ```
 
@@ -427,9 +467,11 @@ In this commuting example, compensation contributes only a known
 boundary unitary:
 
 ```math
+\begin{aligned}
 \mathcal E_{\omega-c}^{(\tau)}
-=\mathrm{Ad}_{e^{ic\tau G}}\circ
+&=\mathrm{Ad}_{e^{ic\tau G}}\circ
 \mathcal E_\omega^{(\tau)}.
+\end{aligned}
 \tag{F22}
 ```
 
@@ -444,7 +486,9 @@ difference between the middle two levels is $`2`$. Since all coefficients
 in (F18) are nonzero, the fundamental frequency alias period is exactly
 
 ```math
-P_\tau=\frac\pi\tau.
+\begin{aligned}
+P_\tau&=\frac\pi\tau.
+\end{aligned}
 \tag{F23}
 ```
 
@@ -458,7 +502,9 @@ SQL scaling on every arbitrarily broad band.
 Now let the parameter lie in a fixed closed interval $`I`$ of length
 
 ```math
-0<\ell<P_\tau.
+\begin{aligned}
+0&\lt \ell\lt P_\tau.
+\end{aligned}
 \tag{F24}
 ```
 
@@ -468,8 +514,11 @@ $`X`$ and the signed $`Y`$ with matrix elements
 $`i|2\rangle\langle3|-i|3\rangle\langle2|`$. Their exact means are
 
 ```math
-\mu(\omega)=\nu\big(\cos(2\tau\omega),\sin(2\tau\omega)\big),
-\qquad \nu=e^{-2\tau}>0.
+\begin{aligned}
+\mu(\omega)&=\nu\big(\cos(2\tau\omega),\sin(2\tau\omega)\big),
+\\
+\nu&=e^{-2\tau}>0.
+\end{aligned}
 \tag{F25}
 ```
 
@@ -477,10 +526,12 @@ For $`x,y\in I`$, the chord length and the monotonicity of $`\sin u/u`$
 on $`(0,\pi)`$ give
 
 ```math
+\begin{aligned}
 \|\mu(x)-\mu(y)\|_2
-=2\nu|\sin(\tau(x-y))|
-\ge k_I|x-y|,\qquad
-k_I=\frac{2\nu\sin(\tau\ell)}\ell>0.
+&=2\nu|\sin(\tau(x-y))|
+\ge k_I|x-y|,\\
+k_I&=\frac{2\nu\sin(\tau\ell)}\ell>0.
+\end{aligned}
 \tag{F26}
 ```
 
@@ -498,9 +549,11 @@ The triangle inequality and the minimizing property give
 $`\|\mu(\widehat\omega)-\mu(\omega)\|_2 \le2\|\widehat\mu-\mu(\omega)\|_2`$. Therefore
 
 ```math
+\begin{aligned}
 \sup_{\omega\in I}
 \mathbb E_\omega(\widehat\omega-\omega)^2
-\le\frac{24}{k_I^2N}=O(T^{-1}).
+&\le\frac{24}{k_I^2N}=O(T^{-1}).
+\end{aligned}
 \tag{F27}
 ```
 
