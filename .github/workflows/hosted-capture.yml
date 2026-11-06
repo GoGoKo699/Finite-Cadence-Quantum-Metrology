@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-24.04
     timeout-minutes: 30
     env:
-      CAPTURE_REVISION: 5dc4a7cd056a266d650b8c89909b149bc17afe60
+      CAPTURE_REVISION: d51aade1d17138d94824d985918b444a735a12fd
     steps:
       - name: Check out collector
         uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
