@@ -1,0 +1,93 @@
+{
+  "scope": "Finite deterministic numerical checks; analytical proofs remain authoritative.",
+  "numpy": "2.3.5",
+  "scipy": "1.17.0",
+  "checks": [
+    {
+      "script": "check_algebra.py",
+      "status": "pass",
+      "summary": {
+        "kind": "Finite numerical checks, not a universal proof",
+        "cases": 18,
+        "maximum_kl_error": 3.554448916512378e-16,
+        "maximum_null_error": 1.8498589390694138e-15,
+        "maximum_tangent_error": 1.0073903524585459e-15,
+        "minimum_logical_gap": 0.1464488106613927,
+        "four_level_hnls_residual": 10.73312629199899
+      }
+    },
+    {
+      "script": "check_exact_cycle.py",
+      "status": "pass",
+      "summary": {
+        "density_matrix_cases": 72,
+        "maximum_complex_channel_discrepancy": 1.336885555457667e-15,
+        "sign_margin_cases": 13020,
+        "minimum_computed_positive_mean": 0.04859980613645187,
+        "proved_uniform_lower_margin": 0.013508742220761321,
+        "Gamma": 1.0,
+        "tau": 1.0,
+        "W": 0.05,
+        "scope": "Finite numerical cross-check; proof establishes universal statement independently."
+      }
+    },
+    {
+      "script": "check_grid_upper.py",
+      "status": "pass",
+      "summary": {
+        "kind": "finite numerical checks, not a universal proof",
+        "checked_cases": 19200,
+        "minimum_ratio_of_signed_mean_to_proved_margin": 3.3343038994398744,
+        "minimum_visibility": 0.9970353934346246,
+        "proved_visibility_lower_bound": 0.9394130628134758,
+        "maximum_fixed_xy_projection_identity_error": 5.578870698741412e-15,
+        "worst_margin_case": {
+          "lam": 1.0,
+          "h": 0.0078125,
+          "stage": 39,
+          "d": -0.00390625,
+          "e": -5.237804771686196e-08,
+          "cycles": 1022
+        }
+      }
+    },
+    {
+      "script": "check_physical_choi.py",
+      "status": "pass",
+      "summary": {
+        "cases": 104,
+        "smallest_ratio_actual_to_event_bound": 4.021835405439457,
+        "largest_derivative_trace_norm": 0.9723947942767954,
+        "all_assertions_passed": true
+      }
+    },
+    {
+      "script": "check_fast_separation.py",
+      "status": "pass",
+      "summary": {
+        "status": "pass",
+        "all_assertions_passed": true,
+        "scope": "Four-level code/tangent, physical fixed-cell channel and RLD formula, actual fast-protocol sign means, deterministic budgets; finite checks only.",
+        "code_errors": {
+          "encoding_isometry": 1.5700924586837752e-16,
+          "jump_compression": 1.4099173839088994e-16,
+          "jump_square_compression": 0.0,
+          "signal_compression": 0.0,
+          "decoder_trace_preservation": 6.843874359417885e-16
+        },
+        "hnls_span_residual": 10.73312629199899,
+        "largest_logical_tangent_error": 4.739215969609768e-15,
+        "fixed_channel_cases": 20,
+        "fast_sign_cases": 195,
+        "budget_cases": 9,
+        "required_sign_margin": 0.0312296589211901,
+        "smallest_signed_outer_mean": 0.12380568476140903,
+        "largest_mean_error_to_bound_ratio": 0.03161336566059839,
+        "largest_output_trace_error": 1.868460941523154e-10,
+        "largest_physical_channel_error": 2.2737367544323206e-13,
+        "largest_rld_formula_relative_error": 7.421041225028176e-11
+      }
+    }
+  ],
+  "status": "pass"
+}

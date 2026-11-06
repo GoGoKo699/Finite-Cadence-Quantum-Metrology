@@ -1,0 +1,26 @@
+# Finite-Cadence Quantum Metrology
+
+Question: when do exact noisy cells at a fixed correction interval permit global Heisenberg mean-square precision under adaptive physical compensation?
+
+Authoritative reading route:
+- README.md: principal results, navigation, reproduction and scope.
+- science/model.md: exact physical channel, allowed strategies, hard sensing budget, all theorem quantifiers and nuisance-rate distinctions.
+- science/constructive_proof.md: generated-algebra code, explicit universal decoder, integrated finite-cell tangent, quadratic mismatch and fully charged global localization.
+- science/converse_proof.md: exact trajectory support, supported Choi information, arbitrary adaptive history/memory and van Trees bound.
+- science/fast_fixed_separation.md: four-level cubic signal, explicit global fast construction, fixed-clock lower bound, aliases and SQL attainment on identifiable bands.
+- science/grid_upper.md: exact transverse response, fixed X/Y measurements, classical quadrature processing and deterministic grid budget.
+- science/grid_lower.md: unrecovered physical-channel Choi bound and lower bound for all allowed grid strategies.
+- science/interpretation.md: control, time, memory, correction count and compensation precision.
+- references/RELATED_WORK.md and references/SOURCES.md: inherited ingredients, closest comparisons and primary source identities.
+- verification/README.md: finite checks, commands and limitations.
+
+Preserve these distinctions:
+1. The physical cell is exp(tau*(D-i*(omega-c)*[G,.])), not generally a product noise-signal channel.
+2. G outside the full noise algebra gives some sufficiently small fixed cadence, not every supplied cadence.
+3. G inside the actual algebra yields a lower bound, not universal SQL attainability.
+4. Unknown bounded rates along known directions use an envelope algebra only for the robust positive theorem; zero rates can shrink the actual algebra.
+5. Global minimax error requires the paid localization proof; local QFI alone is insufficient.
+6. The grid upper theorem uses a known positive rate and the matched law uses Delta <= Delta_0 <= W.
+7. No environment record, subcell quantum control, coherent field register, imperfect recovery or noisy ancilla is included.
+8. The fast construction's quadratic correction count is sufficient, not an optimality theorem.
+9. Finite numerical checks do not establish universal analytical statements.
