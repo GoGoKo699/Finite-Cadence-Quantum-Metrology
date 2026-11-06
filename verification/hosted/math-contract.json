@@ -1,0 +1,1256 @@
+{
+  "schema_version": 1,
+  "expressions": [
+    {
+      "path": "README.md",
+      "index": 1,
+      "source_sha256": "bc08e453a7972d252b544fc93af34735ff5f5593a910d7df5e3da24502ca0dea",
+      "expected_text": "A=C∗(I,L1,...,Lm)"
+    },
+    {
+      "path": "README.md",
+      "index": 2,
+      "source_sha256": "333e0a1e27815d0ceee55c473fe3dc93d56c63e3bee2b3b4aee8eed6d70191a3",
+      "expected_text": "G"
+    },
+    {
+      "path": "README.md",
+      "index": 3,
+      "source_sha256": "cfba8d5e45a0772a2e990ddbbfddc55c8a210b22b58c2dc8857836cf959a8d14",
+      "expected_text": "G∉A"
+    },
+    {
+      "path": "README.md",
+      "index": 4,
+      "source_sha256": "e632b7095b0bf32c260fa4c539e9fd7b852d0de454e9be26f24d0d6f91d069d3",
+      "expected_text": "T"
+    },
+    {
+      "path": "README.md",
+      "index": 5,
+      "source_sha256": "fea83557a20e028913e286cf3b3890f4db6ac4c7e6276bec937498760b4226d6",
+      "expected_text": "Θ(T−2)"
+    },
+    {
+      "path": "README.md",
+      "index": 6,
+      "source_sha256": "e8033a1f64a0da800b84d3ff25a0fb694a535a41e5cdf002486184d274d87e3a",
+      "expected_text": "G∈A"
+    },
+    {
+      "path": "README.md",
+      "index": 7,
+      "source_sha256": "6b0529a5a6dbb552d03bc7c01202880699d8eef2d0f662be719e4adf98dcbb72",
+      "expected_text": "Ω(T−1)"
+    },
+    {
+      "path": "README.md",
+      "index": 8,
+      "source_sha256": "9114639f8bb422224bbd41f51459a7067ebc7c8eb475ae312d971f0a2bd53d1d",
+      "expected_text": "L=diag(−3,−1,1,3)"
+    },
+    {
+      "path": "README.md",
+      "index": 9,
+      "source_sha256": "8f9808d66d70e1002112789acf197cc461432f5963f36ce96c809aba2c32b187",
+      "expected_text": "G=L3"
+    },
+    {
+      "path": "README.md",
+      "index": 10,
+      "source_sha256": "fea83557a20e028913e286cf3b3890f4db6ac4c7e6276bec937498760b4226d6",
+      "expected_text": "Θ(T−2)"
+    },
+    {
+      "path": "README.md",
+      "index": 11,
+      "source_sha256": "f1941b975ffcc891792dd70f07d587a373d6842a1cc214ff4bd645a8dbefae61",
+      "expected_text": "Δ"
+    },
+    {
+      "path": "README.md",
+      "index": 12,
+      "source_sha256": "773137e62333430241fc411f26ea70bb753589d29a04e5e60414aeb86a15e2a0",
+      "expected_text": "Θ(T−2+τΔ2/T)"
+    },
+    {
+      "path": "README.md",
+      "index": 13,
+      "source_sha256": "b5e66b875e5adc164fad93004beb2d3676305414a3e531beb4a42f3cb21e1765",
+      "expected_text": "0<Δ≤Δ0≤W"
+    },
+    {
+      "path": "science/constructive_proof.md",
+      "index": 1,
+      "source_sha256": "7041690f46b297547bdd7482e16f527fa12d6dcc0dda38f4bb324d3765067fce",
+      "expected_text": "T−2"
+    },
+    {
+      "path": "science/constructive_proof.md",
+      "index": 2,
+      "source_sha256": "18ac3e7343f016890c510e93f935261169d9e3f565436429830faf0934f4f8e4",
+      "expected_text": "d"
+    },
+    {
+      "path": "science/constructive_proof.md",
+      "index": 3,
+      "source_sha256": "333e0a1e27815d0ceee55c473fe3dc93d56c63e3bee2b3b4aee8eed6d70191a3",
+      "expected_text": "G"
+    },
+    {
+      "path": "science/constructive_proof.md",
+      "index": 4,
+      "source_sha256": "74cb89ef83acdc318ea3d72b9494db055d480de670ba44b12f9d2f41738770f6",
+      "expected_text": "Fj"
+    },
+    {
+      "path": "science/constructive_proof.md",
+      "index": 5,
+      "source_sha256": "55d1823545b5b4c3cbc42b784c5e84605ffbe8e59d1dee9782cd87741eef9dc3",
+      "expected_text": "τ"
+    },
+    {
+      "path": "science/constructive_proof.md",
+      "index": 6,
+      "source_sha256": "c24cd7016086633cf89f098d9e8af1919eae862f749926c6fbe02cfd26f95d1e",
+      "expected_text": "(C1)Eω,c,γ(τ)=exp[τ(Dγ−i(ω−c)[G,⋅])],Dγ(X)=∑jγj(FjXFj−12{Fj2,X})."
+    },
+    {
+      "path": "science/constructive_proof.md",
+      "index": 7,
+      "source_sha256": "cd873814b352a920a2eb5899d0202190b3ba4081f0977d65e0ed7be100db6ed4",
+      "expected_text": "[−W,W]"
+    },
+    {
+      "path": "science/constructive_proof.md",
+      "index": 8,
+      "source_sha256": "6f45a8d3b97efae3466dc4f2628803ee7229549f3384c687b3bd169a72724418",
+      "expected_text": "W>0"
+    },
+    {
+      "path": "science/constructive_proof.md",
+      "index": 9,
+      "source_sha256": "15aaf15ae0a8192a0e4949c645030c716e6307ca2fb5b4bb1232730772535da6",
+      "expected_text": "0≤γj≤Γj<∞"
+    },
+    {
+      "path": "science/constructive_proof.md",
+      "index": 10,
+      "source_sha256": "b9a28b863a16da6bd487feef5c5c28093f23574a14396c0c0ed7de497366eb3e",
+      "expected_text": "(C2)AF=C∗(I,F1,...,Fm)."
+    },
+    {
+      "path": "science/constructive_proof.md",
+      "index": 11,
+      "source_sha256": "33fdec08ce3425f853567c534ae817f23c71fc86f6881418db2fa591481b659a",
+      "expected_text": "G∉AF"
+    },
+    {
+      "path": "science/constructive_proof.md",
+      "index": 12,
+      "source_sha256": "e741e6a17cf5e3b0b1708c7f73c84d750ae85e92f3412d6bf5337c87a3c40ef4",
+      "expected_text": "τ>0"
+    },
+    {
+      "path": "science/constructive_proof.md",
+      "index": 13,
+      "source_sha256": "e632b7095b0bf32c260fa4c539e9fd7b852d0de454e9be26f24d0d6f91d069d3",
+      "expected_text": "T"
+    },
+    {
+      "path": "science/constructive_proof.md",
+      "index": 14,
+      "source_sha256": "1ffb19d50c5b6c6249455089bf4033a83b16fb5595257ab1cdf972102f2d3248",
+      "expected_text": "(C3)supω∈[−W,W],0≤γj≤ΓjEω,γ(ω^−ω)2≤CT2"
+    },
+    {
+      "path": "science/constructive_proof.md",
+      "index": 15,
+      "source_sha256": "6c4873925ecca911f0de4a4612c3f1eab8c3cab8f6848693504d0b1d98734743",
+      "expected_text": "T>0"
+    },
+    {
+      "path": "science/constructive_proof.md",
+      "index": 16,
+      "source_sha256": "6b23c0d5f35d1b11f9b683f0b0a617355deb11277d91ae091d399c655b87940d",
+      "expected_text": "C"
+    },
+    {
+      "path": "science/constructive_proof.md",
+      "index": 17,
+      "source_sha256": "18ac3e7343f016890c510e93f935261169d9e3f565436429830faf0934f4f8e4",
+      "expected_text": "d"
+    },
+    {
+      "path": "science/constructive_proof.md",
+      "index": 18,
+      "source_sha256": "39618a461ffd8150bf025430a1ff4cb01eb1a63c604bb6e8f8a276f2b9483537",
+      "expected_text": "−cG"
+    },
+    {
+      "path": "science/constructive_proof.md",
+      "index": 19,
+      "source_sha256": "acff651c04187f21187dcf551c524d28c42df3d6441cd9cfcf757e0e90fdd340",
+      "expected_text": "|c|≤W"
+    },
+    {
+      "path": "science/constructive_proof.md",
+      "index": 20,
+      "source_sha256": "e632b7095b0bf32c260fa4c539e9fd7b852d0de454e9be26f24d0d6f91d069d3",
+      "expected_text": "T"
+    },
+    {
+      "path": "science/constructive_proof.md",
+      "index": 21,
+      "source_sha256": "834fb94f0edd7b4c694cf471e287d867fe23b75f1be147fbe7300e8f00e98e68",
+      "expected_text": "Lj"
+    },
+    {
+      "path": "science/constructive_proof.md",
+      "index": 22,
+      "source_sha256": "494a9e1ceedfbfab0beb864cae44d91a039af4009715730f2d38013e1b965722",
+      "expected_text": "Fj=Lj"
+    },
+    {
+      "path": "science/constructive_proof.md",
+      "index": 23,
+      "source_sha256": "b13e2aab3da598e11af6cd60f01bbf6a50c90eefcee90d8b186377ff14745219",
+      "expected_text": "γj=Γj=1"
+    },
+    {
+      "path": "science/constructive_proof.md",
+      "index": 24,
+      "source_sha256": "e60fc2559599d86396d7c348a41de9312b2428e6024ff8a5493f7b4d2934b68e",
+      "expected_text": "AF"
+    },
+    {
+      "path": "science/constructive_proof.md",
+      "index": 25,
+      "source_sha256": "bc08e453a7972d252b544fc93af34735ff5f5593a910d7df5e3da24502ca0dea",
+      "expected_text": "A=C∗(I,L1,...,Lm)"
+    },
+    {
+      "path": "science/constructive_proof.md",
+      "index": 26,
+      "source_sha256": "cb28421219675aea231d451d623668ccb8ddd0c4c0c69805ec3cac13381eec8a",
+      "expected_text": "⟨X,Y⟩=Tr(X†Y)"
+    },
+    {
+      "path": "science/constructive_proof.md",
+      "index": 27,
+      "source_sha256": "8dd0ff44b74515f21a6a331ce4ecc709741bce95c0076d3ac7244f35326ed6a0",
+      "expected_text": "ΠAF"
+    },
+    {
+      "path": "science/constructive_proof.md",
+      "index": 28,
+      "source_sha256": "d4a972611a1cd2e87e9d6d0d18d4905fec87fa23aa44d8d2c3b60b63b4f5ee05",
+      "expected_text": "(C4)Q=G−ΠAFG=Q+−Q−,s=TrQ+=TrQ−>0,ρ0=Q+/s,ρ1=Q−/s."
+    },
+    {
+      "path": "science/constructive_proof.md",
+      "index": 29,
+      "source_sha256": "4ae81572f06e1b88fd5ced7a1a000945432e83e1551e6f721ee9c00b8cc33260",
+      "expected_text": "Q"
+    },
+    {
+      "path": "science/constructive_proof.md",
+      "index": 30,
+      "source_sha256": "a83dd0ccbffe39d071cc317ddf6e97f5c6b1c87af91919271f9fa140b0508c6c",
+      "expected_text": "I"
+    },
+    {
+      "path": "science/constructive_proof.md",
+      "index": 31,
+      "source_sha256": "4ae81572f06e1b88fd5ced7a1a000945432e83e1551e6f721ee9c00b8cc33260",
+      "expected_text": "Q"
+    },
+    {
+      "path": "science/constructive_proof.md",
+      "index": 32,
+      "source_sha256": "33fdec08ce3425f853567c534ae817f23c71fc86f6881418db2fa591481b659a",
+      "expected_text": "G∉AF"
+    },
+    {
+      "path": "science/constructive_proof.md",
+      "index": 33,
+      "source_sha256": "dc9b392a4945bb35b51fa9056b9536178a416fb57f68cf08a2cdab04f33dd80e",
+      "expected_text": "ρ0"
+    },
+    {
+      "path": "science/constructive_proof.md",
+      "index": 34,
+      "source_sha256": "737cdd19f67dfe2835964a6da521be92ac21b850411565e591b2e783fa6738fb",
+      "expected_text": "ρ1"
+    },
+    {
+      "path": "science/constructive_proof.md",
+      "index": 35,
+      "source_sha256": "1c2a539c6a20e86e0ef175a7b222a1f006aec9a2a69c70ef92e8f36fd38294e9",
+      "expected_text": "|0L⟩"
+    },
+    {
+      "path": "science/constructive_proof.md",
+      "index": 36,
+      "source_sha256": "4872554440c1fffcdf282bf3a9481696b17c8674046833a7fb2f943cc4600592",
+      "expected_text": "|1L⟩"
+    },
+    {
+      "path": "science/constructive_proof.md",
+      "index": 37,
+      "source_sha256": "abb2e05e1e2d874e2a03b7c6dc265ea7fe775b9c0ad93a592679756445379e16",
+      "expected_text": "V:C2→Cd⊗HA"
+    },
+    {
+      "path": "science/constructive_proof.md",
+      "index": 38,
+      "source_sha256": "0c810e6b95091c7e0d098893a7824f7dfeee8b327cccd49f9f7c412ffce9f206",
+      "expected_text": "(C5)dimHA=rankQ++rankQ−≤d."
+    },
+    {
+      "path": "science/constructive_proof.md",
+      "index": 39,
+      "source_sha256": "e899016da80a1f85342d4c34e7fc5ac6a625a40705bddaab0f31355f0e6e3f2b",
+      "expected_text": "⟨0L|(X⊗IA)|1L⟩=0"
+    },
+    {
+      "path": "science/constructive_proof.md",
+      "index": 40,
+      "source_sha256": "4b68ab3847feda7d6c62c1fbcbeebfa35eab7351ed5e78f4ddadea5df64b8015",
+      "expected_text": "X"
+    },
+    {
+      "path": "science/constructive_proof.md",
+      "index": 41,
+      "source_sha256": "2807ec0c979a9484f8ccd505799c785432ccb7012621ac398aa347b88c633f4c",
+      "expected_text": "A∈AF"
+    },
+    {
+      "path": "science/constructive_proof.md",
+      "index": 42,
+      "source_sha256": "e02572596af2955465547225ff21e0f48b5bd18df79f2aab6a76ae4c18585546",
+      "expected_text": "Tr(AQ)/s=0"
+    },
+    {
+      "path": "science/constructive_proof.md",
+      "index": 43,
+      "source_sha256": "88c935eeead0e9f0e28b277a5a22a1d49bd6e7acf727029afada18a5c60a117e",
+      "expected_text": "(C6)V†(A⊗IA)V=αAI2(A∈AF)."
+    },
+    {
+      "path": "science/constructive_proof.md",
+      "index": 44,
+      "source_sha256": "5a4206603a4e5403ec4a3f8230091a0d0a29665799477c3415b5a30b45c29a03",
+      "expected_text": "A†B∈AF"
+    },
+    {
+      "path": "science/constructive_proof.md",
+      "index": 45,
+      "source_sha256": "571fb090e927a9ead578dcb8d13c9cc328af9bd86d544f5bb79dd65c15a1a581",
+      "expected_text": "A,B∈AF"
+    },
+    {
+      "path": "science/constructive_proof.md",
+      "index": 46,
+      "source_sha256": "e60fc2559599d86396d7c348a41de9312b2428e6024ff8a5493f7b4d2934b68e",
+      "expected_text": "AF"
+    },
+    {
+      "path": "science/constructive_proof.md",
+      "index": 47,
+      "source_sha256": "5386eaaba1e4ab8a8e9274e56e9d47dae0e6305036fc24fb36bf7f993d500de0",
+      "expected_text": "E1,...,Ea"
+    },
+    {
+      "path": "science/constructive_proof.md",
+      "index": 48,
+      "source_sha256": "43638b8c756a5af48c8fbc1ecd2c56f94b73cf16e596b2df202b77fa89ea408c",
+      "expected_text": "(C7)V†(Eα†Eβ⊗IA)V=CαβI2."
+    },
+    {
+      "path": "science/constructive_proof.md",
+      "index": 49,
+      "source_sha256": "b9bfc7b86612b4a117bf4c0ab9e2469ffdc904de5bf624e8882ce7ddc7aa8bd8",
+      "expected_text": "U†CU=diag(λa)"
+    },
+    {
+      "path": "science/constructive_proof.md",
+      "index": 50,
+      "source_sha256": "28bf17e6145249fc5e816b74f761cf866ed16badc55b4c83fc0f2fc78d12a410",
+      "expected_text": "Da=∑αEαUαa"
+    },
+    {
+      "path": "science/constructive_proof.md",
+      "index": 51,
+      "source_sha256": "cc4bfeeee6c3db5cb576ea467f5d547194a72f1605a231e51fe8874290482207",
+      "expected_text": "λa>0"
+    },
+    {
+      "path": "science/constructive_proof.md",
+      "index": 52,
+      "source_sha256": "6c950eed9b944ecab77058dd27587fe98528aa68fa84496df735146ede4e5b4d",
+      "expected_text": "(C8)Wa=(Da⊗IA)Vλa."
+    },
+    {
+      "path": "science/constructive_proof.md",
+      "index": 53,
+      "source_sha256": "f964af4026efed0495258744a99c77338ffcfbc8410b98f80bc2fb9adfc118ed",
+      "expected_text": "Wa†Wb=δabI2"
+    },
+    {
+      "path": "science/constructive_proof.md",
+      "index": 54,
+      "source_sha256": "adfe11b6e95a1d13758cf61d35be46f28edb0b3082a613ebce024588f639c8ce",
+      "expected_text": "(Da⊗IA)V=0"
+    },
+    {
+      "path": "science/constructive_proof.md",
+      "index": 55,
+      "source_sha256": "6e6ef6f82d4e10862ccd32979e859a3b719e8d98d734768b92f2a78d9781df07",
+      "expected_text": "Perr=∑λa>0WaWa†"
+    },
+    {
+      "path": "science/constructive_proof.md",
+      "index": 56,
+      "source_sha256": "86b1e6cb938cd561e5e7d6d30d1c82d6268f188e3dcf4bfa0786d6a76cb69980",
+      "expected_text": "(C9)R(σ)=∑λa>0Wa†σWa+Tr[(I−Perr)σ]|0⟩⟨0|."
+    },
+    {
+      "path": "science/constructive_proof.md",
+      "index": 57,
+      "source_sha256": "ad4b852d466215fc2a51b6a587a1095196eeae64632c45930b095ceeab5bf35e",
+      "expected_text": "Kμ∈AF"
+    },
+    {
+      "path": "science/constructive_proof.md",
+      "index": 58,
+      "source_sha256": "7903c81010eebdd6f329f10e161b0f6c5ec1c4fcf53b3772d46e61a2767e56e9",
+      "expected_text": "Da"
+    },
+    {
+      "path": "science/constructive_proof.md",
+      "index": 59,
+      "source_sha256": "0bdf05070351dde2aa59a6c4ace263cb51c9acbb74bfd77991d60e4dc5961145",
+      "expected_text": "(C10)(Kμ⊗IA)V=∑λa>0kμaλaWa."
+    },
+    {
+      "path": "science/constructive_proof.md",
+      "index": 60,
+      "source_sha256": "43bee757f1cbfafee1828e46a9cd6b4ea037e40efe8d05fb028e5e89cae417c2",
+      "expected_text": "∑a|kμa|2λaρ"
+    },
+    {
+      "path": "science/constructive_proof.md",
+      "index": 61,
+      "source_sha256": "6c3520173a846b3a2d039bab56ceb78a3eaebba8ef34eb805ffd3f0918a69fa3",
+      "expected_text": "∑μ,a|kμa|2λa=1"
+    },
+    {
+      "path": "science/constructive_proof.md",
+      "index": 62,
+      "source_sha256": "4e15baaf3b7db865464a7e599a63d127c1961c21659a191ba80fe9999d7a591d",
+      "expected_text": "(C11)R∘(N⊗idA)∘V=id2,V(ρ)=VρV†,"
+    },
+    {
+      "path": "science/constructive_proof.md",
+      "index": 63,
+      "source_sha256": "e60fc2559599d86396d7c348a41de9312b2428e6024ff8a5493f7b4d2934b68e",
+      "expected_text": "AF"
+    },
+    {
+      "path": "science/constructive_proof.md",
+      "index": 64,
+      "source_sha256": "55d1823545b5b4c3cbc42b784c5e84605ffbe8e59d1dee9782cd87741eef9dc3",
+      "expected_text": "τ"
+    },
+    {
+      "path": "science/constructive_proof.md",
+      "index": 65,
+      "source_sha256": "e632b7095b0bf32c260fa4c539e9fd7b852d0de454e9be26f24d0d6f91d069d3",
+      "expected_text": "T"
+    },
+    {
+      "path": "science/constructive_proof.md",
+      "index": 66,
+      "source_sha256": "de5a6f78116eca62d7fc5ce159d23ae6b889b365a1739ad2cf36f925a140d0cc",
+      "expected_text": "V"
+    },
+    {
+      "path": "science/constructive_proof.md",
+      "index": 67,
+      "source_sha256": "3e6d443bbd578ddc7e9504fa3d04d79016c52c0d1d62de94cb6c904f0254e21c",
+      "expected_text": "Lj=γjFj"
+    },
+    {
+      "path": "science/constructive_proof.md",
+      "index": 68,
+      "source_sha256": "c70a26b85760e24e8fc745213088494d031b6f3347475c59875d24a57c152e9d",
+      "expected_text": "δ=ω−c"
+    },
+    {
+      "path": "science/constructive_proof.md",
+      "index": 69,
+      "source_sha256": "f23c0b0bfc3cfa08fa74118ccf7a84d5b69b1a2266b69198adf8b0498bf1a76c",
+      "expected_text": "(C12)dUδ(t)=(−iδG−12∑jLj2)Uδ(t)dt−i∑jLjUδ(t)dWj(t),Uδ(0)=I."
+    },
+    {
+      "path": "science/constructive_proof.md",
+      "index": 70,
+      "source_sha256": "bb07b72cefc0368f94a1a4c655a39ff322be1c8215b2bf48dfd1c691a1414e7e",
+      "expected_text": "UδρUδ†"
+    },
+    {
+      "path": "science/constructive_proof.md",
+      "index": 71,
+      "source_sha256": "24ed25c6587ea8f77dff2237884a71b1b56ebddd381fe89c4eeb6849f134dcf6",
+      "expected_text": "δ=0"
+    },
+    {
+      "path": "science/constructive_proof.md",
+      "index": 72,
+      "source_sha256": "e60fc2559599d86396d7c348a41de9312b2428e6024ff8a5493f7b4d2934b68e",
+      "expected_text": "AF"
+    },
+    {
+      "path": "science/constructive_proof.md",
+      "index": 73,
+      "source_sha256": "834fb94f0edd7b4c694cf471e287d867fe23b75f1be147fbe7300e8f00e98e68",
+      "expected_text": "Lj"
+    },
+    {
+      "path": "science/constructive_proof.md",
+      "index": 74,
+      "source_sha256": "e741e6a17cf5e3b0b1708c7f73c84d750ae85e92f3412d6bf5337c87a3c40ef4",
+      "expected_text": "τ>0"
+    },
+    {
+      "path": "science/constructive_proof.md",
+      "index": 75,
+      "source_sha256": "c9c37a63111cb10d9b56ed12147652b8fe1869172b6cc86b55b3a8571497a322",
+      "expected_text": "(C13)Λδ=R∘(Eω,c,γ(τ)⊗idA)∘V."
+    },
+    {
+      "path": "science/constructive_proof.md",
+      "index": 76,
+      "source_sha256": "805659c2fc441d4302213b8ae3d53d0737a8cf0ce0f1bf31c01e6d04517d39d1",
+      "expected_text": "Λ0=id2"
+    },
+    {
+      "path": "science/constructive_proof.md",
+      "index": 77,
+      "source_sha256": "4f3d65b50d2e15f488af138c916a8f230fbe0d419bc9d15b11231f3f48d9ad25",
+      "expected_text": "Aδ(t)=U0(t)†Uδ(t)"
+    },
+    {
+      "path": "science/constructive_proof.md",
+      "index": 78,
+      "source_sha256": "6154f0c74b753894bbf795a2cdac954788d23dd836d082a618892cef10a10e14",
+      "expected_text": "(C14)dAδdt=−iδU0(t)†GU0(t)Aδ(t)."
+    },
+    {
+      "path": "science/constructive_proof.md",
+      "index": 79,
+      "source_sha256": "faa7cab9fba322f1891b00b1a6ffa4ef146e81589f932b00f0e0f2b3da960efa",
+      "expected_text": "(C15)iU0(τ)†∂δUδ(τ)|0=∫0τU0(t)†GU0(t)dt."
+    },
+    {
+      "path": "science/constructive_proof.md",
+      "index": 80,
+      "source_sha256": "662a26fd80cac20d234c7c02dae93e3cb91fa1929e44dbbb4c3abce49c395360",
+      "expected_text": "τ∥G∥"
+    },
+    {
+      "path": "science/constructive_proof.md",
+      "index": 81,
+      "source_sha256": "8b8f2212eaed56ec4a802b7696e551ff61e7078c583317fbb1870771a31c9969",
+      "expected_text": "Kμ(δ)"
+    },
+    {
+      "path": "science/constructive_proof.md",
+      "index": 82,
+      "source_sha256": "2392f5128df1b6c70c3333d4ddc10a1791664fbb9334b64c22026317edd3123b",
+      "expected_text": "(C16)Bτ=i∑μKμ(0)†Kμ′(0)=∫0τetDγ†(G)dt."
+    },
+    {
+      "path": "science/constructive_proof.md",
+      "index": 83,
+      "source_sha256": "a4cb3bb4664a7afbe745bfe443d87ce6ddcfec0541d3aaaeea26fc44e0ded29a",
+      "expected_text": "Bτ=τG"
+    },
+    {
+      "path": "science/constructive_proof.md",
+      "index": 84,
+      "source_sha256": "81ae26f5145c949ef02b1113797e5dd7ed54b8e3d50d190c8e5dae0048b01887",
+      "expected_text": "Rl"
+    },
+    {
+      "path": "science/constructive_proof.md",
+      "index": 85,
+      "source_sha256": "6ee00e9c110e43fe34bb498861d1d8510682bbc4a7ff37c0c3a49ee022cefb49",
+      "expected_text": "(C17)Rl(Kμ(0)⊗IA)V=λlμI2."
+    },
+    {
+      "path": "science/constructive_proof.md",
+      "index": 86,
+      "source_sha256": "f1fc978bbca53c1a559b4293d5603caf1123aa71aac45f40192268253bfa6cc0",
+      "expected_text": "(C18)AL=∑l,μλlμ∗Rl(Kμ′(0)⊗IA)V=V†∑l,μ(Kμ(0)†⊗IA)Rl†Rl(Kμ′(0)⊗IA)V=V†∑μ(Kμ(0)†Kμ′(0)⊗IA)V."
+    },
+    {
+      "path": "science/constructive_proof.md",
+      "index": 87,
+      "source_sha256": "cf55ff7ae95b04aa2a1b5941150af283bd886bc72802d02db01e381d67af7ab8",
+      "expected_text": "(C19)Λ0′(ρ)=−i[HL,ρ],HL=V†(Bτ⊗IA)V."
+    },
+    {
+      "path": "science/constructive_proof.md",
+      "index": 88,
+      "source_sha256": "f2b18ba7ab235e0a6680dc0932924afa9c0b472e0aef6a5de7e8d248cdcdbd3a",
+      "expected_text": "HL"
+    },
+    {
+      "path": "science/constructive_proof.md",
+      "index": 89,
+      "source_sha256": "84917110040a54243db2b772b28d58c0879751b19c44fc3d55b09d4b82a078c5",
+      "expected_text": "(C20)bτ=Tr(QBτ)s."
+    },
+    {
+      "path": "science/constructive_proof.md",
+      "index": 90,
+      "source_sha256": "3bef4261efde48052a6ef122730fd8d3a8f370a2ab9e2d522164e2db9942e018",
+      "expected_text": "(C21)Dγ(X)=−12∑j[Lj,[Lj,X]],⟨X,DγX⟩=−12∑j∥[Lj,X]∥HS2."
+    },
+    {
+      "path": "science/constructive_proof.md",
+      "index": 91,
+      "source_sha256": "bc312f8d6f40d917b19feda5c9aeb8d292571cfa134e8f9987c6f117650a8374",
+      "expected_text": "Dγ=Dγ†"
+    },
+    {
+      "path": "science/constructive_proof.md",
+      "index": 92,
+      "source_sha256": "e60fc2559599d86396d7c348a41de9312b2428e6024ff8a5493f7b4d2934b68e",
+      "expected_text": "AF"
+    },
+    {
+      "path": "science/constructive_proof.md",
+      "index": 93,
+      "source_sha256": "a807cbd105e515f6da2095de9c6babdf89a32954becb8714f718bf1504132883",
+      "expected_text": "AF⊥"
+    },
+    {
+      "path": "science/constructive_proof.md",
+      "index": 94,
+      "source_sha256": "2b0e8819f4ef46f55fe5d1ba79de28ae3519cd3d565bfaaba2de4fa30da1e51f",
+      "expected_text": "(C22)Fτ(Dγ)=∫0τetDγdt."
+    },
+    {
+      "path": "science/constructive_proof.md",
+      "index": 95,
+      "source_sha256": "9d47053085a37609406e3014dc5415fb42ebbb4a95baaa54a9337c0c9c869e73",
+      "expected_text": "∫0τetλdt>0"
+    },
+    {
+      "path": "science/constructive_proof.md",
+      "index": 96,
+      "source_sha256": "bd8dbb24d51170cdc056782722242442c4d54624586a97ff679586afbd50c0ba",
+      "expected_text": "λ≤0"
+    },
+    {
+      "path": "science/constructive_proof.md",
+      "index": 97,
+      "source_sha256": "4ae81572f06e1b88fd5ced7a1a000945432e83e1551e6f721ee9c00b8cc33260",
+      "expected_text": "Q"
+    },
+    {
+      "path": "science/constructive_proof.md",
+      "index": 98,
+      "source_sha256": "fb9b22750824ada775df07d0efe317e5a902caff3843102d22bbc76f993bb18a",
+      "expected_text": "(C23)bτ=⟨Q,Fτ(Dγ)Q⟩s>0."
+    },
+    {
+      "path": "science/constructive_proof.md",
+      "index": 99,
+      "source_sha256": "3244f644fe5afa8b089f40b9a0c4b1731e665bc7cc7c8cb245bc883b28779c0a",
+      "expected_text": "(C24)q=∥Q∥HS2s>0,g=∥G∥,M=2∑jΓj∥Fj∥2,amin(τ)={(1−e−Mτ)/M,M>0,τ,M=0."
+    },
+    {
+      "path": "science/constructive_proof.md",
+      "index": 100,
+      "source_sha256": "0d2b585fb65b473297314d91dabe8302b6595ca2dba5c93442c39fbe61e7cb96",
+      "expected_text": "Dγ"
+    },
+    {
+      "path": "science/constructive_proof.md",
+      "index": 101,
+      "source_sha256": "8b4d3a2723ce67b78f4a8635c72c8255c2e26e21ee0eec7141e3389cd3a6731c",
+      "expected_text": "[−M,0]"
+    },
+    {
+      "path": "science/constructive_proof.md",
+      "index": 102,
+      "source_sha256": "74cb89ef83acdc318ea3d72b9494db055d480de670ba44b12f9d2f41738770f6",
+      "expected_text": "Fj"
+    },
+    {
+      "path": "science/constructive_proof.md",
+      "index": 103,
+      "source_sha256": "948bbdde3cf13f9f1809a0d459404b8a76ec07808aee7ca9eee3c7984dbf7b51",
+      "expected_text": "2∥Fj∥"
+    },
+    {
+      "path": "science/constructive_proof.md",
+      "index": 104,
+      "source_sha256": "d93d91892037968f88a1004851a03e5f6810e12eebd75490f2306e81ac115875",
+      "expected_text": "(C25)qamin(τ)≤bτ≤qτ."
+    },
+    {
+      "path": "science/constructive_proof.md",
+      "index": 105,
+      "source_sha256": "9a793976554b900d5fd421c8f4c1eb5d572dd6ba555daae101a81ec157706b29",
+      "expected_text": "Mτ≤1"
+    },
+    {
+      "path": "science/constructive_proof.md",
+      "index": 106,
+      "source_sha256": "157bd3857300469f2f0d451bb52a5822783f7fada09941cc1fff28b316891bfc",
+      "expected_text": "qτ/2≤bτ≤qτ"
+    },
+    {
+      "path": "science/constructive_proof.md",
+      "index": 107,
+      "source_sha256": "0faea125fd67b55d0500c6c11538b4a1662a33dbcf09e2ca53f351cda49bb88f",
+      "expected_text": "K=−i[G,⋅]"
+    },
+    {
+      "path": "science/constructive_proof.md",
+      "index": 108,
+      "source_sha256": "8b2f125655dc8432aa67b83d4bdfad105e7951d7071336ffe31c9198abbc5d24",
+      "expected_text": "∥K∥⋄≤2g"
+    },
+    {
+      "path": "science/constructive_proof.md",
+      "index": 109,
+      "source_sha256": "16cf6eb5320a578f13cdf6f722a721d9d3234f029384a91979c36e6b05c4a946",
+      "expected_text": "(C26)∥Λδ−id2−δΛ0′∥⋄≤12δ2τ2∥K∥⋄2≤2δ2τ2g2."
+    },
+    {
+      "path": "science/constructive_proof.md",
+      "index": 110,
+      "source_sha256": "d203ba01eef4198ca268a62391076e5080e260b3fcb9b05b334d66206a893936",
+      "expected_text": "δ"
+    },
+    {
+      "path": "science/constructive_proof.md",
+      "index": 111,
+      "source_sha256": "d203ba01eef4198ca268a62391076e5080e260b3fcb9b05b334d66206a893936",
+      "expected_text": "δ"
+    },
+    {
+      "path": "science/constructive_proof.md",
+      "index": 112,
+      "source_sha256": "3bf7de87ba023aa618326743cdafce9b767af6362221d6e63cf318056c57899f",
+      "expected_text": "Uδ=Ad(e−iδHL)"
+    },
+    {
+      "path": "science/constructive_proof.md",
+      "index": 113,
+      "source_sha256": "b7b4c26963b48958b83adca0165acb045d65f5dd297e20efa9ef9a012af08e9c",
+      "expected_text": "∥HL∥≤τg"
+    },
+    {
+      "path": "science/constructive_proof.md",
+      "index": 114,
+      "source_sha256": "7939c14a14547dbd19701562ddac8f0ad113fe1ac0f042edb8466c139cb9e3fb",
+      "expected_text": "(C27)∥Λδ−Uδ∥⋄≤4δ2τ2g2,∥Λδn−Uδn∥⋄≤4nδ2τ2g2(n≥1)."
+    },
+    {
+      "path": "science/constructive_proof.md",
+      "index": 115,
+      "source_sha256": "24ed25c6587ea8f77dff2237884a71b1b56ebddd381fe89c4eeb6849f134dcf6",
+      "expected_text": "δ=0"
+    },
+    {
+      "path": "science/constructive_proof.md",
+      "index": 116,
+      "source_sha256": "295172587141b37da04adc2701d515d684935ef0a65b203d4738a3666c4b5e7d",
+      "expected_text": "|+⟩=(|0⟩+|1⟩)/2"
+    },
+    {
+      "path": "science/constructive_proof.md",
+      "index": 117,
+      "source_sha256": "18f5384d58bcb1bba0bcd9e6a6781d1a6ac2cc280c330ecbab6cb7931b721552",
+      "expected_text": "Y"
+    },
+    {
+      "path": "science/constructive_proof.md",
+      "index": 118,
+      "source_sha256": "1b16b1df538ba12dc3f97edbb85caa7050d46c148134290feba80f8236c83db9",
+      "expected_text": "n"
+    },
+    {
+      "path": "science/constructive_proof.md",
+      "index": 119,
+      "source_sha256": "18f5384d58bcb1bba0bcd9e6a6781d1a6ac2cc280c330ecbab6cb7931b721552",
+      "expected_text": "Y"
+    },
+    {
+      "path": "science/constructive_proof.md",
+      "index": 120,
+      "source_sha256": "9e07403c90da8aefea231a0232c3ca747322547237bae75b365ec3a214ab9021",
+      "expected_text": "sin(nbτδ)"
+    },
+    {
+      "path": "science/constructive_proof.md",
+      "index": 121,
+      "source_sha256": "45964eb8c81a3d1bdb97ffdc73ee759ef61441c27e104aeda815be069b94d2f0",
+      "expected_text": "μn(δ)"
+    },
+    {
+      "path": "science/constructive_proof.md",
+      "index": 122,
+      "source_sha256": "28b1bc20345d8e32bd5d53738269a754cb57c75c51a6450afaed16422c08e919",
+      "expected_text": "(C28)|μn(δ)−sin(nbτδ)|≤4nδ2τ2g2."
+    },
+    {
+      "path": "science/constructive_proof.md",
+      "index": 123,
+      "source_sha256": "f75f26310bf28fc2850164e681519abd5eeca4e9ea6f3f1ed5320c6ba621e978",
+      "expected_text": "(C29)β=14,r=34,s0=sin(β/8)>0."
+    },
+    {
+      "path": "science/constructive_proof.md",
+      "index": 124,
+      "source_sha256": "e741e6a17cf5e3b0b1708c7f73c84d750ae85e92f3412d6bf5337c87a3c40ef4",
+      "expected_text": "τ>0"
+    },
+    {
+      "path": "science/constructive_proof.md",
+      "index": 125,
+      "source_sha256": "69ad2ac01fe12a23bdfc83eb3e0bb1b9c8f917efda1844441030d2d0fc9bce11",
+      "expected_text": "(C30)Mτ≤1,qτW≤β/2,4βτg2Wq≤s0/2."
+    },
+    {
+      "path": "science/constructive_proof.md",
+      "index": 126,
+      "source_sha256": "15828944df52904a735e1832ce614d33339446f2b0e34e4c3e64ca8441f8ea89",
+      "expected_text": "q>0"
+    },
+    {
+      "path": "science/constructive_proof.md",
+      "index": 127,
+      "source_sha256": "e632b7095b0bf32c260fa4c539e9fd7b852d0de454e9be26f24d0d6f91d069d3",
+      "expected_text": "T"
+    },
+    {
+      "path": "science/constructive_proof.md",
+      "index": 128,
+      "source_sha256": "c3eab657a048e506c744f049fefc33ea05641c53a82b99895b57cc2908284200",
+      "expected_text": "I=[c−w,c+w]"
+    },
+    {
+      "path": "science/constructive_proof.md",
+      "index": 129,
+      "source_sha256": "4ea58675d2c0d57ec1da6f09734bc7e3c6a7bd059bfe21bb47ed9f768b88d75a",
+      "expected_text": "w≤W"
+    },
+    {
+      "path": "science/constructive_proof.md",
+      "index": 130,
+      "source_sha256": "2e7d2c03a9507ae265ecf5b5356885a53393a2029d241394997265a1a25aefc6",
+      "expected_text": "c"
+    },
+    {
+      "path": "science/constructive_proof.md",
+      "index": 131,
+      "source_sha256": "6be2ed8c9e11ff3fefe5664f329b1de212dcb318f19235fda11e9b5bd7beeeb4",
+      "expected_text": "(C31)n(w)=⌊βqτw⌋."
+    },
+    {
+      "path": "science/constructive_proof.md",
+      "index": 132,
+      "source_sha256": "58857e79a95eafa9350d1817473d366393a0e24d8ee2e6cb8d47a65a65c4310e",
+      "expected_text": "(C32)β2qτw≤n(w)≤βqτw."
+    },
+    {
+      "path": "science/constructive_proof.md",
+      "index": 133,
+      "source_sha256": "0ff32b78a655c6b55d52040d81524c0f75c5f32e463fd748b78197f579a24b29",
+      "expected_text": "w/2≤|δ|≤w"
+    },
+    {
+      "path": "science/constructive_proof.md",
+      "index": 134,
+      "source_sha256": "ba8eebbffe00467f107272434553975437fc38e5bb6df1ee60782c43ece98ee6",
+      "expected_text": "(C33)β/8≤|n(w)bτδ|≤β."
+    },
+    {
+      "path": "science/constructive_proof.md",
+      "index": 135,
+      "source_sha256": "d203ba01eef4198ca268a62391076e5080e260b3fcb9b05b334d66206a893936",
+      "expected_text": "δ"
+    },
+    {
+      "path": "science/constructive_proof.md",
+      "index": 136,
+      "source_sha256": "b60dd8e5854d9e87d45254216e4b0e18144493192038dce0f4b50e83278587e0",
+      "expected_text": "s0"
+    },
+    {
+      "path": "science/constructive_proof.md",
+      "index": 137,
+      "source_sha256": "e9611040ca69839ca12c91b9b7b5e9f35877f0fdacc9121b7e9ca986b3516306",
+      "expected_text": "4βτg2w/q≤s0/2"
+    },
+    {
+      "path": "science/constructive_proof.md",
+      "index": 138,
+      "source_sha256": "1226f7356b3d970ffe16b77444903489cb28f4c3e845ecd2d47cb8de8bb9c187",
+      "expected_text": "(C34)sgn(δ)μn(w)(δ)≥s0/2(w/2≤|δ|≤w)."
+    },
+    {
+      "path": "science/constructive_proof.md",
+      "index": 139,
+      "source_sha256": "aedac11d029529a198b44f6d8d8d90881e3cea2c6a80fe8b5b8bb30d4dbbf6d6",
+      "expected_text": "bτ"
+    },
+    {
+      "path": "science/constructive_proof.md",
+      "index": 140,
+      "source_sha256": "62c66a7a5dd70c3146618063c344e531e6d4b59e379808443ce962b3abd63c5a",
+      "expected_text": "m"
+    },
+    {
+      "path": "science/constructive_proof.md",
+      "index": 141,
+      "source_sha256": "9d16f500a46f68d69da6bb124988eb189d1a0a0bb93e80659d2db62dc3adcea6",
+      "expected_text": "Y―"
+    },
+    {
+      "path": "science/constructive_proof.md",
+      "index": 142,
+      "source_sha256": "ffb2fb9e9cda798cfc45c4a0d36efba8ba14b5a8ca7f985cec7326e2a2b2e149",
+      "expected_text": "±1"
+    },
+    {
+      "path": "science/constructive_proof.md",
+      "index": 143,
+      "source_sha256": "7d43fa5a5ad98267875adce54ead81128e1ae26096bb7944c5dd08d03fb459f5",
+      "expected_text": "Y―≥0"
+    },
+    {
+      "path": "science/constructive_proof.md",
+      "index": 144,
+      "source_sha256": "8c6e95503d910a7517a97701034a533856606c1ef0abad3d3977cea54cf9fa0c",
+      "expected_text": "[c−w/2,c+w]"
+    },
+    {
+      "path": "science/constructive_proof.md",
+      "index": 145,
+      "source_sha256": "ba27b9dc6c0b821c5f255a0e69cb2438ebc3ddaf31691080c5291e657c4a5229",
+      "expected_text": "[c−w,c+w/2]"
+    },
+    {
+      "path": "science/constructive_proof.md",
+      "index": 146,
+      "source_sha256": "b99943477e9e30681bae8e00e3acc3ba1a2f7d89e50e1fbdd80eba8357ebdfae",
+      "expected_text": "[c−w/2,c+w/2]"
+    },
+    {
+      "path": "science/constructive_proof.md",
+      "index": 147,
+      "source_sha256": "55e1ebd3ebe4f1b46a5ccc9866df4d74e99fe240397e155d04664e5ce2d8e5dc",
+      "expected_text": "rw"
+    },
+    {
+      "path": "science/constructive_proof.md",
+      "index": 148,
+      "source_sha256": "3d3513849591abcd7ced53b267bedc1d1a1537fe2a06cf57df5219faf336d2c1",
+      "expected_text": "\\Pr\\{\\text{truthexcluded}\\mid\\text{truthincurrentinterval}}\\lee^{-ms_0^2/8}.\\tag{C35}"
+    },
+    {
+      "path": "science/constructive_proof.md",
+      "index": 149,
+      "source_sha256": "cd873814b352a920a2eb5899d0202190b3ba4081f0977d65e0ed7be100db6ed4",
+      "expected_text": "[−W,W]"
+    },
+    {
+      "path": "science/constructive_proof.md",
+      "index": 150,
+      "source_sha256": "86be9a55762d316a3026c2836d044f5fc76e34da10e1b45feee5f18be7edb177",
+      "expected_text": "K"
+    },
+    {
+      "path": "science/constructive_proof.md",
+      "index": 151,
+      "source_sha256": "83d08adcc5c934c9691e4325b21f2987fa834f0093fbbdd48ff86e2396839bce",
+      "expected_text": "wj=Wrj"
+    },
+    {
+      "path": "science/constructive_proof.md",
+      "index": 152,
+      "source_sha256": "189f40034be7a199f1fa9891668ee3ab6049f82d38c68be70f596eab2e1857b7",
+      "expected_text": "j"
+    },
+    {
+      "path": "science/constructive_proof.md",
+      "index": 153,
+      "source_sha256": "5045394d3030a346f04fa25c1ca6b9caaab947160f446eaf44b7e73f209a6de2",
+      "expected_text": "nj=n(wj−1)"
+    },
+    {
+      "path": "science/constructive_proof.md",
+      "index": 154,
+      "source_sha256": "de541daa0e98a4c40039fc4b39135a9b94c2677785bcdcac4f93ddf0418ab4bb",
+      "expected_text": "(C36)Crep=24log(1/r)s02,mj=⌈Crep(K−j+1)⌉."
+    },
+    {
+      "path": "science/constructive_proof.md",
+      "index": 155,
+      "source_sha256": "189f40034be7a199f1fa9891668ee3ab6049f82d38c68be70f596eab2e1857b7",
+      "expected_text": "j"
+    },
+    {
+      "path": "science/constructive_proof.md",
+      "index": 156,
+      "source_sha256": "2a6ea2e748d365f47aac453ebbdec4b35af5c257cef44fb234fb989474bbd654",
+      "expected_text": "pj=r3(K−j+1)"
+    },
+    {
+      "path": "science/constructive_proof.md",
+      "index": 157,
+      "source_sha256": "49f567670afb7094a5f5324225da1a224dde4ed486e4881666fa40e37468cbff",
+      "expected_text": "wK"
+    },
+    {
+      "path": "science/constructive_proof.md",
+      "index": 158,
+      "source_sha256": "189f40034be7a199f1fa9891668ee3ab6049f82d38c68be70f596eab2e1857b7",
+      "expected_text": "j"
+    },
+    {
+      "path": "science/constructive_proof.md",
+      "index": 159,
+      "source_sha256": "40253a9e9376ead8b803d67a52de88e19f806829d34982a545c14ab2ae6d74bc",
+      "expected_text": "2wj−1"
+    },
+    {
+      "path": "science/constructive_proof.md",
+      "index": 160,
+      "source_sha256": "432052ad729fdb4e6a23781d225a2b4c695a8d3143a369d5b5fa53b02c5d8903",
+      "expected_text": "(C37)supω,γE(ω^−ω)2≤wK2+4∑j=1Kwj−12r3(K−j+1)=wK2(1+4∑k=1Krk)≤13wK2."
+    },
+    {
+      "path": "science/constructive_proof.md",
+      "index": 161,
+      "source_sha256": "86be9a55762d316a3026c2836d044f5fc76e34da10e1b45feee5f18be7edb177",
+      "expected_text": "K"
+    },
+    {
+      "path": "science/constructive_proof.md",
+      "index": 162,
+      "source_sha256": "9967d645ee7da9a8725e4eb9f43eaf71126ebe9fc92519290a8f4e0621e8daa2",
+      "expected_text": "(C38)TK=τ∑j=1Kmjnj."
+    },
+    {
+      "path": "science/constructive_proof.md",
+      "index": 163,
+      "source_sha256": "51b26afa28c2dde6a42ad6a9765ab9bc9d32501d3bd7a58ce95252e29c54fd58",
+      "expected_text": "mj≤(Crep+1)(K−j+1)"
+    },
+    {
+      "path": "science/constructive_proof.md",
+      "index": 164,
+      "source_sha256": "c25cc474b497562fee435c035912a04adbf594b26d17c63ea1ec4b96855a632f",
+      "expected_text": "(C39)TK≤β(Crep+1)q∑j=1KK−j+1wj−1≤BwK,B=β(Crep+1)qr(1−r)2."
+    },
+    {
+      "path": "science/constructive_proof.md",
+      "index": 165,
+      "source_sha256": "2f1c04bb199251832fd2e0483257f85a17f0af3f0a05daae9df518ed90606bc8",
+      "expected_text": "wj−1=wKr−(K−j+1)"
+    },
+    {
+      "path": "science/constructive_proof.md",
+      "index": 166,
+      "source_sha256": "eda44c8ca80fe206126d0b9ac8248adb67b49ab31becd119e6661294761944be",
+      "expected_text": "∑k≥1krk=r/(1−r)2"
+    },
+    {
+      "path": "science/constructive_proof.md",
+      "index": 167,
+      "source_sha256": "e632b7095b0bf32c260fa4c539e9fd7b852d0de454e9be26f24d0d6f91d069d3",
+      "expected_text": "T"
+    },
+    {
+      "path": "science/constructive_proof.md",
+      "index": 168,
+      "source_sha256": "16b286257ab2a613c922c5d2ce6fe3cc7c1e1b8406e29330f4397c4a8b3195b9",
+      "expected_text": "(C40)K(T)={0,T<B/W,⌊log(WT/B)log(1/r)⌋,T≥B/W."
+    },
+    {
+      "path": "science/constructive_proof.md",
+      "index": 169,
+      "source_sha256": "b0396afcb8b21e6c679d75b9ddb94d5f1527e8d7ec76e0f3f699bdfa380c5a97",
+      "expected_text": "K=0"
+    },
+    {
+      "path": "science/constructive_proof.md",
+      "index": 170,
+      "source_sha256": "6978a5e4bf035607bf835047d4fe5eca7d5d477cab26e10a2eb1291d941f98c2",
+      "expected_text": "B/T≤wK<B/(rT)"
+    },
+    {
+      "path": "science/constructive_proof.md",
+      "index": 171,
+      "source_sha256": "accd0f93168ec02648bf30a0e4cd0b8b5fe92e1e9c76501be52c0398201cb78b",
+      "expected_text": "TK≤T"
+    },
+    {
+      "path": "science/constructive_proof.md",
+      "index": 172,
+      "source_sha256": "86af779e2f08c1222a59540df841b5ff3d33acb31144f1cb6d8185eb90aeec12",
+      "expected_text": "13B2/(r2T2)"
+    },
+    {
+      "path": "science/constructive_proof.md",
+      "index": 173,
+      "source_sha256": "74c43b4a5abc1ccfffe24f8281a0bdd2075c377af87335211f41546bd16143fb",
+      "expected_text": "W2≤B2/T2"
+    },
+    {
+      "path": "science/constructive_proof.md",
+      "index": 174,
+      "source_sha256": "b77f829ca3853a67c209abff9b8b8e651e0f391807280b91e77e5514ef7b445f",
+      "expected_text": "(C41)∑j=1Kmj≤(Crep+1)K(K+1)2=O((logT)2)."
+    },
+    {
+      "path": "science/constructive_proof.md",
+      "index": 175,
+      "source_sha256": "7f3d836e366158cf7aecab66cbf2d296c2c78919b71cc0359fdfc49fdbe9eadd",
+      "expected_text": "K=O(logT)"
+    },
+    {
+      "path": "science/constructive_proof.md",
+      "index": 176,
+      "source_sha256": "14973f38f76f7dfb3333c4cb02f70ee02d878cf098b7f3240fce5dc53fa32e2a",
+      "expected_text": "T/τ"
+    },
+    {
+      "path": "science/constructive_proof.md",
+      "index": 177,
+      "source_sha256": "e632b7095b0bf32c260fa4c539e9fd7b852d0de454e9be26f24d0d6f91d069d3",
+      "expected_text": "T"
+    },
+    {
+      "path": "science/constructive_proof.md",
+      "index": 178,
+      "source_sha256": "667b113b405e36426f7256982c25d2a0ee0f93fac544c7dab4ee696ced3dcdc0",
+      "expected_text": "ν=λmax(G)−λmin(G)>0"
+    },
+    {
+      "path": "science/constructive_proof.md",
+      "index": 179,
+      "source_sha256": "333e0a1e27815d0ceee55c473fe3dc93d56c63e3bee2b3b4aee8eed6d70191a3",
+      "expected_text": "G"
+    },
+    {
+      "path": "science/constructive_proof.md",
+      "index": 180,
+      "source_sha256": "ae1b96daf8dfecf7636226aed25200e96c7c84f0a1f4ef509a1b6ddd6567287d",
+      "expected_text": "∥−i[G,⋅]∥⋄≤ν"
+    },
+    {
+      "path": "science/constructive_proof.md",
+      "index": 181,
+      "source_sha256": "909b532e7a0eac592b50201835a46d254be234fa16dbb7b7c38106f344729f87",
+      "expected_text": "(C42)∥Eω,c,γ(τ)−Eω′,c,γ(τ)∥⋄≤τν|ω−ω′|."
+    },
+    {
+      "path": "science/constructive_proof.md",
+      "index": 182,
+      "source_sha256": "2e7d2c03a9507ae265ecf5b5356885a53393a2029d241394997265a1a25aefc6",
+      "expected_text": "c"
+    },
+    {
+      "path": "science/constructive_proof.md",
+      "index": 183,
+      "source_sha256": "0436e1c071c5af1df610d668484ee83efa21db981cae71ee12fe083cf4430aa0",
+      "expected_text": "(C43)∥ρωout−ρω′out∥1≤Tν|ω−ω′|."
+    },
+    {
+      "path": "science/constructive_proof.md",
+      "index": 184,
+      "source_sha256": "a9fb3bcb5e451252b3ee36f77c278c01b30dca4adee5f7dc3127434d769e0ee7",
+      "expected_text": "ε=min{2W,1/(νT)}"
+    },
+    {
+      "path": "science/constructive_proof.md",
+      "index": 185,
+      "source_sha256": "d939926f05444b0f4495fb9629ecbfa80d99a8ec1a20d06800ca5a3d5f4fd276",
+      "expected_text": "1/2"
+    },
+    {
+      "path": "science/constructive_proof.md",
+      "index": 186,
+      "source_sha256": "01c58031c584b13dc66337f452798e7bd50d1c728f05fcc52e098de6b5cfe77d",
+      "expected_text": "ε2/4"
+    },
+    {
+      "path": "science/constructive_proof.md",
+      "index": 187,
+      "source_sha256": "f593c94566a2dbd949d858eadbe5f311b8d14d964c4ce966fa94396a0609213b",
+      "expected_text": "(1−1/2)/2=1/4"
+    },
+    {
+      "path": "science/constructive_proof.md",
+      "index": 188,
+      "source_sha256": "b9818fd3ff4145ec0be15b9656e4932446daa5cfae8c237e8a2cf480a37cd4dd",
+      "expected_text": "(C44)ε216=min{W24,116ν2T2}."
+    },
+    {
+      "path": "science/constructive_proof.md",
+      "index": 189,
+      "source_sha256": "fea83557a20e028913e286cf3b3890f4db6ac4c7e6276bec937498760b4226d6",
+      "expected_text": "Θ(T−2)"
+    },
+    {
+      "path": "science/constructive_proof.md",
+      "index": 190,
+      "source_sha256": "6b0529a5a6dbb552d03bc7c01202880699d8eef2d0f662be719e4adf98dcbb72",
+      "expected_text": "Ω(T−1)"
+    },
+    {
+      "path": "science/model.md",
+      "index": 55,
+      "source_sha256": "6a5c1ac4f720c62a2edab2547d0d44cc718d1b83364429c27812a8cae4b2ea93",
+      "required_text": [
+        "Θ",
+        "T",
+        "Δ",
+        "τ"
+      ]
+    },
+    {
+      "path": "learning/NIELSEN_CHUANG_BRIDGE.md",
+      "index": 165,
+      "source_sha256": "7879308b7fc30aae7032e88d639c99220f42ce64a3a72e73f8cff1f19f069ff3",
+      "required_text": [
+        "Θ",
+        "T",
+        "Δ",
+        "τ"
+      ]
+    },
+    {
+      "path": "learning/MILESTONES.md",
+      "index": 19,
+      "source_sha256": "bcafecd043339f9ca8c16d3c3d012a7a3e6044be922e09a3a2492524661d8527",
+      "required_text": [
+        "Θ",
+        "T",
+        "Δ",
+        "τ"
+      ]
+    }
+  ]
+}

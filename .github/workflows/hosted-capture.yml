@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-24.04
     timeout-minutes: 30
     env:
-      CAPTURE_REVISION: b9dfe44ac04bfe2d076c1257cd728ce8f3cf56b1
+      CAPTURE_REVISION: 5dc4a7cd056a266d650b8c89909b149bc17afe60
     steps:
       - name: Check out collector
         uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
@@ -28,7 +28,7 @@ jobs:
           "$RUNNER_TEMP/hosted-deps/node_modules/.bin/playwright" install --with-deps chromium
       - name: Capture exact GitHub pages at both widths
         run: |
-          NODE_PATH="$RUNNER_TEMP/hosted-deps/node_modules" node collector/verification/hosted/capture_hosted_math.cjs --root "$GITHUB_WORKSPACE/source" --repository "GoGoKo699/Finite-Cadence-Quantum-Metrology" --revision "$CAPTURE_REVISION" --output "$RUNNER_TEMP/hosted-evidence" --page README.md --page science/constructive_proof.md
+          NODE_PATH="$RUNNER_TEMP/hosted-deps/node_modules" node collector/verification/hosted/capture_hosted_math.cjs --root "$GITHUB_WORKSPACE/source" --repository "GoGoKo699/Finite-Cadence-Quantum-Metrology" --revision "$CAPTURE_REVISION" --output "$RUNNER_TEMP/hosted-evidence" --contract "$GITHUB_WORKSPACE/collector/verification/hosted/math-contract.json"
       - name: Preserve capture evidence
         if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
