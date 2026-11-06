@@ -16,248 +16,274 @@ and the channel RLD tools attributed there. See
 
 In a four-dimensional sensor, take
 
-$$
-L=\operatorname{diag}(-3,-1,1,3),\qquad
-G=L^3=\operatorname{diag}(-27,-1,1,27).
+```math
+\begin{aligned}
+L&=\mathrm{diag}(-3,-1,1,3),\\
+G&=L^3=\mathrm{diag}(-27,-1,1,27).
+\end{aligned}
 \tag{F1}
-$$
+```
 
-The physical generator at residual frequency $\delta=\omega-c$ is
+The physical generator at residual frequency $`\mathstrut{\delta=\omega-c}`$ is
 
-$$
+```math
 \mathcal L_\delta(\rho)=-i\delta[G,\rho]
 +L\rho L-\frac12\{L^2,\rho\}.
-$$
+```
 
 For one Hermitian jump, the real Hermitian infinitesimal Lindblad span is
 
-$$
-\mathcal S=\operatorname{span}_{\mathbb R}\{I,L,L^2\}.
-$$
+```math
+\mathcal S=\mathrm{span}_{\mathbb R}\{I,L,L^2\}.
+```
 
-The signal $G$ is outside $\mathcal S$. Otherwise a monic cubic minus a
+The signal $`\mathstrut{G}`$ is outside $`\mathstrut{\mathcal S}`$. Otherwise a monic cubic minus a
 polynomial of degree at most two would vanish at all four distinct
-eigenvalues of $L$, which is impossible. On the other hand, polynomial
+eigenvalues of $`\mathstrut{L}`$, which is impossible. On the other hand, polynomial
 interpolation at those four eigenvalues generates every diagonal matrix.
-Thus $\mathcal A=C^*(I,L)$ is the full diagonal algebra and
-$G\in\mathcal A$. The HNLS condition and the fixed-cadence criterion
+Thus $`\mathstrut{\mathcal A=C^*(I,L)}`$ is the full diagonal algebra and
+$`\mathstrut{G\in\mathcal A}`$. The HNLS condition and the fixed-cadence criterion
 therefore disagree for this explicit physical model.
 
-Define the encoding isometry $V$ by
+Define the encoding isometry $`\mathstrut{V}`$ by
 
-$$
-V|0\rangle=\frac{\sqrt3}{2}|2\rangle+\frac12|4\rangle,
-\qquad
-V|1\rangle=\frac12|1\rangle+\frac{\sqrt3}{2}|3\rangle.
+```math
+\begin{aligned}
+V|0\rangle&=\frac{\sqrt3}{2}|2\rangle+\frac12|4\rangle,
+\\
+V|1\rangle&=\frac12|1\rangle+\frac{\sqrt3}{2}|3\rangle.
+\end{aligned}
 \tag{F2}
-$$
+```
 
 The supports of these two codewords are disjoint in the eigenbasis of
-$L$. Their moments are:
+$`\mathstrut{L}`$. Their moments are:
 
 | Operator | Logical zero expectation | Logical one expectation |
 |---|---:|---:|
-| $I$ | $1$ | $1$ |
-| $L$ | $0$ | $0$ |
-| $L^2$ | $3$ | $3$ |
-| $L^3=G$ | $6$ | $-6$ |
+| $`\mathstrut{I}`$ | $`\mathstrut{1}`$ | $`\mathstrut{1}`$ |
+| $`\mathstrut{L}`$ | $`\mathstrut{0}`$ | $`\mathstrut{0}`$ |
+| $`\mathstrut{L^2}`$ | $`\mathstrut{3}`$ | $`\mathstrut{3}`$ |
+| $`\mathstrut{L^3=G}`$ | $`\mathstrut{6}`$ | $`\mathstrut{-6}`$ |
 
 All off-diagonal code matrix elements of these operators vanish.
 Consequently
 
-$$
-V^\dagger LV=0,\qquad
-V^\dagger L^2V=3I_2,\qquad
-V^\dagger GV=6Z.
+```math
+\begin{aligned}
+V^\dagger LV&=0,\\
+V^\dagger L^2V&=3I_2,\\
+V^\dagger GV&=6Z.
+\end{aligned}
 \tag{F3}
-$$
+```
 
 The first two identities give the Knill–Laflamme conditions for the
-leading error space spanned by $I,L$. The last identity retains a
+leading error space spanned by $`\mathstrut{I,L}`$. The last identity retains a
 nontrivial logical Hamiltonian. No noiseless encoding ancilla is needed
 for this code; a fixed reset apparatus may implement its boundary
 recovery.
 
 ## 2. An explicit recovery and a finite-step approximation
 
-Let $P=VV^\dagger$. The two subspaces spanned by $V$ and $LV/\sqrt3$
+Let $`\mathstrut{P=VV^\dagger}`$. The two subspaces spanned by $`\mathstrut{V}`$ and $`\mathstrut{LV/\sqrt3}`$
 are orthogonal and each has dimension two, so
 
-$$
+```math
 P+\frac13LPL=I_4.
-$$
+```
 
 The two Kraus operators
 
-$$
-R_0=V^\dagger,\qquad R_1=\frac1{\sqrt3}V^\dagger L
+```math
+\begin{aligned}
+R_0&=V^\dagger,\qquad R_1=\frac1{\sqrt3}V^\dagger L
+\end{aligned}
 \tag{F4}
-$$
+```
 
 therefore define a trace-preserving decoder
-$\mathcal R(\sigma)=\sum_{a=0}^1R_a\sigma R_a^\dagger$ from the physical
-sensor to the logical qubit. Re-encoding with $V$ prepares the next cell.
-For a cell of length $h$, write the corrected logical channel as
+$`\mathstrut{\mathcal R(\sigma)=\sum_{a=0}^1R_a\sigma R_a^\dagger}`$ from the physical
+sensor to the logical qubit. Re-encoding with $`\mathstrut{V}`$ prepares the next cell.
+For a cell of length $`\mathstrut{h}`$, write the corrected logical channel as
 
-$$
+```math
 \Lambda_{\delta,h}=\mathcal R\circ e^{h\mathcal L_\delta}\circ\mathcal V,
 \qquad \mathcal V(\rho)=V\rho V^\dagger.
-$$
+```
 
-At $h=0$ it is the identity. The dissipative first derivative vanishes:
-the recovered jump term is $3\rho$ and the two recovered anticommutator
-terms sum to $-3\rho$. In the Hamiltonian derivative the $R_1$ term
-vanishes because $R_1V=0$, leaving
+At $`\mathstrut{h=0}`$ it is the identity. The dissipative first derivative vanishes:
+the recovered jump term is $`\mathstrut{3\rho}`$ and the two recovered anticommutator
+terms sum to $`\mathstrut{-3\rho}`$. In the Hamiltonian derivative the $`\mathstrut{R_1}`$ term
+vanishes because $`\mathstrut{R_1V=0}`$, leaving
 
-$$
+```math
+\begin{aligned}
 \left.\partial_h\Lambda_{\delta,h}\right|_{h=0}
-=-i[6\delta Z,\cdot].
+&=-i[6\delta Z,\cdot].
+\end{aligned}
 \tag{F5}
-$$
+```
 
 This is a first-order correction statement. It is not an exact
-finite-duration correction of the null channel: higher powers of $L$
+finite-duration correction of the null channel: higher powers of $`\mathstrut{L}`$
 belong to the finite-time Kraus span and fail the same code conditions.
 
-For a valid current frequency interval of half-width $w\le W$ whose
-center is the physical compensation $c$, one has $|\delta|\le W$.
+For a valid current frequency interval of half-width $`\mathstrut{w\le W}`$ whose
+center is the physical compensation $`\mathstrut{c}`$, one has $`\mathstrut{|\delta|\le W}`$.
 On that domain,
 
-$$
+```math
 \|\mathcal L_\delta\|_\diamond\le18+54W,
 \qquad
 \|-i[6\delta Z,\cdot]\|_\diamond\le12W.
-$$
+```
 
-For a channel semigroup with generator $\mathcal K$, the integral Taylor
+For a channel semigroup with generator $`\mathstrut{\mathcal K}`$, the integral Taylor
 remainder satisfies
 
-$$
+```math
 \|e^{h\mathcal K}-\mathrm{id}-h\mathcal K\|_\diamond
 \le\frac{h^2}{2}\|\mathcal K\|_\diamond^2,
-$$
+```
 
 because the semigroup factors in the second-derivative integral are
 channels. Apply this before the fixed decoder and to the ideal logical
 unitary, and use (F5). For
 
-$$
-\mathcal U_{\delta,h}=\operatorname{Ad}_{e^{-i6\delta hZ}},\qquad
+```math
+\mathcal U_{\delta,h}=\mathrm{Ad}_{e^{-i6\delta hZ}},\qquad
 C_W=\frac{(18+54W)^2+(12W)^2}{2},
-$$
+```
 
 one obtains the uniform bound
 
-$$
+```math
+\begin{aligned}
 \|\Lambda_{\delta,h}-\mathcal U_{\delta,h}\|_\diamond
-\le C_Wh^2,
+&\le C_Wh^2,
 \qquad |\delta|\le W.
+\end{aligned}
 \tag{F6}
-$$
+```
 
-Both maps are channels, so telescoping $n$ repeated cells gives
+Both maps are channels, so telescoping $`\mathstrut{n}`$ repeated cells gives
 
-$$
+```math
+\begin{aligned}
 \|\Lambda_{\delta,h}^{n}-\mathcal U_{\delta,h}^{n}\|_\diamond
-\le nC_Wh^2.
+&\le nC_Wh^2.
+\end{aligned}
 \tag{F7}
-$$
+```
 
-Starting from logical $|+\rangle$ and measuring logical $Y$ after the
-batch therefore gives an expectation within $nC_Wh^2$ of
-$\sin(12nh\delta)$.
+Starting from logical $`\mathstrut{|+\rangle}`$ and measuring logical $`\mathstrut{Y}`$ after the
+batch therefore gives an expectation within $`\mathstrut{nC_Wh^2}`$ of
+$`\mathstrut{\sin(12nh\delta)}`$.
 
 ## 3. A global fast-clock protocol with every outcome charged
 
-Take the fixed prior $[-W,W]$ and choose
+Take the fixed prior $`\mathstrut{[-W,W]}`$ and choose
 
-$$
-\beta=\frac14,\qquad r=\frac34,\qquad
+```math
+\begin{aligned}
+\beta&=\frac14,\qquad r=\frac34,\qquad
 s_0=\sin(\beta/4)>0,
-\qquad
-A=\frac{24\log(1/r)}{s_0^2}.
+\\
+A&=\frac{24\log(1/r)}{s_0^2}.
+\end{aligned}
 \tag{F8}
-$$
+```
 
-For a chosen number of stages $K\ge1$, set
+For a chosen number of stages $`\mathstrut{K\ge1}`$, set
 
-$$
-w_j=Wr^j,\qquad
-h_K=\min\!\left\{\frac{\beta}{24W},
+```math
+\begin{aligned}
+w_j&=Wr^j,\\
+h_K&=\min\!\left\{\frac{\beta}{24W},
 \frac{6s_0w_K}{\beta C_W}\right\}.
+\end{aligned}
 \tag{F9}
-$$
+```
 
 This cadence is constant during the whole run, but it depends on the
-intended horizon through $K$. That is the additional resource in this
+intended horizon through $`\mathstrut{K}`$. That is the additional resource in this
 fast-clock comparison.
 
-At stage $j$, the current interval is
-$I_{j-1}=[c_j-w_{j-1},c_j+w_{j-1}]$. Hold the field at $c_j$ for each
+At stage $`\mathstrut{j}`$, the current interval is
+$`\mathstrut{I_{j-1}=[c_j-w_{j-1},c_j+w_{j-1}]}`$. Hold the field at $`\mathstrut{c_j}`$ for each
 batch, and choose the deterministic numbers
 
-$$
-n_j=\left\lfloor\frac{\beta}{12h_Kw_{j-1}}\right\rfloor,
-\qquad
-m_j=\left\lceil A(K-j+1)\right\rceil.
+```math
+\begin{aligned}
+n_j&=\left\lfloor\frac{\beta}{12h_Kw_{j-1}}\right\rfloor,
+\\
+m_j&=\left\lceil A(K-j+1)\right\rceil.
+\end{aligned}
 \tag{F10}
-$$
+```
 
-Repeat $m_j$ independent preparations of logical $|+\rangle$, each with
-$n_j$ corrected cells and a final $Y$ measurement. If the empirical
+Repeat $`\mathstrut{m_j}`$ independent preparations of logical $`\mathstrut{|+\rangle}`$, each with
+$`\mathstrut{n_j}`$ corrected cells and a final $`\mathstrut{Y}`$ measurement. If the empirical
 mean is nonnegative retain
 
-$$
+```math
 I_j=[c_j-w_{j-1}/2,c_j+w_{j-1}];
-$$
+```
 
 otherwise retain
 
-$$
+```math
 I_j=[c_j-w_{j-1},c_j+w_{j-1}/2].
-$$
+```
 
-Either interval has half-width $w_j=rw_{j-1}$ and lies inside its parent.
-Return the center of $I_K$. The procedure is defined on every history,
+Either interval has half-width $`\mathstrut{w_j=rw_{j-1}}`$ and lies inside its parent.
+Return the center of $`\mathstrut{I_K}`$. The procedure is defined on every history,
 and every field remains in the original band. It uses no rejection or
 unpriced restart.
 
 ### 3.1 Conditional reliability of each stage
 
 Conditional on all earlier intervals containing the true frequency,
-$|\delta|\le w_{j-1}$. From the first part of (F9), the expression inside
+$`\mathstrut{|\delta|\le w_{j-1}}`$. From the first part of (F9), the expression inside
 the floor in (F10) is at least two. Hence
 
-$$
+```math
+\begin{aligned}
 \frac{\beta}{24h_Kw_{j-1}}
-\le n_j\le\frac{\beta}{12h_Kw_{j-1}}.
+&\le n_j\le\frac{\beta}{12h_Kw_{j-1}}.
+\end{aligned}
 \tag{F11}
-$$
+```
 
-If $|\delta|\ge w_{j-1}/2$, the magnitude of the ideal phase lies between
-$\beta/4$ and $\beta$. Its sine has the sign of $\delta$ and magnitude
-at least $s_0$. The second part of (F9) and (F11) give
+If $`\mathstrut{|\delta|\ge w_{j-1}/2}`$, the magnitude of the ideal phase lies between
+$`\mathstrut{\beta/4}`$ and $`\mathstrut{\beta}`$. Its sine has the sign of $`\mathstrut{\delta}`$ and magnitude
+at least $`\mathstrut{s_0}`$. The second part of (F9) and (F11) give
 
-$$
+```math
+\begin{aligned}
 n_jC_Wh_K^2
-\le\frac{\beta C_Wh_K}{12w_{j-1}}
+&\le\frac{\beta C_Wh_K}{12w_{j-1}}
 \le\frac{s_0w_K}{2w_{j-1}}
 \le\frac{s_0}{2}.
+\end{aligned}
 \tag{F12}
-$$
+```
 
 Thus the **actual** noisy measurement mean has the correct sign and
-magnitude at least $s_0/2$ outside the central overlap. When
-$|\delta|\le w_{j-1}/2$, both retained intervals already contain the
-truth. For independent outcomes in $[-1,1]$, the one-sided Hoeffding
+magnitude at least $`\mathstrut{s_0/2}`$ outside the central overlap. When
+$`\mathstrut{|\delta|\le w_{j-1}/2}`$, both retained intervals already contain the
+truth. For independent outcomes in $`\mathstrut{[-1,1]}`$, the one-sided Hoeffding
 bound, centered on the actual mean, therefore gives conditional
 exclusion probability
 
-$$
-p_j\le\exp(-m_js_0^2/8)
+```math
+\begin{aligned}
+p_j&\le\exp(-m_js_0^2/8)
 \le r^{3(K-j+1)}.
+\end{aligned}
 \tag{F13}
-$$
+```
 
 The approximation (F6) is required only on histories before their first
 failure. Later histories may have larger detuning, but no reliability
@@ -266,12 +292,12 @@ interval, which controls their contribution to risk.
 
 ### 3.2 Global squared error, including rare failures
 
-On complete success the squared error is at most $w_K^2$. If the first
-exclusion occurs at stage $j$, all later estimates remain in
-$I_{j-1}$, which did contain the truth. The error is then at most
-$2w_{j-1}$. Using (F13), with $\ell=K-j+1$, gives
+On complete success the squared error is at most $`\mathstrut{w_K^2}`$. If the first
+exclusion occurs at stage $`\mathstrut{j}`$, all later estimates remain in
+$`\mathstrut{I_{j-1}}`$, which did contain the truth. The error is then at most
+$`\mathstrut{2w_{j-1}}`$. Using (F13), with $`\mathstrut{\ell=K-j+1}`$, gives
 
-$$
+```math
 \begin{aligned}
 \sup_{\omega\in[-W,W]}
 \mathbb E_\omega(\widehat\omega-\omega)^2
@@ -280,7 +306,7 @@ $$
 &\le13w_K^2.
 \end{aligned}
 \tag{F14}
-$$
+```
 
 This uses conditional bounds, so no independence between adaptive
 stages is assumed. It gives a global risk guarantee on a nonshrinking
@@ -292,146 +318,162 @@ estimate.
 All repetitions, including those on failed histories, have the same
 deterministic lengths. Their total sensing time is
 
-$$
+```math
 T_K=h_K\sum_{j=1}^Km_jn_j.
-$$
+```
 
-Since $m_j\le(A+1)(K-j+1)$ and (F11) bounds $n_j$,
+Since $`\mathstrut{m_j\le(A+1)(K-j+1)}`$ and (F11) bounds $`\mathstrut{n_j}`$,
 
-$$
-T_K\le\frac{C_T}{w_K},\qquad
-C_T=\frac{\beta(A+1)}{12}\frac{r}{(1-r)^2}.
+```math
+\begin{aligned}
+T_K&\le\frac{C_T}{w_K},\\
+C_T&=\frac{\beta(A+1)}{12}\frac{r}{(1-r)^2}.
+\end{aligned}
 \tag{F15}
-$$
+```
 
-For a supplied budget $T$, choose
+For a supplied budget $`\mathstrut{T}`$, choose
 
-$$
-K(T)=
+```math
+\begin{aligned}
+K(T)&=
 \begin{cases}
-0,&T<C_T/W,\\[2pt]
+0,&T\lt C_T/W,\\[2pt]
 \left\lfloor\log_{1/r}(WT/C_T)\right\rfloor,&T\ge C_T/W.
 \end{cases}
+\end{aligned}
 \tag{F16}
-$$
+```
 
-At $K=0$, perform no experiment and return zero. Otherwise
-$w_K\ge C_T/T$, so (F15) proves $T_K\le T$ on every history. Also
-$w_K<C_T/(rT)$ in the second case. Equations (F14)–(F16), with the
+At $`\mathstrut{K=0}`$, perform no experiment and return zero. Otherwise
+$`\mathstrut{w_K\ge C_T/T}`$, so (F15) proves $`\mathstrut{T_K\le T}`$ on every history. Also
+$`\mathstrut{w_K\lt C_T/(rT)}`$ in the second case. Equations (F14)–(F16), with the
 constant-risk small-budget case included, therefore prove
 
-$$
-R_T^{\mathrm{fast}}\le
+```math
+\begin{aligned}
+R_T^{\mathrm{fast}}&\le
 \frac{13C_T^2}{r^2T^2}.
+\end{aligned}
 \tag{F17}
-$$
+```
 
 The constant is loose and the protocol is not optimized for efficiency;
 its purpose is an explicit globally valid scaling comparison.
 
 ### 3.4 Resources and the lower bound
 
-For large $T$, $w_K=\Theta(T^{-1})$ and the second term in (F9) is the
-minimum, so $h_K=\Theta(T^{-1})$. The final batch alone and (F11) give
+For large $`\mathstrut{T}`$, $`\mathstrut{w_K=\Theta(T^{-1})}`$ and the second term in (F9) is the
+minimum, so $`\mathstrut{h_K=\Theta(T^{-1})}`$. The final batch alone and (F11) give
 
-$$
+```math
 T_K\ge h_Kn_K
 \ge\frac{\beta r}{24w_K}.
-$$
+```
 
-Together with (F15), this gives $T_K=\Theta(T)$. Hence **this
-construction** uses $\Theta(T^2)$ corrected cells, $O(\log T)$ field
-settings and $O(\log^2T)$ prepare-and-measure batches. No optimal
+Together with (F15), this gives $`\mathstrut{T_K=\Theta(T)}`$. Hence **this
+construction** uses $`\mathstrut{\Theta(T^2)}`$ corrected cells, $`\mathstrut{O(\log T)}`$ field
+settings and $`\mathstrut{O(\log^2T)}`$ prepare-and-measure batches. No optimal
 necessity claim is made for its number of recoveries. Boundary
 operations and their reset apparatus remain ideal and uncharged in the
 sensing-time model; charging a fixed cost per recovery would change
 the resource comparison.
 
-The spectral diameter of $G$ is $54$. For an arbitrary allowed strategy,
+The spectral diameter of $`\mathstrut{G}`$ is $`\mathstrut{54}`$. For an arbitrary allowed strategy,
 the Duhamel/hybrid argument bounds its final trace-norm difference at
-two frequencies by $54T|\omega-\omega'|$, even if its cell lengths vary.
-Choosing two frequencies a distance $1/(54T)$ apart and using the
+two frequencies by $`\mathstrut{54T|\omega-\omega'|}`$, even if its cell lengths vary.
+Choosing two frequencies a distance $`\mathstrut{1/(54T)}`$ apart and using the
 two-point risk argument of the [grid converse](grid_lower.md) gives
 
-$$
+```math
 R_T^{\mathrm{fast}}\ge\frac{1}{16\cdot54^2T^2}
-$$
+```
 
 once the two frequencies fit inside the band. Thus the fast model has
-global minimax risk $\Theta(T^{-2})$.
+global minimax risk $`\mathstrut{\Theta(T^{-2})}`$.
 
 ## 4. Every fixed positive clock has finite information per cell
 
-For a fixed $\tau>0$, signal and noise commute in the physical
+For a fixed $`\mathstrut{\tau>0}`$, signal and noise commute in the physical
 eigenbasis, giving the exact channel
 
-$$
+```math
+\begin{aligned}
 \mathcal E_\delta^{(\tau)}(|j\rangle\langle k|)
-=\exp\!\left[-\frac\tau2(l_j-l_k)^2
+&=\exp\!\left[-\frac\tau2(l_j-l_k)^2
 -i\delta\tau(g_j-g_k)\right]|j\rangle\langle k|.
+\end{aligned}
 \tag{F18}
-$$
+```
 
 The normalized Choi matrix lives on the four-dimensional maximally
-correlated subspace spanned by $|jj\rangle$. On that subspace it is
+correlated subspace spanned by $`\mathstrut{|jj\rangle}`$. On that subspace it is
 
-$$
-J_\delta=\frac14D_\delta R_\tau D_\delta^\dagger,
-\quad
-(D_\delta)_{jj}=e^{-i\delta\tau g_j},
-\quad
-(R_\tau)_{jk}=e^{-\tau(l_j-l_k)^2/2}.
+```math
+\begin{aligned}
+J_\delta&=\frac14D_\delta R_\tau D_\delta^\dagger,
+\\
+(D_\delta)_{jj}&=e^{-i\delta\tau g_j},
+\\
+(R_\tau)_{jk}&=e^{-\tau(l_j-l_k)^2/2}.
+\end{aligned}
 \tag{F19}
-$$
+```
 
-The Gaussian kernel $R_\tau$ is strictly positive definite for
-$\tau>0$. Indeed, its quadratic form is the integral of
-$|\sum_jv_je^{ixl_j}|^2$ against an everywhere positive Gaussian
+The Gaussian kernel $`\mathstrut{R_\tau}`$ is strictly positive definite for
+$`\mathstrut{\tau>0}`$. Indeed, its quadratic form is the integral of
+$`\mathstrut{|\sum_jv_je^{ixl_j}|^2}`$ against an everywhere positive Gaussian
 density. If this were zero, the exponential polynomial would vanish
 everywhere by continuity. Its first four derivatives at zero give an
-invertible Vandermonde system at the distinct $l_j$, forcing $v=0$.
+invertible Vandermonde system at the distinct $`\mathstrut{l_j}`$, forcing $`\mathstrut{v=0}`$.
 The restricted Choi eigenvalues are therefore positive and independent
 of detuning.
 
-Let $Q=\operatorname{diag}(g_1,\ldots,g_4)$. The unnormalized Choi
-operator is $\Gamma_\delta=4J_\delta$. Differentiating (F19), using its
+Let $`\mathstrut{Q=\mathrm{diag}(g_1,\ldots,g_4)}`$. The unnormalized Choi
+operator is $`\mathstrut{\Gamma_\delta=4J_\delta}`$. Differentiating (F19), using its
 support inverse and taking the output partial trace gives the exact
 channel RLD information
 
-$$
-M_\tau:=\widehat I(\mathcal E_\delta^{(\tau)})
-=\tau^2\max_j
+```math
+\begin{aligned}
+M_\tau&:=\widehat I(\mathcal E_\delta^{(\tau)})\\
+&=\tau^2\max_j
 \left([Q,R_\tau]R_\tau^{-1}[Q,R_\tau]^\dagger\right)_{jj}
-<\infty.
+\lt \infty.
+\end{aligned}
 \tag{F20}
-$$
+```
 
 For clarity, the product inside the Choi formula is
-$\tau^2D_\delta[Q,R_\tau]R_\tau^{-1}[Q,R_\tau]^\dagger D_\delta^\dagger$.
-The output partial trace of $|jj\rangle\langle kk|$ vanishes for
-$j\ne k$, leaving precisely its diagonal; the phases cancel there.
-Thus (F20) is independent of both $\omega$ and the chosen field $c$.
+$`\mathstrut{\tau^2D_\delta[Q,R_\tau]R_\tau^{-1}[Q,R_\tau]^\dagger D_\delta^\dagger}`$.
+The output partial trace of $`\mathstrut{|jj\rangle\langle kk|}`$ vanishes for
+$`\mathstrut{j\ne k}`$, leaving precisely its diagonal; the phases cancel there.
+Thus (F20) is independent of both $`\mathstrut{\omega}`$ and the chosen field $`\mathstrut{c}`$.
 
 The adaptive cq-history chain rule now gives
-$I_{\mathrm{data}}\le NM_\tau$ even for unbounded classical field
+$`\mathstrut{I_{\mathrm{data}}\le NM_\tau}`$ even for unbounded classical field
 amplitudes. The global Bayesian argument consequently yields
 
-$$
+```math
+\begin{aligned}
 R_T^{\mathrm{fixed}}
-\ge\frac{1}{\lfloor T/\tau\rfloor M_\tau+\pi^2/W^2}
+&\ge\frac{1}{\lfloor T/\tau\rfloor M_\tau+\pi^2/W^2}
 =\Omega(T^{-1}).
+\end{aligned}
 \tag{F21}
-$$
+```
 
 In this commuting example, compensation contributes only a known
 boundary unitary:
 
-$$
+```math
+\begin{aligned}
 \mathcal E_{\omega-c}^{(\tau)}
-=\operatorname{Ad}_{e^{ic\tau G}}\circ
+&=\mathrm{Ad}_{e^{ic\tau G}}\circ
 \mathcal E_\omega^{(\tau)}.
+\end{aligned}
 \tag{F22}
-$$
+```
 
 Unlimited analog field resolution cannot change the fixed-clock
 obstruction. It arises from the physical finite-time channel, not
@@ -439,83 +481,93 @@ from a failure to choose a suitable decoder.
 
 ## 5. Exact aliases and an alias-free SQL upper bound
 
-Every pairwise difference $g_j-g_k$ is an even integer and the
-difference between the middle two levels is $2$. Since all coefficients
+Every pairwise difference $`\mathstrut{g_j-g_k}`$ is an even integer and the
+difference between the middle two levels is $`\mathstrut{2}`$. Since all coefficients
 in (F18) are nonzero, the fundamental frequency alias period is exactly
 
-$$
-P_\tau=\frac\pi\tau.
+```math
+\begin{aligned}
+P_\tau&=\frac\pi\tau.
+\end{aligned}
 \tag{F23}
-$$
+```
 
-Two frequencies differing by $P_\tau$ produce identical cell channels
+Two frequencies differing by $`\mathstrut{P_\tau}`$ produce identical cell channels
 for every fixed field value. The full adaptive output distributions
 remain identical by induction on the boundary history. If the prior
 band contains such a pair, any estimator therefore has worst-case
-MSE at least $P_\tau^2/4$. One must not describe (F21) as attainable
+MSE at least $`\mathstrut{P_\tau^2/4}`$. One must not describe (F21) as attainable
 SQL scaling on every arbitrarily broad band.
 
-Now let the parameter lie in a fixed closed interval $I$ of length
+Now let the parameter lie in a fixed closed interval $`\mathstrut{I}`$ of length
 
-$$
-0<\ell<P_\tau.
+```math
+\begin{aligned}
+0&\lt \ell\lt P_\tau.
+\end{aligned}
 \tag{F24}
-$$
+```
 
-Prepare $(|2\rangle+|3\rangle)/\sqrt2$ before each single cell and use
-$c=0$. Measure the two Pauli quadratures in this subspace: the usual
-$X$ and the signed $Y$ with matrix elements
-$i|2\rangle\langle3|-i|3\rangle\langle2|$. Their exact means are
+Prepare $`\mathstrut{(|2\rangle+|3\rangle)/\sqrt2}`$ before each single cell and use
+$`\mathstrut{c=0}`$. Measure the two Pauli quadratures in this subspace: the usual
+$`\mathstrut{X}`$ and the signed $`\mathstrut{Y}`$ with matrix elements
+$`\mathstrut{i|2\rangle\langle3|-i|3\rangle\langle2|}`$. Their exact means are
 
-$$
-\mu(\omega)=\nu\big(\cos(2\tau\omega),\sin(2\tau\omega)\big),
-\qquad \nu=e^{-2\tau}>0.
+```math
+\begin{aligned}
+\mu(\omega)&=\nu\big(\cos(2\tau\omega),\sin(2\tau\omega)\big),
+\\
+\nu&=e^{-2\tau}>0.
+\end{aligned}
 \tag{F25}
-$$
+```
 
-For $x,y\in I$, the chord length and the monotonicity of $\sin u/u$
-on $(0,\pi)$ give
+For $`\mathstrut{x,y\in I}`$, the chord length and the monotonicity of $`\mathstrut{\sin u/u}`$
+on $`\mathstrut{(0,\pi)}`$ give
 
-$$
+```math
+\begin{aligned}
 \|\mu(x)-\mu(y)\|_2
-=2\nu|\sin(\tau(x-y))|
-\ge k_I|x-y|,\qquad
-k_I=\frac{2\nu\sin(\tau\ell)}\ell>0.
+&=2\nu|\sin(\tau(x-y))|
+\ge k_I|x-y|,\\
+k_I&=\frac{2\nu\sin(\tau\ell)}\ell>0.
+\end{aligned}
 \tag{F26}
-$$
+```
 
-For $N\ge2$, allocate $\lfloor N/2\rfloor$ independent cells to one
+For $`\mathstrut{N\ge2}`$, allocate $`\mathstrut{\lfloor N/2\rfloor}`$ independent cells to one
 quadrature and the rest to the other, with empirical mean vector
-$\widehat\mu$. The two bounded-sample variances imply
+$`\mathstrut{\widehat\mu}`$. The two bounded-sample variances imply
 
-$$
+```math
 \mathbb E\|\widehat\mu-\mu(\omega)\|_2^2\le\frac6N.
-$$
+```
 
-Take $\widehat\omega$ to minimize
-$\|\widehat\mu-\mu(x)\|_2$ over $x\in I$, with a fixed rule for ties.
+Take $`\mathstrut{\widehat\omega}`$ to minimize
+$`\mathstrut{\|\widehat\mu-\mu(x)\|_2}`$ over $`\mathstrut{x\in I}`$, with a fixed rule for ties.
 The triangle inequality and the minimizing property give
-$\|\mu(\widehat\omega)-\mu(\omega)\|_2
-\le2\|\widehat\mu-\mu(\omega)\|_2$. Therefore
+$`\mathstrut{\|\mu(\widehat\omega)-\mu(\omega)\|_2 \le2\|\widehat\mu-\mu(\omega)\|_2}`$. Therefore
 
-$$
+```math
+\begin{aligned}
 \sup_{\omega\in I}
 \mathbb E_\omega(\widehat\omega-\omega)^2
-\le\frac{24}{k_I^2N}=O(T^{-1}).
+&\le\frac{24}{k_I^2N}=O(T^{-1}).
+\end{aligned}
 \tag{F27}
-$$
+```
 
-The version of (F21) with prior half-width $\ell/2$ supplies the matching
-lower bound. Thus every fixed $\tau>0$ has global risk
-$\Theta(T^{-1})$ on each fixed interval satisfying (F24), while the
-fast-clock model has $\Theta(T^{-2})$ risk on any fixed finite band.
+The version of (F21) with prior half-width $`\mathstrut{\ell/2}`$ supplies the matching
+lower bound. Thus every fixed $`\mathstrut{\tau>0}`$ has global risk
+$`\mathstrut{\Theta(T^{-1})}`$ on each fixed interval satisfying (F24), while the
+fast-clock model has $`\mathstrut{\Theta(T^{-2})}`$ risk on any fixed finite band.
 
 ## 6. What the separation establishes
 
 At infinitesimal times, correction of the leading errors only tests the
 quadratic Lindblad span. At any fixed positive time, all finite jump
 words contribute to the physical Kraus span. In this example their
-algebra contains $G=L^3$, although the quadratic span does not. Equations
+algebra contains $`\mathstrut{G=L^3}`$, although the quadratic span does not. Equations
 (F17) and (F21) turn that algebraic distinction into a global estimation
 separation with explicit time accounting.
 

@@ -15,7 +15,7 @@ The checked dependency versions are pinned in `requirements.txt`. The runner pri
 
 | Script | Independent calculation | Scope |
 |---|---|---|
-| `check_algebra.py` | Builds the explicit Gram-matrix decoder and compares a Frechet derivative of the physical semigroup with the integrated Heisenberg tangent | 18 cases across a noncommuting $`M_2\otimes I`$ algebra and a diagonal qutrit algebra, including zero rates; also checks the four-level HNLS residual and Gaussian kernel positivity |
+| `check_algebra.py` | Builds the explicit Gram-matrix decoder and compares a Frechet derivative of the physical semigroup with the integrated Heisenberg tangent | 18 cases across a noncommuting $`\mathstrut{M_2\otimes I}`$ algebra and a diagonal qutrit algebra, including zero rates; also checks the four-level HNLS residual and Gaussian kernel positivity |
 | `check_exact_cycle.py` | Exponentiates the full sensor–ancilla density-matrix generator and applies parity recovery | 72 exact-channel comparisons and 13,020 finite sign-margin cases |
 | `check_grid_upper.py` | Uses an independent two-state telegraph generator to evaluate visibility, phase and classical X/Y processing | 19,200 parameter/width/offset cases; zero rate is included as an identity check, not as a matched-grid lower-bound claim |
 | `check_physical_choi.py` | Exponentiates the unrecovered qubit channel and its Frechet derivative, then forms its Choi matrix | 104 cases testing the analytical positive-eigenvalue, derivative and RLD upper bounds |

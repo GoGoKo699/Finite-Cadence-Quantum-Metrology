@@ -11,8 +11,16 @@ Authoritative reading route:
 - science/grid_upper.md: exact transverse response, fixed X/Y measurements, classical quadrature processing and deterministic grid budget.
 - science/grid_lower.md: unrecovered physical-channel Choi bound and lower bound for all allowed grid strategies.
 - science/interpretation.md: control, time, memory, correction count and compensation precision.
+- learning/NIELSEN_CHUANG_BRIDGE.md: the single educational anchor, Nielsen–Chuang (10th Anniversary Edition, 2010); source sections, notation, worked sensing example and missing steps to the project.
+- learning/MILESTONES.md: the common project map, M01–M30; 11 background/preliminaries milestones and 19 narrative/innovation milestones, with dependencies and scientific source pointers.
 - references/RELATED_WORK.md and references/SOURCES.md: inherited ingredients, closest comparisons and primary source identities.
 - verification/README.md: finite checks, commands and limitations.
+
+Reader intentions:
+- Understand the physical story: README.md -> science/interpretation.md -> science/model.md.
+- Study the project: learning/NIELSEN_CHUANG_BRIDGE.md -> learning/MILESTONES.md -> the linked scientific sources.
+- Audit a theorem: science/model.md -> its linked proof -> references/RELATED_WORK.md and references/SOURCES.md for imported ingredients.
+- Reproduce the computations: verification/README.md -> verification/run_all.py -> verification/results/summary.json.
 
 Preserve these distinctions:
 1. The physical cell is exp(tau*(D-i*(omega-c)*[G,.])), not generally a product noise-signal channel.
@@ -24,3 +32,4 @@ Preserve these distinctions:
 7. No environment record, subcell quantum control, coherent field register, imperfect recovery or noisy ancilla is included.
 8. The fast construction's quadratic correction count is sufficient, not an optimality theorem.
 9. Finite numerical checks do not establish universal analytical statements.
+10. Nielsen–Chuang supplies foundations; the modern adaptive RLD converse and paid global-risk analysis require the explicitly identified research dependencies and project proofs.
