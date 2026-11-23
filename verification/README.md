@@ -20,6 +20,7 @@ The checked dependency versions are pinned in `requirements.txt`. The runner pri
 | `check_grid_upper.py` | Uses an independent two-state telegraph generator to evaluate visibility, phase and classical X/Y processing | 19,200 parameter/width/offset cases; zero rate is included as an identity check, not as a matched-grid lower-bound claim |
 | `check_physical_choi.py` | Exponentiates the unrecovered qubit channel and its Frechet derivative, then forms its Choi matrix | 104 cases testing the analytical positive-eigenvalue, derivative and RLD upper bounds |
 | `check_fast_separation.py` | Checks the explicit four-level code and its recovered finite-cell response | Finite global-fast-protocol margins and error bounds; the script reports its actual sampled scope |
+| `check_cadence_budget.py` | Builds the polynomial syndrome and checks its exact Schur response, the balanced small-cell Kraus gauge and the separate long-cell Gram gauge | 72 finite checks across cubic, quintic and two-jump quintic examples |
 
 The source uses column-stacking for numerical superoperators and explicitly constructs Choi matrices in output-factor-first tensor order. This convention does not change the abstract support or information statements.
 

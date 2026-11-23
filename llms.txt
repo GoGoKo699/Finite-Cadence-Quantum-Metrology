@@ -1,12 +1,15 @@
 # Finite-Cadence Quantum Metrology
 
-Question: when do exact noisy cells at a fixed correction interval permit global Heisenberg mean-square precision under adaptive physical compensation?
+Question: when do exact noisy cells permit global Heisenberg mean-square precision, and how much boundary control does it require?
 
 Authoritative reading route:
 - README.md: principal results, navigation, reproduction and scope.
 - science/model.md: exact physical channel, allowed strategies, hard sensing budget, all theorem quantifiers and nuisance-rate distinctions.
 - science/constructive_proof.md: generated-algebra code, explicit universal decoder, integrated finite-cell tangent, quadratic mismatch and fully charged global localization.
 - science/converse_proof.md: exact trajectory support, supported Choi information, arbitrary adaptive history/memory and van Trees bound.
+- science/cadence_budget.md: matched global risk under either a common duration or hard time and cell caps for known commuting dephasing; minimal signal polynomial degree, cubic and quintic examples.
+- science/cadence_budget_protocol.md: real polynomial syndrome, exact Ramsey response, paid localization and matched budget sufficiency.
+- science/cadence_budget_converse.md: balanced small-cell Kraus gauge, uniform long-cell bound, adaptive duration split and pathwise elapsed-time converse.
 - science/fast_fixed_separation.md: four-level cubic signal, explicit global fast construction, fixed-clock lower bound, aliases and SQL attainment on identifiable bands.
 - science/grid_upper.md: exact transverse response, fixed X/Y measurements, classical quadrature processing and deterministic grid budget.
 - science/grid_lower.md: unrecovered physical-channel Choi bound and lower bound for all allowed grid strategies.
@@ -30,6 +33,6 @@ Preserve these distinctions:
 5. Global minimax error requires the paid localization proof; local QFI alone is insufficient.
 6. The grid upper theorem uses a known positive rate and the matched law uses Delta <= Delta_0 <= W.
 7. No environment record, subcell quantum control, coherent field register, imperfect recovery or noisy ancilla is included.
-8. The fast construction's quadratic correction count is sufficient, not an optimality theorem.
+8. In the commuting correction-budget law, minimal total degree s on the joint spectrum fixes m=ceil(s/2). For m>=2 the minimum cell budget for inverse-square risk is of order T^(m/(m-1)), including variable classical-feedback durations. Cells, rather than the number of gates in a recovery, are charged.
 9. Finite numerical checks do not establish universal analytical statements.
 10. Nielsen–Chuang supplies foundations; the modern adaptive RLD converse and paid global-risk analysis require the explicitly identified research dependencies and project proofs.

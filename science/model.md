@@ -123,9 +123,13 @@ For one four-level sensor set
 L=\mathrm{diag}(-3,-1,1,3),\qquad G=L^3.
 ```
 
-Here $`\mathstrut{G\notin\mathrm{span}_{\mathbb R}\{I,L,L^2\}}`$, while $`\mathstrut{G\in C^*(I,L)}`$. An explicit two-dimensional code admits a global fast-correction protocol with error $`\mathstrut{\Theta(T^{-2})}`$ under the same hard sensing-time accounting. In that construction the interval $`\mathstrut{h(T)=\Theta(T^{-1})}`$ and the number of corrections is $`\mathstrut{\Theta(T^2)}`$. This is a resource statement about the construction, not a lower bound on every possible fast protocol.
+Here $`\mathstrut{G\notin\mathrm{span}_{\mathbb R}\{I,L,L^2\}}`$, while $`\mathstrut{G\in C^*(I,L)}`$. An explicit two-dimensional code admits a global fast-correction protocol with error $`\mathstrut{\Theta(T^{-2})}`$ under the same hard sensing-time accounting. In that construction the interval $`\mathstrut{h(T)=\Theta(T^{-1})}`$ and the number of corrections is $`\mathstrut{\Theta(T^2)}`$. The [correction-budget theorem](cadence_budget.md) gives the matching order for every allowed boundary strategy, including irregular and feedback-chosen durations.
 
 Every positive fixed interval instead obeys the SQL lower bound. For this commuting example the lower bound is even uniform over unbounded classical compensation values. On an identifiable interval shorter than $`\mathstrut{\pi/\tau}`$, a two-quadrature protocol attains $`\mathstrut{O(T^{-1})}`$; bands containing an alias pair can have constant risk. The [separation proof](fast_fixed_separation.md) establishes both global comparisons and the alias period.
+
+## Correction budgets for commuting dephasing
+
+When the jumps commute and the nonconstant signal is a real polynomial in them, the [matched correction-budget law](cadence_budget.md) strengthens the four-level comparison. The least total degree $`\mathstrut{s}`$ on the joint spectrum determines the exponent through $`\mathstrut{m=\lceil s/2\rceil}`$. With a common small cell length $`\mathstrut{h}`$ the risk is of order $`\mathstrut{\max\{T^{-2},h^{m-1}/T\}}`$. If the controller can vary durations and is limited to $`\mathstrut{M}`$ cells, the risk for $`\mathstrut{m\ge2}`$ is of order $`\mathstrut{\max\{T^{-2},M^{-2+2/m}\}}`$. The value $`\mathstrut{m=1}`$ gives the standard-quantum-limit orders stated in the theorem. These bounds assume known jumps and count each cell on every history.
 
 ## Result 3: a compensation-resolution law
 

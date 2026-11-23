@@ -373,8 +373,9 @@ T_K\ge h_Kn_K
 
 Together with (F15), this gives $`\mathstrut{T_K=\Theta(T)}`$. Hence **this
 construction** uses $`\mathstrut{\Theta(T^2)}`$ corrected cells, $`\mathstrut{O(\log T)}`$ field
-settings and $`\mathstrut{O(\log^2T)}`$ prepare-and-measure batches. No optimal
-necessity claim is made for its number of recoveries. Boundary
+settings and $`\mathstrut{O(\log^2T)}`$ prepare-and-measure batches. The
+[correction-budget law](cadence_budget.md) proves the matching cell-count
+order for all feedback-chosen schedules in this model. Boundary
 operations and their reset apparatus remain ideal and uncharged in the
 sensing-time model; charging a fixed cost per recovery would change
 the resource comparison.
@@ -572,10 +573,9 @@ algebra contains $`\mathstrut{G=L^3}`$, although the quadratic span does not. Eq
 separation with explicit time accounting.
 
 The fast construction improves its cadence as the horizon grows and
-uses ideal boundary operations. The fixed-clock result permits every
-adaptive boundary protocol, not just the displayed code. Neither is a
-claim of fault tolerance under noisy gates, optimal prefactors or an
-optimal recovery-count tradeoff. The [verification scripts](../verification/README.md)
+uses ideal boundary operations. The fixed-clock result applies to every
+adaptive boundary protocol. The [correction-budget law](cadence_budget.md)
+gives the sharp cell-count order. The [verification scripts](../verification/README.md)
 check the code moments, exact physical channel, finite-cell tangent and
 the actual sign margin at finite parameter values; the analytic argument
 supplies the universal bounds.

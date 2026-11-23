@@ -1,0 +1,405 @@
+{
+  "scope": "Deterministic matrix checks on three spectra, with four durations per trajectory and gauge check.",
+  "all_assertions_passed": true,
+  "spectra": 3,
+  "syndrome_cases": 12,
+  "detuning_tangent_cases": 36,
+  "balanced_gauge_cases": 12,
+  "long_gauge_cases": 12,
+  "instances": [
+    {
+      "example": "cubic",
+      "joint_spectrum": [
+        [
+          -1.0
+        ],
+        [
+          -0.33333333333333337
+        ],
+        [
+          0.33333333333333326
+        ],
+        [
+          1.0
+        ]
+      ],
+      "signal_values": [
+        -1.0,
+        -0.03703703703703705,
+        0.037037037037037014,
+        1.0
+      ],
+      "minimum_degree": 3,
+      "order": 2,
+      "projected_signal_gap": 0.4444444444444435,
+      "matched_moment_error": 1.1965703366944316e-15,
+      "corrected_syndrome_rank": 2,
+      "syndrome": [
+        {
+          "duration": 0.04,
+          "loss_over_h_to_order": 0.21576890563061646,
+          "slope_over_h_times_projected_gap": 1.0294197121704627,
+          "syndrome_overlap_absolute_error": 1.6805133673525319e-18,
+          "maximum_tangent_absolute_error": 6.939740885162004e-18,
+          "discarded_trajectory_weight_upper": 1.9769306173047618e-36
+        },
+        {
+          "duration": 0.02,
+          "loss_over_h_to_order": 0.21896306390248005,
+          "slope_over_h_times_projected_gap": 1.0151269052941507,
+          "syndrome_overlap_absolute_error": 2.15485181781494e-18,
+          "maximum_tangent_absolute_error": 5.2045277576875214e-18,
+          "discarded_trajectory_weight_upper": 3.073871081682006e-41
+        },
+        {
+          "duration": 0.01,
+          "loss_over_h_to_order": 0.22058442037193235,
+          "slope_over_h_times_projected_gap": 1.0076698792112104,
+          "syndrome_overlap_absolute_error": 3.5575383784680614e-19,
+          "maximum_tangent_absolute_error": 8.674957308978032e-19,
+          "discarded_trajectory_weight_upper": 4.734705768318904e-46
+        },
+        {
+          "duration": 0.005,
+          "loss_over_h_to_order": 0.22140125327117527,
+          "slope_over_h_times_projected_gap": 1.0038618215540294,
+          "syndrome_overlap_absolute_error": 8.046812998915853e-20,
+          "maximum_tangent_absolute_error": 8.67361841385974e-19,
+          "discarded_trajectory_weight_upper": 7.258665002296957e-51
+        }
+      ],
+      "balanced_gauge": [
+        {
+          "duration": 0.04,
+          "beta_residual": 7.37257477290143e-18,
+          "alpha_scaled": 0.5337679791767708
+        },
+        {
+          "duration": 0.02,
+          "beta_residual": 3.469446951953614e-18,
+          "alpha_scaled": 0.5170512327573391
+        },
+        {
+          "duration": 0.01,
+          "beta_residual": 1.734723475976807e-18,
+          "alpha_scaled": 0.5085681317725178
+        },
+        {
+          "duration": 0.005,
+          "beta_residual": 8.673617379884035e-19,
+          "alpha_scaled": 0.504294781858989
+        }
+      ],
+      "long_gauge": [
+        {
+          "duration": 0.2,
+          "gram_minimum_eigenvalue": 0.00020155482198440817,
+          "beta_residual": 2.2133298874571416e-17,
+          "channel_tangent_maximum_error": 5.551115123125783e-17,
+          "alpha_norm": 7.35594200056878
+        },
+        {
+          "duration": 0.4,
+          "gram_minimum_eigenvalue": 0.0015298374049680626,
+          "beta_residual": 4.010307873640964e-17,
+          "channel_tangent_maximum_error": 6.245004513516506e-17,
+          "alpha_norm": 3.6327189890826705
+        },
+        {
+          "duration": 1.0,
+          "gram_minimum_eigenvalue": 0.01961834032623766,
+          "beta_residual": 6.240201158405195e-17,
+          "channel_tangent_maximum_error": 5.551115123125783e-17,
+          "alpha_norm": 1.482123794240673
+        },
+        {
+          "duration": 8.0,
+          "gram_minimum_eigenvalue": 0.7272601680926212,
+          "beta_residual": 7.29871531648359e-18,
+          "channel_tangent_maximum_error": 2.220446049250313e-16,
+          "alpha_norm": 0.44905492543450687
+        }
+      ]
+    },
+    {
+      "example": "quintic",
+      "joint_spectrum": [
+        [
+          -1.0
+        ],
+        [
+          -0.6
+        ],
+        [
+          -0.19999999999999996
+        ],
+        [
+          0.20000000000000018
+        ],
+        [
+          0.6000000000000001
+        ],
+        [
+          1.0
+        ]
+      ],
+      "signal_values": [
+        -1.0,
+        -0.07775999999999998,
+        -0.00031999999999999965,
+        0.00032000000000000144,
+        0.07776000000000005,
+        1.0
+      ],
+      "minimum_degree": 5,
+      "order": 3,
+      "projected_signal_gap": 0.07680000000000037,
+      "matched_moment_error": 9.103828801926284e-14,
+      "corrected_syndrome_rank": 3,
+      "syndrome": [
+        {
+          "duration": 0.04,
+          "loss_over_h_to_order": 0.018671766750483678,
+          "slope_over_h_times_projected_gap": 1.0011105810001946,
+          "syndrome_overlap_absolute_error": 4.2372823186396374e-19,
+          "maximum_tangent_absolute_error": 1.3010426069826053e-18,
+          "discarded_trajectory_weight_upper": 1.9769306173047618e-36
+        },
+        {
+          "duration": 0.02,
+          "loss_over_h_to_order": 0.018933557771437383,
+          "slope_over_h_times_projected_gap": 1.0002830025330458,
+          "syndrome_overlap_absolute_error": 2.6475073557617225e-19,
+          "maximum_tangent_absolute_error": 8.673882073641208e-19,
+          "discarded_trajectory_weight_upper": 3.073871081682006e-41
+        },
+        {
+          "duration": 0.01,
+          "loss_over_h_to_order": 0.019066191471006456,
+          "slope_over_h_times_projected_gap": 1.0000714315141153,
+          "syndrome_overlap_absolute_error": 2.4955377336234803e-19,
+          "maximum_tangent_absolute_error": 4.336841777040303e-19,
+          "discarded_trajectory_weight_upper": 4.734705768318904e-46
+        },
+        {
+          "duration": 0.005,
+          "loss_over_h_to_order": 0.019132948122049014,
+          "slope_over_h_times_projected_gap": 1.0000179437001286,
+          "syndrome_overlap_absolute_error": 2.8544762168286156e-20,
+          "maximum_tangent_absolute_error": 1.0842104442600758e-19,
+          "discarded_trajectory_weight_upper": 7.258665002296957e-51
+        }
+      ],
+      "balanced_gauge": [
+        {
+          "duration": 0.04,
+          "beta_residual": 2.0816681711721685e-17,
+          "alpha_scaled": 1.6316632230012895
+        },
+        {
+          "duration": 0.02,
+          "beta_residual": 6.938893903907228e-18,
+          "alpha_scaled": 1.5649166569138435
+        },
+        {
+          "duration": 0.01,
+          "beta_residual": 1.734723475976807e-18,
+          "alpha_scaled": 1.5322292792621657
+        },
+        {
+          "duration": 0.005,
+          "beta_residual": 2.6020852139652106e-18,
+          "alpha_scaled": 1.5160573347301554
+        }
+      ],
+      "long_gauge": [
+        {
+          "duration": 0.2,
+          "gram_minimum_eigenvalue": 1.559757023471461e-08,
+          "beta_residual": 8.278380003183837e-17,
+          "channel_tangent_maximum_error": 1.3704315460216776e-16,
+          "alpha_norm": 3721.9729686068545
+        },
+        {
+          "duration": 0.4,
+          "gram_minimum_eigenvalue": 4.854156866542881e-07,
+          "beta_residual": 4.9049201637403636e-17,
+          "channel_tangent_maximum_error": 1.6653345369377348e-16,
+          "alpha_norm": 462.4555354549137
+        },
+        {
+          "duration": 1.0,
+          "gram_minimum_eigenvalue": 4.268888880139051e-05,
+          "beta_residual": 3.232158286910801e-17,
+          "channel_tangent_maximum_error": 2.220446049250313e-16,
+          "alpha_norm": 38.48055998209911
+        },
+        {
+          "duration": 8.0,
+          "gram_minimum_eigenvalue": 0.15127664872651847,
+          "beta_residual": 8.139577050241474e-17,
+          "channel_tangent_maximum_error": 4.440892098500626e-16,
+          "alpha_norm": 7.319911381817979
+        }
+      ]
+    },
+    {
+      "example": "two-jump quintic",
+      "joint_spectrum": [
+        [
+          -1.0,
+          -1.0
+        ],
+        [
+          -1.0,
+          0.0
+        ],
+        [
+          -1.0,
+          1.0
+        ],
+        [
+          -0.33333333333333337,
+          -1.0
+        ],
+        [
+          -0.33333333333333337,
+          0.0
+        ],
+        [
+          -0.33333333333333337,
+          1.0
+        ],
+        [
+          0.33333333333333326,
+          -1.0
+        ],
+        [
+          0.33333333333333326,
+          0.0
+        ],
+        [
+          0.33333333333333326,
+          1.0
+        ],
+        [
+          1.0,
+          -1.0
+        ],
+        [
+          1.0,
+          0.0
+        ],
+        [
+          1.0,
+          1.0
+        ]
+      ],
+      "signal_values": [
+        -1.0,
+        -0.0,
+        -1.0,
+        -0.03703703703703705,
+        -0.0,
+        -0.03703703703703705,
+        0.037037037037037014,
+        0.0,
+        0.037037037037037014,
+        1.0,
+        0.0,
+        1.0
+      ],
+      "minimum_degree": 5,
+      "order": 3,
+      "projected_signal_gap": 0.22222222222222615,
+      "matched_moment_error": 1.6659658116858018e-14,
+      "corrected_syndrome_rank": 6,
+      "syndrome": [
+        {
+          "duration": 0.04,
+          "loss_over_h_to_order": 0.26160560134766425,
+          "slope_over_h_times_projected_gap": 1.0020419558334601,
+          "syndrome_overlap_absolute_error": 4.0149361699853836e-18,
+          "maximum_tangent_absolute_error": 5.204452764587509e-18,
+          "discarded_trajectory_weight_upper": 1.2477416246229362e-31
+        },
+        {
+          "duration": 0.02,
+          "loss_over_h_to_order": 0.26929369988004287,
+          "slope_over_h_times_projected_gap": 1.0005342885227948,
+          "syndrome_overlap_absolute_error": 3.9077865021577146e-18,
+          "maximum_tangent_absolute_error": 8.674676106452505e-19,
+          "discarded_trajectory_weight_upper": 1.9769306173047618e-36
+        },
+        {
+          "duration": 0.01,
+          "loss_over_h_to_order": 0.27324260134782646,
+          "slope_over_h_times_projected_gap": 1.000136655919576,
+          "syndrome_overlap_absolute_error": 1.496601338679942e-18,
+          "maximum_tangent_absolute_error": 8.673882073641208e-19,
+          "discarded_trajectory_weight_upper": 3.073871081682006e-41
+        },
+        {
+          "duration": 0.005,
+          "loss_over_h_to_order": 0.2752439097180453,
+          "slope_over_h_times_projected_gap": 1.0000345564641855,
+          "syndrome_overlap_absolute_error": 5.906797492567664e-19,
+          "maximum_tangent_absolute_error": 2.168470518410302e-19,
+          "discarded_trajectory_weight_upper": 4.734705768318904e-46
+        }
+      ],
+      "balanced_gauge": [
+        {
+          "duration": 0.04,
+          "beta_residual": 8.890457814381136e-18,
+          "alpha_scaled": 0.568682661092192
+        },
+        {
+          "duration": 0.02,
+          "beta_residual": 6.938893903907228e-18,
+          "alpha_scaled": 0.5332596864388721
+        },
+        {
+          "duration": 0.01,
+          "beta_residual": 1.734723475976807e-18,
+          "alpha_scaled": 0.5163677796014035
+        },
+        {
+          "duration": 0.005,
+          "beta_residual": 1.0570971181733668e-18,
+          "alpha_scaled": 0.5081193893775976
+        }
+      ],
+      "long_gauge": [
+        {
+          "duration": 0.2,
+          "gram_minimum_eigenvalue": 2.4916864201727148e-06,
+          "beta_residual": 5.2439593952976605e-17,
+          "channel_tangent_maximum_error": 1.205632815803881e-16,
+          "alpha_norm": 366.5742413865472
+        },
+        {
+          "duration": 0.4,
+          "gram_minimum_eigenvalue": 6.916307594075787e-05,
+          "beta_residual": 4.117992795538995e-17,
+          "channel_tangent_maximum_error": 1.3561856575897475e-16,
+          "alpha_norm": 44.809024040983466
+        },
+        {
+          "duration": 1.0,
+          "gram_minimum_eigenvalue": 0.0040656813006290735,
+          "beta_residual": 8.187696987056255e-17,
+          "channel_tangent_maximum_error": 1.214306433183765e-16,
+          "alpha_norm": 3.065728304624902
+        },
+        {
+          "duration": 8.0,
+          "gram_minimum_eigenvalue": 0.7084225525644776,
+          "beta_residual": 2.1034510602129093e-17,
+          "channel_tangent_maximum_error": 2.220446049250313e-16,
+          "alpha_norm": 0.45457667330599216
+        }
+      ]
+    }
+  ]
+}

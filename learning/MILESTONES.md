@@ -2,20 +2,20 @@
 
 [Repository overview](../README.md) · [Nielsen–Chuang bridge](NIELSEN_CHUANG_BRIDGE.md) · [Model and exact results](../science/model.md)
 
-This map follows one scientific question: **which resources let a noisy sensor retain inverse-square estimation error when its recovery clock has a positive, fixed interval?** The milestones connect the exact physical experiment, its constructive protocols, and the bounds that apply to every permitted protocol.
+This map follows one scientific question: **which resources let a noisy sensor retain inverse-square estimation error when correction is available only between sensing cells?** The milestones connect the fixed-cadence criterion, the number of cells needed when shorter cells are needed, and the accuracy required of the physical compensation field.
 
 The educational anchor is Michael A. Nielsen and Isaac L. Chuang, *Quantum Computation and Quantum Information*, 10th Anniversary Edition (2010). “N&C” below always means that edition. Its relevant sections supply the language of states, operations, distinguishability and error correction. The [bridge](NIELSEN_CHUANG_BRIDGE.md) translates that language to this project. Exact finite-cell support, adaptive information bounds and global minimax accounting are supplied by the linked scientific pages and their research references; they are not attributed to the textbook.
 
 ## Structure and use
 
-The map has **11 background/preliminary milestones and 19 narrative/innovation milestones**. The background must assemble an unusually important experimental contract: a quantum channel, an error algebra, an admissible controller, a statistical objective and a hard resource budget. Its last milestone integrates those objects into one well-defined question. The narrative then develops the positive construction and all-strategy converse before using the four-level and grid examples to separate three control resources. Its last milestones integrate scope, evidence and physical meaning.
+The map has **11 background/preliminary milestones and 19 narrative/innovation milestones**. The background must assemble an unusually important experimental contract: a quantum channel, an error algebra, an admissible controller, a statistical objective and a hard resource budget. Its last milestone integrates those objects into one well-defined question. The narrative develops the positive construction and all-strategy converse, then uses commuting sensors and a transverse qubit to distinguish the fixed-cadence criterion, the cell budget and the compensation grid. Its last milestones integrate scope, evidence and physical meaning.
 
 This allocation follows the scientific dependencies rather than the order of textbook chapters. Each milestone is a common understanding target, independent of any reader's previous attempts. Together they cover the project's argument and consequences; specialist calculations and every technical lemma remain in the proof pages.
 
 | Phase | Stable IDs | Progression |
 |---|---|---|
 | Background/preliminaries | M01–M11 | Individual states and cells → correction and distinguishability → the complete experimental and statistical contract |
-| Narrative/innovation | M12–M30 | Correctable algebra and exact tangent → globally paid protocol and converse → fast/fixed separation and grid law → a unified resource account |
+| Narrative/innovation | M12–M30 | Correctable algebra and exact tangent → globally paid protocol and converse → polynomial degree, cell budget and grid spacing → a unified resource account |
 
 Dependency links name earlier milestones whose ideas are needed. They describe the scientific order, not a requirement to read every cited textbook page before using the explanations.
 
@@ -121,13 +121,13 @@ Dependency links name earlier milestones whose ideas are needed. They describe t
 
 **Central question:** How is an adaptive experiment compared fairly when its outcomes determine later actions?
 
-**Understanding target:** Explain why every prepared batch, failed decision and postselection failure consumes its actual cells. Distinguish a deterministic cap of $`\mathstrut{N=\lfloor T/\tau\rfloor}`$ cells on every history from an average cost or a cost conditioned on success. Separate sensing time from the assumed ideal, instantaneous boundary operations.
+**Understanding target:** Explain why every prepared batch, failed decision and postselection failure consumes its actual cells. Distinguish a deterministic cap of $`\mathstrut{N=\lfloor T/\tau\rfloor}`$ cells at fixed cadence from a joint cap on sensing time and cell count when durations can vary. Both caps apply on every history. Separate sensing time from the assumed ideal, instantaneous boundary operations.
 
 **Dependencies and story role:** [M03](#m03--memory-instruments-and-the-accessible-experiment), [M06](#m06--a-physical-counterfield-changes-the-cell), [M08](#m08--local-sensitivity-and-global-risk-are-different-claims). The statistical objective now has a complete operational resource constraint.
 
-**Conceptual connection:** Feedback alters the path through an experiment but does not erase the cost or probability of an unfavorable path. Both constructive risk estimates and universal lower bounds must retain those paths.
+**Conceptual connection:** Feedback changes the path through an experiment. Both risk bounds and resource guarantees must account for unfavorable paths, including the cells already spent on them.
 
-**Source pointers:** N&C §8.2 for quantum-operation foundations; [allowed operations and resources](../science/model.md#allowed-operations-and-resources); [exact budget choice](../science/constructive_proof.md#9-exact-budget-choice-and-resource-accounting); [full-history converse](../science/converse_proof.md#4-adaptive-histories-and-coherent-memory-are-included).
+**Source pointers:** N&C §8.2 for quantum-operation foundations; [allowed operations and resources](../science/model.md#allowed-operations-and-resources); [exact budget choice](../science/constructive_proof.md#9-exact-budget-choice-and-resource-accounting); [full-history converse](../science/converse_proof.md#4-adaptive-histories-and-coherent-memory-are-included); [time and cell caps](../science/cadence_budget.md).
 
 ### M10 — Identification can fail even with a useful tangent
 
@@ -145,13 +145,13 @@ Dependency links name earlier milestones whose ideas are needed. They describe t
 
 **Central question:** What complete experiment is classified by the project's main theorem?
 
-**Understanding target:** State together the finite-dimensional sensor, Hermitian parameter-independent noise, exact simultaneous cell, one active sensing system, ideal boundary operations, inaccessible environment, classical counterfield, fixed band, hard total time and minimax loss. Explain the order of choices: the physical model and band are fixed, one suitable positive cadence may be chosen, and only then does the horizon grow.
+**Understanding target:** State together the finite-dimensional sensor, Hermitian parameter-independent noise, exact simultaneous cell, one active sensing system, ideal boundary operations, inaccessible environment, classical counterfield, fixed band, hard total time and minimax loss. Explain the order of choices for a horizon-independent cadence. Then identify the two changed clock promises used later: equal cells that may shrink with the horizon, and arbitrary cell durations under a hard count.
 
 **Dependencies and story role:** [M04](#m04--an-error-span-and-an-error-algebra-ask-different-questions)–[M10](#m10--identification-can-fail-even-with-a-useful-tangent), drawing on [M01](#m01--a-frequency-becomes-a-measurement-distribution)–[M03](#m03--memory-instruments-and-the-accessible-experiment). This is the background phase's synthesis.
 
 **Conceptual connection:** Algebra, controller access, statistical loss and resource accounting form one problem. Changing any of them can change the answer even when the phrase “quantum sensing with error correction” stays the same.
 
-**Source pointers:** [Model and exact results](../science/model.md); [resource interpretation](../science/interpretation.md); [Nielsen–Chuang bridge](NIELSEN_CHUANG_BRIDGE.md), integrating the selected textbook foundations.
+**Source pointers:** [Model and exact results](../science/model.md); [resource interpretation](../science/interpretation.md); [correction budgets](../science/cadence_budget.md); [Nielsen–Chuang bridge](NIELSEN_CHUANG_BRIDGE.md), integrating the selected textbook foundations.
 
 ## Phase II — Narrative/innovation
 
@@ -265,27 +265,27 @@ Dependency links name earlier milestones whose ideas are needed. They describe t
 
 ### M21 — Build the four-level algebraic separation
 
-**Central question:** How can a signal pass the fast-control criterion and fail the fixed-cadence criterion in the same sensor?
+**Central question:** Which polynomial degree determines how far a commuting-noise code can suppress dephasing while preserving its signal?
 
-**Understanding target:** Explain why the cubic signal $`\mathstrut{G=L^3}`$ for $`\mathstrut{L=\mathrm{diag}(-3,-1,1,3)}`$ lies outside the quadratic real span but inside the full diagonal algebra. Connect the displayed code's equal first two noise moments and unequal cubic signal moments to its first-order recovered Hamiltonian. Distinguish this correction of leading errors from exact correction at positive duration.
+**Understanding target:** Find the least degree $`\mathstrut{s}`$ of a real polynomial that agrees with the signal on the finite joint noise spectrum, where degree means total degree in the jump eigenvalues. For the four-level cubic witness, explain why $`\mathstrut{s=3}`$. Its logical states agree on the moments through degree two and disagree on the cubic signal. Extend the connection to the code matching moments through degree $`\mathstrut{2m-2}`$ for $`\mathstrut{m=\lceil s/2\rceil}`$.
 
-**Dependencies and story role:** [M04](#m04--an-error-span-and-an-error-algebra-ask-different-questions), [M05](#m05--correct-noise-without-erasing-the-useful-signal), [M18](#m18--determine-the-full-physical-kraus-support), [M20](#m20--convert-the-information-bound-into-the-classification). This turns the abstract distinction into one explicit physical witness.
+**Dependencies and story role:** [M04](#m04--an-error-span-and-an-error-algebra-ask-different-questions), [M05](#m05--correct-noise-without-erasing-the-useful-signal), [M18](#m18--determine-the-full-physical-kraus-support), [M20](#m20--convert-the-information-bound-into-the-classification). This connects the four-level witness to the polynomial degree that sets the strength of the remaining dephasing.
 
-**Conceptual connection:** Polynomial degree separates two error spaces without changing the sensor or signal. There is no contradiction between the two criteria because they describe different correction-rate resources.
+**Conceptual connection:** The error-overlap tests multiply two polynomial errors. Correcting errors through degree $`\mathstrut{m-1}`$ therefore uses moments through degree $`\mathstrut{2m-2}`$, below the first degree that can represent the signal. At zero residual detuning, recovery suppresses the per-cell dephasing to order $`\mathstrut{h^m}`$. The slope of the recovered phase with respect to detuning remains of order $`\mathstrut{h}`$.
 
-**Source pointers:** N&C §10.3 for error-correction foundations; [algebra and code, Eqs. (F1)–(F3)](../science/fast_fixed_separation.md#1-the-signal-passes-hnls-but-belongs-to-the-full-algebra); [finite-step approximation](../science/fast_fixed_separation.md#2-an-explicit-recovery-and-a-finite-step-approximation); [HNLS18](../references/SOURCES.md#hnls18).
+**Source pointers:** N&C §10.3 for error-correction foundations; [algebra and code, Eqs. (F1)–(F3)](../science/fast_fixed_separation.md#1-the-signal-passes-hnls-but-belongs-to-the-full-algebra); [polynomial code and recovered channel](../science/cadence_budget_protocol.md).
 
 ### M22 — Compare the fast and fixed clocks globally
 
-**Central question:** What resource changes when the four-level sensor moves from inverse-time to inverse-square error?
+**Central question:** How many sensing cells buy inverse-square error, and can unequal cell durations reduce that count?
 
-**Understanding target:** Explain why the explicit fast construction chooses its interval as $`\mathstrut{h(T)=\Theta(T^{-1})}`$ and uses $`\mathstrut{\Theta(T^2)}`$ recoveries while still charging at most total sensing time $`\mathstrut{T}`$. Contrast that construction with the all-strategy fixed-clock information bound. Explain why the exact alias period limits the fixed-clock SQL upper bound to an identifiable interval.
+**Understanding target:** Explain why equal short cells of duration $`\mathstrut{h}`$ give risk $`\mathstrut{\Theta(\max\{T^{-2},h^{m-1}/T\})}`$. With at most $`\mathstrut{M}`$ variable-duration cells, read the matched law $`\mathstrut{\Theta(\max\{T^{-2},M^{-2+2/m}\})}`$ for $`\mathstrut{m\ge2}`$ and the inverse-budget law $`\mathstrut{\Theta(\max\{T^{-1},M^{-1}\})}`$ for $`\mathstrut{m=1}`$. Compute the inverse-square thresholds $`\mathstrut{\Theta(T^2)}`$ for the cubic signal and $`\mathstrut{\Theta(T^{3/2})}`$ for a quintic signal of least degree five.
 
-**Dependencies and story role:** [M09](#m09--charge-every-history-to-one-budget), [M10](#m10--identification-can-fail-even-with-a-useful-tangent), [M17](#m17--complete-the-globally-paid-heisenberg-construction), [M20](#m20--convert-the-information-bound-into-the-classification), [M21](#m21--build-the-four-level-algebraic-separation). This completes the first resource comparison at the same global-risk level.
+**Dependencies and story role:** [M09](#m09--charge-every-history-to-one-budget), [M10](#m10--identification-can-fail-even-with-a-useful-tangent), [M17](#m17--complete-the-globally-paid-heisenberg-construction), [M20](#m20--convert-the-information-bound-into-the-classification), [M21](#m21--build-the-four-level-algebraic-separation). This converts the short-cell dephasing order into a global resource comparison.
 
-**Conceptual connection:** A cadence fixed during one run can still shrink with the planned horizon. The correction count is a demonstrated resource of this construction, not a universal minimum; unlimited classical field precision cannot remove the commuting witness's fixed-clock obstruction.
+**Conceptual connection:** A coherent block can retain visibility for sensing time of order $`\mathstrut{h^{1-m}}`$. The estimator pays for localization and repeats blocks when the horizon exceeds that time. The variable-cell converse controls short and long cells on the same adaptive history. It makes the cell-count threshold necessary even when the protocol chooses durations from earlier data.
 
-**Source pointers:** [Global fast protocol and resources](../science/fast_fixed_separation.md#3-a-global-fast-clock-protocol-with-every-outcome-charged); [fixed-clock bound](../science/fast_fixed_separation.md#4-every-fixed-positive-clock-has-finite-information-per-cell); [aliases and SQL upper bound](../science/fast_fixed_separation.md#5-exact-aliases-and-an-alias-free-sql-upper-bound).
+**Source pointers:** [Clock and cell-budget laws](../science/cadence_budget.md); [global protocol with exact Ramsey inversion](../science/cadence_budget_protocol.md); [all-strategy converse](../science/cadence_budget_converse.md); [alias example for a supplied clock](../science/fast_fixed_separation.md#5-exact-aliases-and-an-alias-free-sql-upper-bound).
 
 ### M23 — Read the exact transverse-qubit response
 
@@ -363,23 +363,22 @@ Dependency links name earlier milestones whose ideas are needed. They describe t
 
 **Central question:** Which parts of the scientific account are inherited, analytically established here or checked only in finite examples?
 
-**Understanding target:** Trace the roles of algebraic error correction, local channel criteria, exact transverse response, global phase-estimation ideas and the RLD chain rule to their cited sources. Explain what the deterministic matrix checks can detect and why sampled signs, eigenvalues or derivatives do not prove universal support or infinite-horizon minimax rates. Distinguish the operational contribution from a claim of exhaustive priority.
+**Understanding target:** Trace the roles of algebraic error correction, the polynomial noise hierarchy, physical-channel information bounds, exact transverse response and global phase estimation. Distinguish a code's short-cell suppression order from the converse that establishes the minimum cell budget. Explain what the deterministic matrix checks can detect and why sampled signs, eigenvalues or derivatives do not prove universal support or infinite-horizon minimax rates. Distinguish the operational contribution from a claim of exhaustive priority.
 
 **Dependencies and story role:** [M17](#m17--complete-the-globally-paid-heisenberg-construction), [M20](#m20--convert-the-information-bound-into-the-classification), [M22](#m22--compare-the-fast-and-fixed-clocks-globally), [M28](#m28--interpret-the-matched-resolution-law-with-its-quantifiers). This integrates the proof routes with their evidential and attribution boundaries.
 
 **Conceptual connection:** A trustworthy conclusion has a chain of explicit assumptions, imported tools, project-specific derivations and appropriate checks. Neither a textbook reference nor successful numerical reproduction replaces a missing link in that chain.
 
-**Source pointers:** [Related work](../references/RELATED_WORK.md); [primary source index](../references/SOURCES.md); [verification and its limits](../verification/README.md); [boundaries and proof dependencies](../science/model.md#boundaries-and-proof-dependencies).
+**Source pointers:** [Related work](../references/RELATED_WORK.md); [primary source index](../references/SOURCES.md); [verification and its limits](../verification/README.md); [boundaries and proof dependencies](../science/model.md#boundaries-and-proof-dependencies); [cell-budget proof](../science/cadence_budget_converse.md).
 
 ### M30 — Explain the whole control-resource picture
 
-**Central question:** How do the fixed-cadence criterion, fast-clock witness and grid law fit into one physical account?
+**Central question:** How do the fixed-cadence criterion, correction budget and field resolution fit into one physical account?
 
-**Understanding target:** Explain why the full noise algebra governs the possibility of exact finite-cell protection, why adaptive physical compensation can turn its surviving tangent into global precision, and why compensation resolution remains a separate resource. Use the four-level and transverse-qubit examples to distinguish a fixed clock, a horizon-dependent clock and a finite field grid. State the load-bearing assumptions and what changes when identification, rate knowledge or physical access changes.
+**Understanding target:** Explain why the full noise algebra governs fixed-cadence protection, how least polynomial degree controls the correction budget for commuting Gaussian dephasing, and how a compensation grid limits an otherwise correctable transverse qubit. State which results need a sufficiently small cell, known rates, a calibrated field or a globally identifiable band.
 
 **Dependencies and story role:** [M11](#m11--assemble-the-fixed-cadence-question), [M17](#m17--complete-the-globally-paid-heisenberg-construction), [M20](#m20--convert-the-information-bound-into-the-classification), [M22](#m22--compare-the-fast-and-fixed-clocks-globally), [M28](#m28--interpret-the-matched-resolution-law-with-its-quantifiers), [M29](#m29--follow-the-evidence-from-ingredient-to-conclusion). This is the narrative phase's final synthesis.
 
-**Conceptual connection:** The answer depends jointly on what evolves inside a cell, what can be controlled at its boundaries and what must be inferred from a fixed initial band. The results give a bounded operational classification with ideal controls, rather than a fault-tolerance claim or a universal statement for other noise models.
+**Conceptual connection:** The relevant resources are the time and number of cells used for sensing, boundary access, and the resolution of the field during a cell. The algebraic and statistical mechanisms determine which resource limits precision in each model.
 
-**Source pointers:** [Model and exact results](../science/model.md); [physical interpretation](../science/interpretation.md); [scope of the contribution](../references/RELATED_WORK.md); [Nielsen–Chuang bridge](NIELSEN_CHUANG_BRIDGE.md).
-
+**Source pointers:** [Model and exact results](../science/model.md); [physical interpretation](../science/interpretation.md); [clock-budget result](../science/cadence_budget.md); [scope of the contribution](../references/RELATED_WORK.md); [Nielsen–Chuang bridge](NIELSEN_CHUANG_BRIDGE.md).

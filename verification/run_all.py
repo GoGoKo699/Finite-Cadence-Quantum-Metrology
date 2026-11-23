@@ -8,7 +8,7 @@ import scipy
 
 here=Path(__file__).resolve().parent
 scripts=['check_algebra.py','check_exact_cycle.py','check_grid_upper.py',
-         'check_physical_choi.py','check_fast_separation.py']
+         'check_physical_choi.py','check_fast_separation.py','check_cadence_budget.py']
 rows=[]
 for script in scripts:
     result=subprocess.run([sys.executable,str(here/script)],capture_output=True,text=True)
