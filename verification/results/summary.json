@@ -87,6 +87,19 @@
         "largest_physical_channel_error": 2.2737367544323206e-13,
         "largest_rld_formula_relative_error": 7.421041225028176e-11
       }
+    },
+    {
+      "script": "check_cadence_budget.py",
+      "status": "pass",
+      "summary": {
+        "scope": "Deterministic matrix checks on three spectra, with four durations per trajectory and gauge check.",
+        "all_assertions_passed": true,
+        "spectra": 3,
+        "syndrome_cases": 12,
+        "detuning_tangent_cases": 36,
+        "balanced_gauge_cases": 12,
+        "long_gauge_cases": 12
+      }
     }
   ],
   "status": "pass"

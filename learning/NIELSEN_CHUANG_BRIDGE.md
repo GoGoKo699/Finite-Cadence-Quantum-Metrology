@@ -2,9 +2,9 @@
 
 [Repository overview](../README.md) · [30-milestone map](MILESTONES.md) · [Exact model and results](../science/model.md)
 
-Imagine a clock whose hand advances at an unknown rate. A longer observation can reveal that rate more precisely, but a full revolution can hide how many turns occurred. A quantum sensor has a related difficulty: the unknown signal writes a relative phase, noise disrupts that phase, and a final measurement supplies only a random outcome. This project asks how accurately the rate can be learned when error correction is available only at regularly spaced boundaries.
+Imagine a clock whose hand advances at an unknown rate. A longer observation can reveal that rate more precisely, but a full revolution can hide how many turns occurred. A quantum sensor has a related difficulty: the unknown signal writes a relative phase, noise disrupts that phase, and a final measurement supplies only a random outcome. This project asks how accurately the rate can be learned when error correction is available only between sensing cells.
 
-Two controls have different roles. The **correction interval** determines how long noise and signal act before the next recovery. A **physical compensation field** subtracts a current estimate of the signal during that interval. The main result identifies when one sufficiently small interval, chosen once, can support inverse-square mean-squared error as the total sensing time grows. The grid result quantifies how accurately the compensation field must then be selectable. The full statements and their hypotheses are in the [model](../science/model.md).
+Two controls have different roles. The **correction interval** determines how long noise and signal act before the next recovery. A **physical compensation field** subtracts a current estimate of the signal during that interval. The fixed-cadence result identifies when one sufficiently small interval, chosen once, can support inverse-square mean-squared error. The clock-budget result quantifies how many cells are needed for that precision in commuting Gaussian dephasing. The grid result quantifies how finely the physical field must be selectable in a transverse qubit. The full statements and their hypotheses are in the [model](../science/model.md).
 
 ## The selected source and how to use it
 
@@ -21,7 +21,7 @@ Consult these parts as their concepts become useful. The bridge supplies the pro
 | §9.2.1 | Operational distinguishability of two states | Why nearby frequencies cannot be separated arbitrarily well with a fixed sensing budget |
 | §10.3, especially §10.3.1 | A code corrects a linear space of errors through conditions on error products | Correct the full algebra generated during a finite cell, then preserve a useful signal tangent |
 
-The selected anchor supplies the quantum-information foundation. The channel RLD information bound, its adaptive chain rule, the exact finite-time support argument, and the global statistical budget argument need additional derivations or research theorems. Their roles are identified below and in the [attribution map](../references/RELATED_WORK.md).
+The selected anchor supplies the quantum-information foundation. The finite-time support argument, the channel information bounds for adaptive experiments, and the global estimates under hard budgets need additional derivations or research theorems. Their roles are identified below and in the [attribution map](../references/RELATED_WORK.md).
 
 ## 1. Translate the objects into an experiment
 
@@ -265,24 +265,46 @@ The matching [lower bound](../science/grid_lower.md) does not use the parity dec
 
 At fixed $`\mathstrut{\tau}`$, retaining Heisenberg order requires $`\mathstrut{\Delta=O(T^{-1/2})}`$; dimensionally the comparison is $`\mathstrut{\tau\Delta^2\lesssim T^{-1}}`$. A fixed nonzero mesh eventually gives SQL order. The constants depend on positive noise; at zero rate this particular grid obstruction disappears. The exponent has established noisy-phase-estimation antecedents, credited in [GLOBAL22 and related work](../references/RELATED_WORK.md#why-the-calibrated-grid-requires-a-physical-channel-bound).
 
-## 8. Why faster correction is a separate resource
+## 8. How polynomial degree determines the correction budget
 
-The four-level example uses
+Consider commuting Hermitian noise with a nonconstant signal in its generated algebra and a fixed frequency band. In a joint eigenbasis, the noise operators are diagonal and the signal assigns a value to each joint noise eigenvalue. Let $`\mathstrut{s}`$ be the least total degree of a real polynomial in the noise eigenvalues that agrees with the signal at those points. This degree depends on the finite spectrum. Define $`\mathstrut{m=\lceil s/2\rceil}`$.
+
+The four-level example has
 
 ```math
 L=\mathrm{diag}(-3,-1,1,3),\qquad G=L^3.
 ```
 
-The cubic signal cannot be a combination of $`\mathstrut{I,L,L^2}`$: a cubic polynomial cannot agree with a quadratic at four distinct points unless their difference is zero, which its leading coefficient prevents. Yet $`\mathstrut{G}`$ plainly belongs to the full algebra generated by $`\mathstrut{L}`$. An explicit code has equal expectations of $`\mathstrut{I,L,L^2}`$ in its two logical states and different expectations of $`\mathstrut{G}`$. It therefore corrects the leading infinitesimal errors while retaining a signal. This is the setting of the inherited fast-control [HNLS criterion](../references/SOURCES.md#hnls18).
+A cubic with leading coefficient one cannot agree with a quadratic at four distinct points. Thus $`\mathstrut{s=3}`$ and $`\mathstrut{m=2}`$. The two codewords have equal expectations of $`\mathstrut{I,L,L^2}`$ and different expectations of $`\mathstrut{L^3}`$. Their equal lower moments meet the error-correction conditions for the span of $`\mathstrut{I,L}`$ while their different cubic moments preserve the signal. [Four-level code](../science/fast_fixed_separation.md#1-the-signal-passes-hnls-but-belongs-to-the-full-algebra)
 
-For that code, the error of one short corrected cell is bounded by a constant times $`\mathstrut{h^2}`$. The [global fast protocol](../science/fast_fixed_separation.md#3-a-global-fast-clock-protocol-with-every-outcome-charged) chooses $`\mathstrut{h(T)=\Theta(T^{-1})}`$, controls the accumulated remainder, and pays for all localization trials. It attains $`\mathstrut{\Theta(T^{-2})}`$ error and uses $`\mathstrut{\Theta(T^2)}`$ recovery applications in this construction. A fixed positive $`\mathstrut{h=\tau}`$ belongs to a different regime: the full algebra converse applies, even with unlimited compensation amplitude in this commuting example.
+The [general code](../science/cadence_budget_protocol.md) matches moments through degree $`\mathstrut{2m-2}`$. The product of two errors of degree at most $`\mathstrut{m-1}`$ stays within those moments. At zero residual detuning, the unmatched Gaussian error amplitude is of order at most $`\mathstrut{h^{m/2}}`$. The decoded loss of visibility is of order at most $`\mathstrut{h^m}`$ per cell. After localizing the frequency and choosing a close physical counterfield, a coherent block can retain visibility for duration of order $`\mathstrut{h^{1-m}}`$. The [global estimator](../science/cadence_budget_protocol.md) uses the exact Ramsey response, counts the initial localization and repeats independent blocks when the total budget is longer than the useful coherence time.
 
-Its exact channel also repeats with frequency period $`\mathstrut{\pi/\tau}`$. On an identifiable interval shorter than this period, two quadratures attain SQL order. A band containing an alias pair has a positive error floor. The [alias analysis](../science/fast_fixed_separation.md#5-exact-aliases-and-an-alias-free-sql-upper-bound) explains why a local phase response or an SQL lower bound alone cannot settle global estimation.
+For equal cells of sufficiently small duration $`\mathstrut{h}`$ and a hard sensing-time cap $`\mathstrut{T}`$, the [matched risk law](../science/cadence_budget.md) is
+
+```math
+R^*(T,h)=\Theta\!\left(\max\left\{T^{-2},\frac{h^{m-1}}{T}\right\}\right).
+```
+
+A short block whose visibility remains appreciable has frequency information of order its duration squared. When many such blocks fit in time $`\mathstrut{T}`$, their information adds, giving the term $`\mathstrut{h^{m-1}/T}`$ in the inverse information. At constant $`\mathstrut{h}`$, that term eventually dominates. For $`\mathstrut{m\ge2}`$, retaining inverse-square precision requires $`\mathstrut{h=O(T^{-1/(m-1)})}`$ in this equal-cell regime.
+
+With at most $`\mathstrut{M}`$ cells and variable durations, both budgets apply on every experimental history. The matching law becomes
+
+```math
+R^*(T,M)=
+\begin{cases}
+\Theta\!\left(\max\{T^{-2},M^{-2+2/m}\}\right),&m\ge2,\\[3pt]
+\Theta\!\left(\max\{T^{-1},M^{-1}\}\right),&m=1.
+\end{cases}
+```
+
+When $`\mathstrut{m\ge2}`$, inverse-square risk needs and suffices with a cell budget of order $`\mathstrut{T^{m/(m-1)}}`$. This gives $`\mathstrut{\Theta(T^2)}`$ cells for the cubic sensor. For a quintic signal of least degree five, for example $`\mathstrut{G=L^5}`$ at six distinct noise eigenvalues, $`\mathstrut{m=3}`$ gives $`\mathstrut{\Theta(T^{3/2})}`$ cells. For degree one or two, the $`\mathstrut{m=1}`$ law allows inverse-time precision when the cell budget is at least of order $`\mathstrut{T}`$.
+
+An equal-cell schedule attains the variable-duration law. The [converse](../science/cadence_budget_converse.md) bounds information from both short and long cells, including durations chosen from earlier outcomes. The fixed-clock support argument only establishes an inverse-time lower bound with a clock-dependent constant; the short-cell information bound is what quantifies that constant's relevance as the cadence changes. Identification still matters for a separately supplied clock. The [four-level alias example](../science/fast_fixed_separation.md#5-exact-aliases-and-an-alias-free-sql-upper-bound) exhibits a band where two frequencies give identical cell channels and a band on which inverse-time precision is attainable.
 
 ## 9. Assemble the scientific account
 
-Three questions organize the result. **Which errors can occur during a complete cell?** Their algebra controls exact correction and the physical-channel support argument. **Which useful signal remains near a corrected point?** The integrated tangent and quadratic remainder control reliable longer sensing batches. **How is that local behavior paid for and used globally?** Nested intervals, weighted failure probabilities and deterministic budgets answer this without an accurate initial estimate.
+The full noise algebra determines which signals can survive exact correction of a complete cell. When the signal is in the algebra for commuting Gaussian dephasing, the least polynomial degree determines how quickly the clock must run. When the signal survives exact finite-cell correction, physical compensation can still impose its own precision requirement, as it does for the transverse qubit on a grid. The global estimators account for localization and unsuccessful trials from the original band.
 
-The selected textbook provides the language of states, channels, purification, distinguishability and error correction. The project connects those foundations to a precise finite-cadence sensing model. The [constructive proof](../science/constructive_proof.md), [converse](../science/converse_proof.md), [grid pair](../science/grid_upper.md) and [fast/fixed example](../science/fast_fixed_separation.md) supply the specialist arguments; the [primary-source index](../references/SOURCES.md) distinguishes inherited tools from these derivations. The [30 milestones](MILESTONES.md) connect the same story from individual objects to the full result.
+The selected textbook provides the language of states, channels, purification, distinguishability and error correction. The project connects those foundations to a precise finite-cadence sensing model. The [constructive proof](../science/constructive_proof.md), [converse](../science/converse_proof.md), [grid pair](../science/grid_upper.md) and [clock-budget proof](../science/cadence_budget.md) supply the specialist arguments; the [primary-source index](../references/SOURCES.md) distinguishes inherited tools from these derivations. The [30 milestones](MILESTONES.md) connect the same story from individual objects to the full result.
 
 The guarantees assume Hermitian parameter-independent Markovian noise, a known signal direction, noiseless ancillary memory, ideal boundary operations and a calibrated field acting throughout each cell. They do not analyze faulty recovery, unknown field bias, general non-Hermitian jumps, inaccessible persistent bath memory or observed jump records. The [finite verification suite](../verification/README.md) checks concrete identities and parameter cases. The universal conclusions depend on the written proofs and their hypotheses.

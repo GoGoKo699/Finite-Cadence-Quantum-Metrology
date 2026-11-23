@@ -47,6 +47,16 @@ The [grid upper bound](../science/grid_upper.md) continues estimating below the 
 
 [INTERPOLATE17](SOURCES.md#interpolate17) shows why a hardware grid by itself does not imply an estimation floor: sequences of available propagators can produce finer effective control. Accordingly, the converse here includes switching and dithering between grid values at cell boundaries. It excludes subcell switching, a coherently controlled field register, and access to environmental records, as specified in the model.
 
+## Correction budgets for commuting dephasing
+
+[CHANNEL21](SOURCES.md#channel21), Theorem 2 and Appendix A, supplies the channel-extension gauge and the fixed-channel local information characterization. The [correction-budget converse](../science/cadence_budget_converse.md) evaluates a gauge uniformly as the physical cell shrinks. The estimate uses the least polynomial degree of the signal and a balanced split across its Kraus products. A cutoff separates short and long derivative insertions in a single adaptive strategy, which controls the information under a hard cell cap.
+
+[AUTO26](SOURCES.md#auto26), Theorem 1 and Supplement S5, already shows higher-order protection by engineered autonomous dissipation. Its construction matches moments between codewords in distinct signal eigenspaces and controls the local quantum Fisher information over a specified finite horizon. The [boundary-code construction](../science/cadence_budget_protocol.md) uses the nonzero compression of the signal onto two real codewords. Their supports may each include several signal eigenvalues, as in the nondegenerate cubic and quintic examples. The theorem gives a global minimax bound and a necessary cell count for adaptive boundary durations. Autonomous dissipation strength is a different control resource.
+
+[GLOBAL22](SOURCES.md#global22), Theorem 1 and Section IV, establishes the inverse-use phase-damping threshold and a global adaptive readout for a given elementary qubit phase channel. This explains why a logical visibility loss of order $`\mathstrut{h^m}`$ per cell limits the effective interrogation length. The physical-channel gauge bounds strategies that need not use that logical channel. The global upper bound charges localization and uses the exact finite-block response. [CSS26](SOURCES.md#css26) analyzes related time-window effects for discrete CSS recovery of perpendicular noise.
+
+The same repository's [cubic construction](../science/fast_fixed_separation.md) already attains inverse-square risk with a quadratic number of cells. The new lower bound makes that count sharp. A quintic signal changes the exponent because its projected signal can survive correction of more noise moments.
+
 ## Other control-resource comparisons
 
 | Source | Established scope | Relevant distinction |

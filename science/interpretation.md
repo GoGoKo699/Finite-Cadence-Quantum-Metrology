@@ -31,7 +31,7 @@ The field must act during the noisy cell. When signal and noise do not commute, 
 | Independently prepared/read-out batches | $`\mathstrut{O((\log T)^2)}`$ |
 | Accuracy of the classical compensation values | Improves as the localization interval shrinks |
 
-Instantaneous, noiseless boundary operations are idealizations of the model. The count of their applications is explicit, but their laboratory duration, thermodynamic cost and implementation error are not estimated. The fast-separation construction uses $`\mathstrut{\Theta(T^2)}`$ correction applications because its interval shrinks with $`\mathstrut{T}`$; this is not claimed to be optimal.
+Instantaneous, noiseless boundary operations are idealizations of the model. The count of their applications is explicit, but their laboratory duration, thermodynamic cost and implementation error are not estimated. In the commuting four-level example, the [correction-budget law](cadence_budget.md) shows why the cubic signal needs order $`\mathstrut{T^2}`$ cells for inverse-square risk. A higher-degree signal can survive a code that equalizes more noise moments. The resulting longer useful interrogation changes the optimal cell count. For a quintic signal on six distinct levels, the order is $`\mathstrut{T^{3/2}}`$ even when the controller may choose durations by feedback.
 
 ## Resolution is distinct from the correction clock
 
@@ -57,6 +57,6 @@ The four-level example makes this concrete: its exact channel has fundamental pe
 
 ## What is inherited and what the combined account adds
 
-The [source comparison](../references/RELATED_WORK.md) credits the prior error-correction and channel-estimation tools. In particular, correcting a generated noise algebra and obtaining a local useful tangent are not new general principles. The scientific comparison here is the exact simultaneous physical semigroup, global risk with all sensing time charged, the converse for arbitrary fixed-boundary strategies, and an explicit resource distinction between a fixed clock, a shrinking clock and a finite compensation grid.
+The [source comparison](../references/RELATED_WORK.md) credits the prior error-correction and channel-estimation tools. In particular, correcting a generated noise algebra and obtaining a local useful tangent are not new general principles. The scientific comparison here is the exact simultaneous physical semigroup, global risk with all sensing time charged, the converse for arbitrary fixed-boundary strategies, a sharp correction count for commuting noise, and a separate tradeoff for a finite compensation grid.
 
 The [finite checks](../verification/README.md) test formulas and representative implementations. The physical conclusions rest on the stated analytical hypotheses. They do not assert fault tolerance with imperfect operations or universal applicability to other noise models.
