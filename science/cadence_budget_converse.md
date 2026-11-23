@@ -40,7 +40,7 @@ Let $`\mathstrut{V_{h,\omega}}`$ be the Kraus isometry and apply an environment 
 For $`\mathstrut{a\le s}`$ the exponent is at least $`\mathstrut{2-m}`$. For $`\mathstrut{a\gt s}`$, the Taylor factor compensates for the larger degree since $`\mathstrut{\lceil a/2\rceil-\lceil s/2\rceil\le\lceil(a-s)/2\rceil}`$. The finite sum, including the ungauged derivative, therefore satisfies
 
 ```math
-\|\dot V_h^\dagger\dot V_h\|\le C h^{2-m}\qquad(0<h\le h_0).
+\|\dot V_h^\dagger\dot V_h\|\le C h^{2-m}\qquad(0\lt h\le h_0).
 ```
 
 This bound is uniform in the operating frequency on the band. The gauge is used only to bound information. It does not expose an environment operation to the controller.

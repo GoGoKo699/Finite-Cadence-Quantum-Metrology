@@ -31,7 +31,7 @@ For every $`\mathstrut{A\in\mathscr P_{m-1}}`$, each $`\mathstrut{W_a^\dagger AV
 
 ## The exact logical coherence
 
-With $`\mathstrut{c}`$ the chosen compensation frequency, set $`\mathstrut{\delta=\omega-c}`$. Since $`\mathstrut{G}`$ and all the jumps commute, the physical cell is the Gaussian dephasing channel followed by $`\mathstrut{\operatorname{Ad}_{e^{-ih\delta G}}}`$. The known rotation $`\mathstrut{e^{+ihcG}}`$ can be applied at the boundary immediately before decoding, with the same effect as the in-cell counterfield. The construction holds for either realization in this commuting model.
+With $`\mathstrut{c}`$ the chosen compensation frequency, set $`\mathstrut{\delta=\omega-c}`$. Since $`\mathstrut{G}`$ and all the jumps commute, the physical cell is the Gaussian dephasing channel followed by $`\mathstrut{\mathrm{Ad}_{e^{-ih\delta G}}}`$. The known rotation $`\mathstrut{e^{+ihcG}}`$ can be applied at the boundary immediately before decoding, with the same effect as the in-cell counterfield. The construction holds for either realization in this commuting model.
 
 Write $`\mathstrut{J=\sum_{j=1}^r L_j^2}`$. An exact Kraus family at zero detuning is indexed by multi-indices $`\mathstrut{\mathbf k=(k_1,\ldots,k_r)\in\mathbb N^r}`$:
 
@@ -74,7 +74,7 @@ For the first equality, expand the derivative of the exponential in $`\mathstrut
 Prepare logical $`\mathstrut{|+\rangle}`$, run $`\mathstrut{n}`$ cells with the same value of $`\mathstrut{c}`$, and decode and re-encode between cells. A logical $`\mathstrut{Y}`$ measurement has expectation
 
 ```math
-Q_{h,n}(\delta)=-\operatorname{Im}[f_h(\delta)^n].
+Q_{h,n}(\delta)=-\mathrm{Im}[f_h(\delta)^n].
 ```
 
 Write $`\mathstrut{t=nh}`$. There are fixed positive constants $`\mathstrut{h_0,\eta_0,\zeta}`$ such that, for $`\mathstrut{0\lt h\le h_0}`$, $`\mathstrut{nh^m\le\eta_0}`$ and $`\mathstrut{|\delta|\le W}`$ with $`\mathstrut{t|\delta|\le\zeta}`$,
