@@ -75,7 +75,9 @@ function inspectArticle(root, expected) {
     if (['annotation','annotation-xml','mspace'].includes(tag)) return [];
     const variant=e.getAttribute('mathvariant') || inherited;
     if (['mi','mo','mn','mtext','ms'].includes(tag)) {
-      const text=e.textContent.trim();
+      const literal=e.textContent.trim();
+      // GitHub and MathJax use equivalent code points for these operators.
+      const text=tag==='mo' ? literal.replaceAll('‖','∥').replaceAll('⟂','⊥') : literal;
       return text?[[tag,text,variant]]:[];
     }
     // Preserve each structural child slot: flattening numerator and denominator
@@ -88,6 +90,16 @@ function inspectArticle(root, expected) {
     // A table cell is an inferred row (a sequence), not a fixed-arity operator.
     // GitHub inserts empty mrow alignment nodes; ignore those inside the cell
     // while preserving the cell and row themselves, including empty cells.
+    if (tag==='mlabeledtr') {
+      // Some hosts split the same parenthesized label into three mtext nodes.
+      // Keep both its full text and its position in the labeled row.
+      const label=children[0]?.[0];
+      const parts=label?.[0]==='mtd' ? label[2] : [];
+      if (parts.length===3 && parts.every(part=>part[0]==='mtext' && part[2]==='')
+          && parts[0][1]==='(' && parts[2][1]===')') {
+        label[2]=[['mtext',parts.map(part=>part[1]).join(''),'']];
+      }
+    }
     return [[tag,semantic,tag==='mtd'?children.flat():children]];
   }
   function plain(math) {
