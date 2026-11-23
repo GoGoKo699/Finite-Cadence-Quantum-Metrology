@@ -22,10 +22,12 @@ jobs:
           ref: ${{ env.CAPTURE_REVISION }}
           path: source
           persist-credentials: false
-      - name: Install pinned capture dependencies
-        run: |
-          npm install --prefix "$RUNNER_TEMP/hosted-deps" playwright@1.56.1 mathjax-full@3.2.1
-          "$RUNNER_TEMP/hosted-deps/node_modules/.bin/playwright" install --with-deps chromium
+      - name: Install pinned capture packages
+        timeout-minutes: 3
+        run: npm install --prefix "$RUNNER_TEMP/hosted-deps" playwright@1.56.1 mathjax-full@3.2.1
+      - name: Install pinned Chromium shell
+        timeout-minutes: 3
+        run: '"$RUNNER_TEMP/hosted-deps/node_modules/.bin/playwright" install --only-shell chromium'
       - name: Capture exact GitHub pages at both widths
         run: |
           NODE_PATH="$RUNNER_TEMP/hosted-deps/node_modules" node collector/verification/hosted/capture_hosted_math.cjs --root "$GITHUB_WORKSPACE/source" --repository "GoGoKo699/Finite-Cadence-Quantum-Metrology" --revision "$CAPTURE_REVISION" --output "$RUNNER_TEMP/hosted-evidence"
